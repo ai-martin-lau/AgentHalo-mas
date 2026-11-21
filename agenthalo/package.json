@@ -281,7 +281,7 @@
       "identity": "LI JIE",
       "provisioningProfile": "build/development.provisionprofile"
     },
-    "buildVersion": "10703"
+    "buildVersion": "10704"
   },
   "engines": {
     "node": ">=22.12.0"
