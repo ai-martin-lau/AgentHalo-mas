@@ -725,7 +725,7 @@
           if (hintText && hintText !== ev.hint) detail = hintText;
         }
         if (!detail && ev.message) detail = ev.message;
-        line.textContent = `[${ev.status}] ${stepLabel}` + (detail ? ` — ${detail}` : "");
+        line.textContent = `[${ev.status}] ${stepLabel}` + (detail ? `; ${detail}` : "");
         if (ev.message && detail !== ev.message) line.title = ev.message;
         log.appendChild(line);
       }

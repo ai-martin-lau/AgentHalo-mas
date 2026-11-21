@@ -377,7 +377,7 @@
 
   function formatAcceleratorLabel(
     accelerator,
-    { isMac = false, unassignedLabel = "— unassigned —" } = {}
+    { isMac = false, unassignedLabel = "unassigned" } = {}
   ) {
     if (!accelerator) return unassignedLabel;
     const parsed = parseAccelerator(accelerator);

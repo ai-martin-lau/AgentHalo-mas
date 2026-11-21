@@ -38,7 +38,7 @@
   const buildAcceleratorFromEvent = shortcutApi.buildAcceleratorFromEvent
     || (() => ({ action: "reject", reason: "That key combination is not supported." }));
   const formatAcceleratorLabel = shortcutApi.formatAcceleratorLabel
-    || ((value) => value || "— unassigned —");
+    || ((value) => value || "unassigned");
   const formatAcceleratorPartial = shortcutApi.formatAcceleratorPartial
     || (() => "");
 

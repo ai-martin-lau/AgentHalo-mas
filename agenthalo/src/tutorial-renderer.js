@@ -443,7 +443,7 @@
   }
 
   function formatShortcutValue(accelerator) {
-    const unassigned = i18n("shortcutUnassigned", "— unassigned —");
+    const unassigned = i18n("shortcutUnassigned", "unassigned");
     if (shortcutActions.formatAcceleratorLabel) {
       return shortcutActions.formatAcceleratorLabel(accelerator, {
         isMac: isMac(),

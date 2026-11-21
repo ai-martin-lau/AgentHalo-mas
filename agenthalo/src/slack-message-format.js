@@ -461,7 +461,7 @@ function buildCompletionMessage(entry, options = {}) {
   if (fallbackFolder) fallbackMeta.push(fallbackFolder);
   if (fallbackTag) fallbackMeta.push(fallbackTag);
   const fallback = clipMrkdwn(
-    `${icon} ${redactMrkdwn(rawTitle)} ${wrapStatus}${fallbackMeta.length ? ` — ${fallbackMeta.join(" · ")}` : ""}`,
+    `${icon} ${redactMrkdwn(rawTitle)} ${wrapStatus}${fallbackMeta.length ? ` (${fallbackMeta.join(" · ")})` : ""}`,
     FALLBACK_MAX
   );
   return { text: fallback, blocks };

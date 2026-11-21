@@ -345,7 +345,7 @@ async function legacyDeploy({ profile, runtime, deps = {} }) {
   progress("remote-shell", "start");
   const shell = await detectShellFn({ profile, spawn, buildSshArgs, runtime });
   if (shell && shell.shell === "windows-cmd") {
-    const msg = "Remote default shell is Windows cmd.exe. Remote SSH needs a POSIX shell — set OpenSSH DefaultShell to Git Bash or WSL bash on the remote, then redeploy.";
+    const msg = "Remote default shell is Windows cmd.exe. Remote SSH needs a POSIX shell. Set OpenSSH DefaultShell to Git Bash or WSL bash on the remote, then redeploy.";
     progress("remote-shell", "fail", msg, "remoteSshErrWindowsCmdShell");
     return {
       ok: false,

@@ -27,7 +27,7 @@ function checkLocalServer(serverApi) {
   if (!status.runtimeFileExists || !status.runtimeMatches || identityBroken) {
     const identityDetail = identityBroken
       ? `; runtime owner is ${status.runtimeOwnerPid ? `${status.runtimeOwnerPid} (not running)` : "missing"}`
-        + " — hooks will omit process metadata"
+        + "; hooks will omit process metadata"
       : "";
     return {
       id: "local-server",

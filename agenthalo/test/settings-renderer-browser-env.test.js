@@ -8043,9 +8043,9 @@ describe("settings renderer browser environment", () => {
     }
 
     assert.deepStrictEqual(toasts.map((toast) => toast.message), [
-      "That App ID does not look like a self-built app id — Lark self-built app ids start with cli_.",
+      "That App ID does not look like a self-built app id; Lark self-built app ids start with cli_.",
       "App ID and App Secret are not saved yet.",
-      "The Lark approval config is incomplete — check the approver user id.",
+      "The Lark approval config is incomplete. Check the approver user id.",
       "Lark approval is turned off.",
     ]);
     for (const toast of toasts) {

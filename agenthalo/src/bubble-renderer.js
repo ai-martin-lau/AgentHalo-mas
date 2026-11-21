@@ -74,7 +74,7 @@ function setSessionTag(data) {
 
 const BUBBLE_STRINGS = {
   en: {
-    irreversibleHint: "Destructive action \u2014 may not be recoverable",
+    irreversibleHint: "Destructive action: may not be recoverable",
     autoAcceptEdits: "Auto-accept edits",
     switchToPlanMode: "Switch to plan mode",
     allowInDir: "Allow {tool} in {dir}/",
@@ -86,7 +86,7 @@ const BUBBLE_STRINGS = {
     allow: "Allow",
     deny: "Deny",
     alwaysAllowBlanket: "Always Allow (blanket)",
-    alwaysAllowBlanketTitle: "Warning: {agent}'s 'always' rule auto-approves every subsequent tool call of the same category in this session (including rm and similar destructive commands). The rule lives only in memory — restart {agent} to revoke.",
+    alwaysAllowBlanketTitle: "Warning: {agent}'s 'always' rule auto-approves every subsequent tool call of the same category in this session (including rm and similar destructive commands). The rule lives only in memory. Restart {agent} to revoke.",
     needsInput: "Needs Input",
     goToTerminal: "Go to Terminal",
     submitAnswer: "Submit Answer",
@@ -124,7 +124,7 @@ const BUBBLE_STRINGS = {
     questionCount: "Questions: {count}",
   },
   zh: {
-    irreversibleHint: "\u7834\u574F\u6027\u64CD\u4F5C\u2014\u2014\u53EF\u80FD\u65E0\u6CD5\u6062\u590D",
+    irreversibleHint: "\u7834\u574F\u6027\u64CD\u4F5C\uFF0C\u53EF\u80FD\u65E0\u6CD5\u6062\u590D",
     autoAcceptEdits: "\u81EA\u52A8\u63A5\u53D7\u7F16\u8F91",
     switchToPlanMode: "\u5207\u6362\u5230 Plan \u6A21\u5F0F",
     allowInDir: "\u5141\u8BB8 {tool} \u5728 {dir}/",
@@ -174,7 +174,7 @@ const BUBBLE_STRINGS = {
     questionCount: "{count} \u4E2A\u95EE\u9898",
   },
   "zh-TW": {
-    irreversibleHint: "\u7834\u58DE\u6027\u64CD\u4F5C\u2014\u2014\u53EF\u80FD\u7121\u6CD5\u5FA9\u539F",
+    irreversibleHint: "\u7834\u58DE\u6027\u64CD\u4F5C\uFF0C\u53EF\u80FD\u7121\u6CD5\u5FA9\u539F",
     autoAcceptEdits: "自動接受編輯",
     switchToPlanMode: "切換到計劃模式",
     allowInDir: "允許 {tool} 在 {dir}/",
@@ -224,7 +224,7 @@ const BUBBLE_STRINGS = {
     questionCount: "{count} 個問題",
   },
   ko: {
-    irreversibleHint: "\uD30C\uAD34\uC801 \uC791\uC5C5 \u2014 \uBCF5\uAD6C\uB418\uC9C0 \uC54A\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4",
+    irreversibleHint: "\uD30C\uAD34\uC801 \uC791\uC5C5: \uBCF5\uAD6C\uB418\uC9C0 \uC54A\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4",
     autoAcceptEdits: "\uD3B8\uC9D1 \uC790\uB3D9 \uC2B9\uC778",
     switchToPlanMode: "Plan \uBAA8\uB4DC\uB85C \uC804\uD658",
     allowInDir: "{dir}/\uC5D0\uC11C {tool} \uD5C8\uC6A9",
@@ -274,7 +274,7 @@ const BUBBLE_STRINGS = {
     questionCount: "\uC9C8\uBB38 {count}\uAC1C",
   },
   ja: {
-    irreversibleHint: "\u7834\u58CA\u7684\u306A\u64CD\u4F5C \u2014 \u5FA9\u5143\u3067\u304D\u306A\u3044\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059",
+    irreversibleHint: "\u7834\u58CA\u7684\u306A\u64CD\u4F5C\u3067\u3001\u5FA9\u5143\u3067\u304D\u306A\u3044\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059",
     autoAcceptEdits: "編集を自動承認",
     switchToPlanMode: "Plan モードに切り替え",
     allowInDir: "{dir}/ で {tool} を許可",
@@ -324,7 +324,7 @@ const BUBBLE_STRINGS = {
     questionCount: "質問 {count} 件",
   },
   "pt-BR": {
-    irreversibleHint: "Ação destrutiva — pode não ter volta",
+    irreversibleHint: "Ação destrutiva: pode não ter volta",
     autoAcceptEdits: "Aceitar edições automaticamente",
     switchToPlanMode: "Mudar para o modo plano",
     allowInDir: "Permitir {tool} em {dir}/",
@@ -336,7 +336,7 @@ const BUBBLE_STRINGS = {
     allow: "Permitir",
     deny: "Negar",
     alwaysAllowBlanket: "Sempre permitir (irrestrito)",
-    alwaysAllowBlanketTitle: "Aviso: a regra 'sempre' do {agent} aprova automaticamente todas as chamadas seguintes de ferramenta da mesma categoria nesta sessão (incluindo rm e outros comandos destrutivos). A regra vive só na memória — reinicie o {agent} para revogá-la.",
+    alwaysAllowBlanketTitle: "Aviso: a regra 'sempre' do {agent} aprova automaticamente todas as chamadas seguintes de ferramenta da mesma categoria nesta sessão (incluindo rm e outros comandos destrutivos). A regra vive só na memória. Reinicie o {agent} para revogá-la.",
     needsInput: "Precisa de resposta",
     goToTerminal: "Ir para o terminal",
     submitAnswer: "Enviar resposta",
@@ -374,7 +374,7 @@ const BUBBLE_STRINGS = {
     questionCount: "Perguntas: {count}",
   },
   es: {
-    irreversibleHint: "Acción destructiva — puede ser irreversible",
+    irreversibleHint: "Acción destructiva: puede ser irreversible",
     autoAcceptEdits: "Aceptar ediciones automáticamente",
     switchToPlanMode: "Cambiar al modo plan",
     allowInDir: "Permitir {tool} en {dir}/",

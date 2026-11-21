@@ -259,7 +259,7 @@ describe("formatAcceleratorLabel", () => {
       formatAcceleratorLabel("CommandOrControl+Control+K", { isMac: false }),
       "Ctrl+K"
     );
-    assert.strictEqual(formatAcceleratorLabel(null), "— unassigned —");
+    assert.strictEqual(formatAcceleratorLabel(null), "unassigned");
   });
 
   it("formats labels for macOS", () => {

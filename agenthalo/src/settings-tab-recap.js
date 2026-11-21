@@ -639,7 +639,7 @@
     }
     if (view.period === "week") {
       const end = addLocalDays(data.startDate, 6);
-      return `${formatDate(data.startDate, { month: "short", day: "numeric" })} — ${formatDate(end, { month: "short", day: "numeric" })}`;
+      return `${formatDate(data.startDate, { month: "short", day: "numeric" })} – ${formatDate(end, { month: "short", day: "numeric" })}`;
     }
     if (view.period === "month") {
       return formatDate(`${data.anchorDate.slice(0, 7)}-01`, { year: "numeric", month: "long" });

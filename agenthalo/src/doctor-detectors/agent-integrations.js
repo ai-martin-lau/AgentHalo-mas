@@ -1337,7 +1337,7 @@ function getZcodeHooksSupplementary(settings, descriptor) {
       key: "zcode_hooks",
       value: "permission-conflict",
       detail: managedPermissionHook
-        ? "a foreign PermissionRequest hook coexists with AgentHalo's; ZCode executes same-event hooks with last-wins decisions — keep exactly one owner for PermissionRequest"
+        ? "a foreign PermissionRequest hook coexists with AgentHalo's; ZCode executes same-event hooks with last-wins decisions; keep exactly one owner for PermissionRequest"
         : "a foreign PermissionRequest hook owns the event; AgentHalo's blocking permission hook is intentionally not registered (last-wins would override the existing hook's deny)",
     };
   }
@@ -2196,7 +2196,7 @@ function checkOpencodeSettings(descriptor, settings, options) {
     // family-core-missing carries WHICH shared file is gone — surface it, or
     // the user sees "packaging problem" with no way to tell core.mjs from
     // session-ids.mjs (the modal renders detail verbatim, no i18n layer).
-    const missingSuffix = validation.missing ? ` — missing ${validation.missing}` : "";
+    const missingSuffix = validation.missing ? `; missing ${validation.missing}` : "";
     return makeDetail(descriptor, "broken-path", {
       level: "warning",
       parentDirExists: true,
@@ -2599,7 +2599,7 @@ function withKimiLegacyPermissionModeSupplement(detail, descriptor, options) {
     ...detail,
     status: "needs-review",
     level: "warning",
-    detail: `${legacyTarget.configPath}: ${issues.join("; ")} — Fix rewrites AgentHalo's Kimi hooks in the current format`,
+    detail: `${legacyTarget.configPath}: ${issues.join("; ")}. Fix rewrites AgentHalo's Kimi hooks in the current format`,
     supplementary: { key: "kimi_legacy_mode", value: "stale" },
     kimiLegacyConfigPath: legacyTarget.configPath,
   };
