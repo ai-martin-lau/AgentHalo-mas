@@ -1,0 +1,7 @@
+{
+  "id": "bunny",
+  "displayName": "Bunny",
+  "description": "A round little bunny with a halo who keeps an eye on your coding agents.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

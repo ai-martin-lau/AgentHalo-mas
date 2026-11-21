@@ -1,0 +1,7 @@
+{
+  "id": "cat",
+  "displayName": "Cat",
+  "description": "A round little orange cat with a halo who keeps an eye on your coding agents.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

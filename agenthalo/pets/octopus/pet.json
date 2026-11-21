@@ -1,0 +1,7 @@
+{
+  "id": "octopus",
+  "displayName": "Octopus",
+  "description": "A round little octopus with a halo who juggles your coding agents.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "dragon",
+  "displayName": "Dragon",
+  "description": "A round little dragon with a halo who keeps an eye on your coding agents.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}
