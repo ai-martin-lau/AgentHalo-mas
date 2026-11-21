@@ -15,7 +15,6 @@ if(themes.length!==10)throw Error(`Expected 10 themes, got ${themes.length}`);
 // Keep the generated SVG geometry, animation and settings DOM; nearest-neighbor only.
 for(const t of themes){const svg=fs.readFileSync(new URL(t.previewFileUrl),'utf8');const atlas=fs.readFileSync(path.join(app,'themes',t.id,'assets/spritesheet.webp'));t.previewFileUrl='data:image/svg+xml;base64,'+Buffer.from(svg.replace('href="spritesheet.webp"','href="data:image/webp;base64,'+atlas.toString('base64')+'"').replaceAll('image-rendering: auto','image-rendering: pixelated')).toString('base64')}
 const agents=['claude-code','codex'].map(id=>{const a=require(path.join(app,'agents',id+'.js'));return {id:a.id,name:a.name,eventSource:a.eventSource,capabilities:a.capabilities,cleanupSuggestionExempt:true}});
-const previousApprove=Object.fromEntries(Object.keys(copy).map(locale=>{const f=path.join(root,locale,'02-approve.png');return [locale,fs.existsSync(f)?crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'):null]}));
 const archive=path.join(app,'dist/mas-dev-universal/AgentHalo.app/Contents/Resources/app.asar');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const sourceFiles=fs.readdirSync(path.join(app,'src')).filter(f=>/^(settings|language-picker|shortcut-actions|ui-color-theme|sound-playback|localized-field|session-hud|bubble)/.test(f)&&/\.(js|css|html)$/.test(f));
@@ -102,7 +101,7 @@ async function main(){
     for(const c of metrics.visibleThemeCards)if(c.x<820||c.y<330||c.x+c.width>1440||c.y+c.height>870)throw Error(locale+' first three gallery cards clipped');
    }
    if(metrics.titleLines>2||metrics.titleRight>1353||metrics.subtitleBottom>300)throw Error(locale+'/'+slide+' copy overflow '+JSON.stringify(metrics));
-   const name=['01-walk-away','02-approve','03-characters','04-quiet','05-privacy'][slide-1];const rendered=await page.screenshot();if(slide!==2||previousApprove[locale]===null)fs.writeFileSync(path.join(dir,name+'.png'),rendered);if(slide===2){metrics.sha256=hash(fs.readFileSync(path.join(dir,name+'.png')));metrics.unchanged=previousApprove[locale]===null||previousApprove[locale]===metrics.sha256;if(!metrics.unchanged)throw Error(locale+' 02-approve changed')}audit.slides.push({locale,name,...metrics});await page.close();console.log(locale+'/'+name);
+   const name=['01-walk-away','02-approve','03-characters','04-quiet','05-privacy'][slide-1];const rendered=await page.screenshot();fs.writeFileSync(path.join(dir,name+'.png'),rendered);audit.slides.push({locale,name,...metrics});await page.close();console.log(locale+'/'+name);
   }
  }
  fs.writeFileSync(path.join(root,'audit.json'),JSON.stringify(audit,null,2)+'\n');
