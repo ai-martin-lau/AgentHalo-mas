@@ -61,6 +61,10 @@ test("all ten reserved pet IDs have the specified seven locale names", () => {
   for (const names of Object.values(BUILTIN_PET_NAMES)) assert.deepEqual(Object.keys(names).sort(), [...SUPPORTED_LANGS].sort());
   assert.equal(BUILTIN_PET_NAMES.axolotl.zh, "六角恐龙");
   assert.equal(BUILTIN_PET_NAMES.wukong.en, "Monkey King");
+  // Halo is a brand name; every locale also says what the character is.
+  assert.equal(BUILTIN_PET_NAMES.halo.zh, "猫头鹰 Halo");
+  assert.equal(BUILTIN_PET_NAMES.halo.en, "Halo the Owl");
+  for (const [lang, name] of Object.entries(BUILTIN_PET_NAMES.halo)) assert.notEqual(name, "Halo", `${lang} shows only the bare brand name`);
 });
 
 test("fresh installs default to Halo, 50% volume and long-task completion sounds", () => {

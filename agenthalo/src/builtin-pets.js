@@ -4,13 +4,13 @@
 const LEGACY_THEME_IDS = Object.freeze(["ink", "cactus", "turtle", "fox", "acorn", "sunwukong", "crane", "sprout", "owl", "lantern", "halo", "starfish", "nimbus", "crescent", "snow", "bao", "persimmon", "teapot"]);
 const BUILTIN_PET_NAMES = Object.freeze({
   "halo": {
-    "en": "Halo",
-    "zh": "Halo",
-    "zh-TW": "Halo",
-    "ko": "Halo",
-    "ja": "Halo",
-    "pt-BR": "Halo",
-    "es": "Halo"
+    "en": "Halo the Owl",
+    "zh": "猫头鹰 Halo",
+    "zh-TW": "貓頭鷹 Halo",
+    "ko": "부엉이 Halo",
+    "ja": "フクロウのHalo",
+    "pt-BR": "Coruja Halo",
+    "es": "Halo el búho"
   },
   "fox": {
     "en": "Fox",
