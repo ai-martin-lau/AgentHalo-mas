@@ -1,0 +1,246 @@
+{
+  "count": 30,
+  "passed": true,
+  "images": [
+    {
+      "file": "en-US/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "en-US/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "en-US/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "en-US/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "en-US/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hans/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hans/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hans/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hans/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hans/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hant/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hant/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hant/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hant/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "zh-Hant/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ja/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ja/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ja/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ja/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ja/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ko/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ko/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ko/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ko/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ko/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "es-ES/01-walk-away.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "es-ES/02-approve.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "es-ES/03-characters.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "es-ES/04-quiet.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "es-ES/05-privacy.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "mode": "RGB"
+    }
+  ]
+}

@@ -1,0 +1,1638 @@
+{
+  "canvas": {
+    "css": [
+      1440,
+      900
+    ],
+    "deviceScaleFactor": 2
+  },
+  "uiDeviceScaleFactor": 4,
+  "sourceComparison": [
+    {
+      "file": "src/bubble-format.js",
+      "sha256": "cf7947f183cf68ec68d9e1d5e3da0da735641d1528594b04ae329b2a920db97f",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/bubble-policy.js",
+      "sha256": "7de05b66b252862e23af948d125ceafae168effc1e0a00b509b758260985ecec",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/bubble-renderer.js",
+      "sha256": "2a60ffc16dfb64111d7575210c75e04a01fe31f803a55ccefbec4dc312a8fd03",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/bubble-work-area.js",
+      "sha256": "79e261ad9db4490a574400b9793685555d084a3d6f02e3d6660d3e5fa03b87fd",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/bubble.css",
+      "sha256": "0b6e2c762d21b35dd46a85a0614896dae27c5ff3a08d3bf55ed81416d4211b6b",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/bubble.html",
+      "sha256": "e33ab96b104b1435695398bf69150db9d340598ee1030baf8bd12770a1730c84",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/language-picker.css",
+      "sha256": "744507a515adb18e9fcbbd556b1a519ea812381832301f1191e699fdf739c726",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/language-picker.js",
+      "sha256": "18747f3c99f19a39743aed4dacee90b342a3137e187358a49c2ad865ff48e024",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/localized-field.js",
+      "sha256": "79d0626c233134e1b461789cad0a27be4f06973e2c5e0391f430951e2a0aa1e6",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/session-hud-renderer.js",
+      "sha256": "cb2b46b6dd9a1d670980204cf4b46c11d847ef0678d11047be79c7b018ff153c",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/session-hud.html",
+      "sha256": "729e85dc58da35ddc92cba68ab80d8d159c6bda1c065f36d9e6fc59c73706527",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/session-hud.js",
+      "sha256": "6e517f1764c2c1ae625c76cd193091712b5db7263f2c9b2879c331c4701ca5af",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-actions-agents.js",
+      "sha256": "cd861923739d00256a7f32e797ea7a7ee70b045869a14ba9b96927329ae5dd50",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-actions-shortcuts.js",
+      "sha256": "6f425073830a12f04d9dba5690db4e7c9587dea326e2ae33e7e158cd07ab3dd8",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-actions-system.js",
+      "sha256": "c6065a3510ddfeb24ad135ec9dab257a3fc775c26b00933dac03276352b3782d",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-actions-theme-overrides.js",
+      "sha256": "8e1a4cf2c97b9197777ad18b572fba0de42abe86e449c14b8f9f47c80eba777a",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-actions.js",
+      "sha256": "19c1f6bc6bc0c895542e43e06c4e760fd281419abc18ca0044fa4544f95aca84",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-agent-order.js",
+      "sha256": "04281889e28b73f10d211af081fc9435bee037343edf004a6b26447923f5d428",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-anim-overrides-merge.js",
+      "sha256": "a678ff685a7ced9019233f436ce464307d6d9f8ff56e8a3b3f9ab56e793d8a1f",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-animation-overrides-main.js",
+      "sha256": "ac29d1470cb0e842f2a18c853bafb3cd6f7c5a15d58e754f54968d3ab03284bd",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-animation-preview.html",
+      "sha256": "21aed94c275e5ec4312f2bf1fc5b98b3b245656b9da94d477ff85e23e32c8039",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-controller.js",
+      "sha256": "516ee7cd5e8e0aa5e40dff19edcd2f83197de80e61ea45b125bf607623447602",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-doctor-modal.js",
+      "sha256": "cec58728ed3ba7a880ad6f1c5bae0f49e125ee096370ab10319d37f7d5c56f65",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-effect-router.js",
+      "sha256": "b6bf1b5b48a376a97dcf9e6b9833ee27feb2bee97cb61229710ff8f2a303fca0",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-i18n.js",
+      "sha256": "237dc08d003f7c6e9036311012d5e00563faaac194f579adc7ff2e92592264aa",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-icons.js",
+      "sha256": "99100375fae3c7b5766ee5ce8d3a50390e922db587685893ec704c2a3afed0f0",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-ipc.js",
+      "sha256": "9d8cd00fb1d46732afa9c7c3f5a5515e9b17c7a9757c1f6e986809ef995b1b97",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-renderer.js",
+      "sha256": "a7a019eeb6e576fb8a63ab7136b02ab2d6cb679fc1854c921bc9c86a93a6d814",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-size-preview-session.js",
+      "sha256": "a79190bff229529aea862763ceeac405f01a5554d3557a262ad53722ea4ac743",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-size-slider.js",
+      "sha256": "3b8924f86579b10f97e866a4ca5090f94a0d85f7611f9dd06560f2aaf2b4bb92",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-store.js",
+      "sha256": "084f7e2ace06edaef1eedae46064b5e104d5abb2b806e88957bc50740faa08be",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-about.js",
+      "sha256": "ace91cf2073b99bda0b302fbce87f1ebe1fdb353f6a3da9f9ba24c9142ddd10b",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-agents.js",
+      "sha256": "8f37a7c72b7da677785d4dad3af999c1944dc85746609d0c6ca5e107cdee070c",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-anim-map.js",
+      "sha256": "abebc5663594745d93bedb6b8317bf5bee3e92c158a3fe792d937bfe1fa72e50",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-anim-overrides.js",
+      "sha256": "c97f6686b34d962d0f0bc332249dcab855b6a7334b12b1b7c91e97ac90ebf51c",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-discord-presence.js",
+      "sha256": "a5bc2de39cbfcef0797e49783957fceac475f74c1251393d8ef77280981005bd",
+      "packaged": false
+    },
+    {
+      "file": "src/settings-tab-general.js",
+      "sha256": "501a31ae1d3603a55ce4d1bdba6eb6be9be60485da7a6dbf34d1755906a05ded",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-mobile.js",
+      "sha256": "0be5fd0512292bae748c84141e86bf5db181370fc38d59afd1a0d03e312bd33a",
+      "packaged": false
+    },
+    {
+      "file": "src/settings-tab-recap.js",
+      "sha256": "8769611832b7744d8dddd6ec0a4a1ff392b717b8e063a5f32cbc4e03e0f081a9",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-remote-ssh.js",
+      "sha256": "9fe010b84845feaf455c4936e8b0cfcb4682dbee7fefc1cd45746977c0f90149",
+      "packaged": false
+    },
+    {
+      "file": "src/settings-tab-shortcuts.js",
+      "sha256": "7a053519b9253792e13681bc1ec7610704fcad29ea332b8d68c93129e47e0cc9",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-tab-telegram-approval.js",
+      "sha256": "d869b2d9f53eea7073111fcf96c9796907af08b88b2b1e6ca3a655cfe5f2ceb6",
+      "packaged": false
+    },
+    {
+      "file": "src/settings-tab-theme.js",
+      "sha256": "ad1241c52d9606b94cd60b9831079b2a122a5dd1240aaa23c3470a91145cd225",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-theme-importer.js",
+      "sha256": "2cb117509745e1afd337bf36d56ab549be4007913df848773d69704320aa74b4",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-ui-core.js",
+      "sha256": "da26d0916ca2bfd987c45578f7ec678090a969c2ca7ca8544f1e82e5bcdb7a8c",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-validators.js",
+      "sha256": "8d6407df81e31383cb7cd455f31866cc5c8b0dba24155f75dfb99d601b7c26a8",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-window-icon.js",
+      "sha256": "6170a45a634234e2d4cbfd6787a5df0edd9592f12de0e68468e8347628c21b9a",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings-window.js",
+      "sha256": "e832382a9fb20a2b8522e09301e6a1b801a5b1a67d8ce05ad4fe7d337b045e81",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings.css",
+      "sha256": "d2430f73f9e69ddbcd8a78ae88c4df6f05cb464cce6310814d1a7233fa461428",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/settings.html",
+      "sha256": "a38d374b77529bb38bb499e29c37ae1be1863327f6d659eacdb544a20f24d3f4",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/shortcut-actions.js",
+      "sha256": "2a2b28dd1e43ef9e87afb4c5fe29d7aeceaa58d96082c427151de02123528d5f",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/sound-playback.js",
+      "sha256": "d960ba7f51c7c91fb63d352063836045dfb6741d2a121ce305b5252636593f8d",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/ui-color-theme-runtime.js",
+      "sha256": "1b211bb287d1965aaa5604c7f63a0967fe6e11029ab2f07424454542459d348e",
+      "packaged": true,
+      "matches": true
+    },
+    {
+      "file": "src/ui-color-theme.js",
+      "sha256": "48cb5e2261a527b7e836d1f11f903bb38d7e97c1c85ae15044524ff64ebf6145",
+      "packaged": true,
+      "matches": true
+    }
+  ],
+  "assetComparison": [
+    {
+      "file": "pets/halo/spritesheet.webp",
+      "sha256": "733652d8b2e6b93654ac294fc215ef171cbbcf29a235e5cb4f1524847dc0540b",
+      "matches": true
+    },
+    {
+      "file": "themes/halo/theme.json",
+      "sha256": "6c2e840632d798f9598be87394a58320350911df555e917d05b1e224ece4f7e1",
+      "matches": true
+    },
+    {
+      "file": "pets/fox/spritesheet.webp",
+      "sha256": "e8f21c9d2e155d5a117449d50fabc187b3ff30461152c4864730c3087936ac09",
+      "matches": true
+    },
+    {
+      "file": "themes/fox/theme.json",
+      "sha256": "19359434db2e1b19f2cadbe14adf0d038323c7b0847a50888e01b2c4b709752b",
+      "matches": true
+    },
+    {
+      "file": "pets/panda/spritesheet.webp",
+      "sha256": "bd6471c5a545ba809acbc56a4a32be0c6f09c1a36ded4ba2b74fd9bacbd2aa09",
+      "matches": true
+    },
+    {
+      "file": "themes/panda/theme.json",
+      "sha256": "3eb319acdc8b6df853b3535f25dfcb62fa0896dee3e9c369a3867340b0bc101b",
+      "matches": true
+    },
+    {
+      "file": "pets/octopus/spritesheet.webp",
+      "sha256": "e1b86f7b8f9c704982ad885a974b98c004ef3961a743d0bfba5c8d5e40068812",
+      "matches": true
+    },
+    {
+      "file": "themes/octopus/theme.json",
+      "sha256": "2e601bb1ec4746e4d4d74f885aa2af80cd5fac618f3951c6482f736fa757ce14",
+      "matches": true
+    },
+    {
+      "file": "pets/cat/spritesheet.webp",
+      "sha256": "a2c5bba37a1e0edc9fa39f8a7edc7b16c7cc9c6c2dfe6b00ce65d2668c33beb5",
+      "matches": true
+    },
+    {
+      "file": "themes/cat/theme.json",
+      "sha256": "b86e90d4bd5f2978ab8d3bb9fee8a7082846d29ad810233621a8a917e7688d05",
+      "matches": true
+    },
+    {
+      "file": "pets/bunny/spritesheet.webp",
+      "sha256": "52c6cef9f74a90391f398617bfbbcdc57c1df5ccd14f600e6756ab092694137e",
+      "matches": true
+    },
+    {
+      "file": "themes/bunny/theme.json",
+      "sha256": "2f2bd3745e63d3c536709551419e087e52777c36aaa413ff1c44e02b4998d424",
+      "matches": true
+    },
+    {
+      "file": "pets/dragon/spritesheet.webp",
+      "sha256": "9c0e81b172d916b441c8c322f5869b15a0b5b18fb3b6d04972ec917d0313a951",
+      "matches": true
+    },
+    {
+      "file": "themes/dragon/theme.json",
+      "sha256": "1c430ce097d6d4ff961fd2e98dd3cf5984ba1e4b4b9d0d7b538681205e47f31e",
+      "matches": true
+    },
+    {
+      "file": "pets/penguin/spritesheet.webp",
+      "sha256": "a16b4057c9ec76badce9c2dd8c8363dbe531e7ca68f69b224ea75e03d5f8e977",
+      "matches": true
+    },
+    {
+      "file": "themes/penguin/theme.json",
+      "sha256": "a7fd7b4a71a2972778d82d6d5ba8a997633266747d35721cc2dc440b20fecd04",
+      "matches": true
+    },
+    {
+      "file": "pets/axolotl/spritesheet.webp",
+      "sha256": "6aae5b191cca200008fb466a44672038d2df4dd6f791605c04fbc3364e7e04a4",
+      "matches": true
+    },
+    {
+      "file": "themes/axolotl/theme.json",
+      "sha256": "82dc31b5c29c8a8d5efe8db0058a24acdd51cd4be31cbd1f9ae6af609b1ab60d",
+      "matches": true
+    },
+    {
+      "file": "pets/wukong/spritesheet.webp",
+      "sha256": "0eb8ef2a10ee90fbfc9bbfc84571e28532ff6e4a32b8d3d196501287b425f5a0",
+      "matches": true
+    },
+    {
+      "file": "themes/wukong/theme.json",
+      "sha256": "fb66c651806e158948561d022942dbff6f630178fbe29d5a558e190ef00d57a3",
+      "matches": true
+    }
+  ],
+  "pages": [
+    {
+      "locale": "en-US",
+      "tab": "theme",
+      "lang": "en",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nDesktop companion\n\nChoose and customize your desktop pet.\n\nAnimation and sound\nBuilt-in\nHalo\nBUILT-IN\n✓ Active\nFox\nBUILT-IN\nPanda\nBUILT-IN\nOctopus\nBUILT-IN\nCat\nBUILT-IN\nBunny\nBUILT-IN\nDragon\nBUILT-IN\nPenguin\nBUILT-IN\nAxolotl\nBUILT-IN\nMonkey King\nBUILT-IN\nImport companions\n\nSupports AgentHalo and Codex Pet packages. Format is detected automatically.\n\nImport character package (.zip)\nOpen themes folder\nRefresh themes",
+      "themeCount": 10,
+      "activeTheme": "HaloBuilt-in✓ Active",
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "tab": "general",
+      "lang": "en",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nPreferences\n\nConfigure how AgentHalo behaves on your desktop.\n\nAppearance\nLanguage\nInterface language for menus and bubbles.\nEnglish\nInterface colors\nShared across the app; follows system light and dark mode.\nClassic Orange\nMoss Green\nOcean Blue\nSoft Lavender\nRose Pink\nSize\n30%\nText size\nSaved separately for each display.\n100%\nAlerts & feedback\nSound effects\nPlay a chime when AgentHalo finishes a task or asks for input.\nCompletion sound\nLong tasks (30 seconds or more)\nVolume\nAvailable when sound effects are on.\n50%\nBehavior & position\nFree roam\nStarts wandering after 8 seconds idle. Working, thinking or moving the mouse stops it.\nMovement style\nNatural\nHorizontal / vertical\nActivity area\nThe area file is invalid or still loading; roaming stays paused.\nChoose area…\nStartup and display\nOpen at login\nShow in menu bar\nShow in Dock\nShortcuts\nFootprints",
+      "themeCount": 0,
+      "completion": "Long tasks (30 seconds or more)Long tasks (30 seconds or more)Every timeOff",
+      "soundBox": {
+        "x": 216,
+        "y": 544.515625,
+        "width": 546,
+        "height": 248.59375
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "tab": "agents",
+      "lang": "en",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nConnected apps\n\nConnect the AI apps you use and see their tasks here.\n\nConnection check\nConnected\nDiscover and add\nClaude Code\nCONNECTED\nDisconnect\nFolder not authorized yet\nApp Store build: AgentHalo only writes hooks after you choose this tool's config folder.\nChoose folder\nManage Claude hooks automatically\nRepairs overwritten hooks automatically at startup and while running.\nTurning this off keeps installed hooks. Use Disconnect to remove them.\nStart with Claude Code\nAuto-launch AgentHalo whenever a Claude Code session starts.\nCollect local Claude usage\nReads context and available quota through AgentHalo’s status line without replacing yours. Turning off removes its status line and local cache.\nShow pop-up bubbles\nWhen off, prompts stay in the app’s own terminal.\nSubagent permission bubbles\nWhen off, subagent requests stay in the terminal.\nWait-for-input alerts\nPlays a bell when the app asks for input; permission bubbles are separate.\nCodex CLI\nCONNECTED\nDisconnect\nFolder not authorized yet\nApp Store build: AgentHalo only writes hooks after you choose this tool's config folder.\nChoose folder\nStart with Codex\nStarts with local sessions only; excludes Remote SSH and WSL.\nCodex permission mode\nNative keeps Codex AutoReview and terminal prompts in charge. Intercept shows AgentHalo Allow/Deny bubbles.\nNative\nIntercept\nNative notification sound\nWhen off, Codex Native permission prompts still show the notification animation without the prompt sound. Completion sound still plays.\nWarn when the Codex hook is inactive\nAlerts at startup if the approval hook needs attention, once per issue.\nShow pop-up bubbles\nWhen off, prompts stay in the app’s own terminal.",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "tab": "about",
+      "lang": "en",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nAgentHalo\n\nA little company while your ideas take shape.\n\nRate AgentHalo…\nVersion\nv1.0.7\nRepository\nai-martin-lau / AgentHalo-mas\nFeedback\nReport an issue\nPrivacy\nRead the privacy policy\nSupport\nHelp and contact\nGetting started\nOpen the welcome guide\nUpdates\nUpdates arrive through the Mac App Store\nLicense\nAGPL-3.0-only\n\nBuilt on Clawd on Desk. Thank you to Ruller_Lulu and all upstream contributors.\n\nOriginal project\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "tab": "bubble",
+      "text": "Permission Request\nBASH\nAgentHalo · #107\nnpm test\nAllow\nDeny\nGo to Terminal",
+      "errors": []
+    },
+    {
+      "locale": "zh-Hans",
+      "tab": "theme",
+      "lang": "zh",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n桌面伙伴\n\n选择并装扮你的桌宠。\n\n动画和声音\n内建\nHalo\n内建\n✓ 当前\n小狐狸\n内建\n熊猫\n内建\n小章鱼\n内建\n橘猫\n内建\n小兔\n内建\n小龙\n内建\n企鹅\n内建\n六角恐龙\n内建\n孙悟空\n内建\n导入伙伴\n\n支持 AgentHalo 和 Codex Pet 角色包，自动识别格式。\n\n导入角色包（.zip）\n打开主题文件夹\n刷新主题",
+      "themeCount": 10,
+      "activeTheme": "Halo内建✓ 当前",
+      "errors": []
+    },
+    {
+      "locale": "zh-Hans",
+      "tab": "general",
+      "lang": "zh",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n偏好设置\n\n配置 AgentHalo 在桌面上的行为。\n\n外观\n语言\n设置应用、菜单和弹窗的显示语言。\n简体中文\n界面配色\n全应用共用，随系统切换深浅色。\n经典暖橘\n青苔绿\n海盐蓝\n柔雾紫\n玫瑰粉\n大小\n30%\n文字大小\n每块屏幕分别记忆。\n100%\n提醒与反馈\n音效\nAI 完成任务或需要你回复时播放提示音。\n完成提示音\n长任务（30 秒以上）\n音量\n开启音效后可调节。\n50%\n行为与位置\n自由漫步\n空闲 8 秒后开始漫步；工作、思考或移动鼠标时暂停。\n移动方式\n自然\n横向 / 纵向\n活动范围\n范围文件无效或仍在读取；自由漫步会保持暂停。\n框选范围…\n启动与显示\n登录时自动启动\n在菜单栏显示\n在 Dock 显示\n快捷键\n足迹",
+      "themeCount": 0,
+      "completion": "长任务（30 秒以上）长任务（30 秒以上）每次关闭",
+      "soundBox": {
+        "x": 216,
+        "y": 507.671875,
+        "width": 546,
+        "height": 250.59375
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hans",
+      "tab": "agents",
+      "lang": "zh",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n连接应用\n\n接入你常用的 AI 应用，在桌面查看任务状态。\n\n连接检查\n已接入\n发现并添加\nClaude Code\n已接入\n断开\n尚未授权目录\n商店版只会在你选中该工具的配置文件夹后写入 hook。\n选择文件夹\n自动维护 Claude Code 连接\n自动检查并修复连接配置，让 AgentHalo 能持续接收 Claude Code 的任务状态和权限请求。\n关闭后保留现有连接配置；点击“断开连接”才会移除。\n随 Claude Code 启动\n开始 Claude Code 会话时，自动启动 AgentHalo。\n读取 Claude 上下文和额度\n通过 Claude Code 状态栏读取上下文用量和可用额度；已有自定义状态栏会保留。关闭后移除 AgentHalo 添加的状态栏和本机用量缓存。\n在桌面处理权限请求\n应用需要你允许某项操作时，在桌面显示确认弹窗。关闭后请回到原应用确认。\n显示子任务的权限请求\n应用分派的子任务需要授权时，也在桌面弹窗。关闭后请回到原应用确认。\n等待回复时播放提示音\n应用停下来等待你回复时播放提示音。此开关不控制权限弹窗。\nCodex CLI\n已接入\n断开\n尚未授权目录\n商店版只会在你选中该工具的配置文件夹后写入 hook。\n选择文件夹\n随 Codex 启动\n在本机开始 Codex 会话时，自动启动 AgentHalo。WSL 和远程会话不会触发。\nCodex 权限模式\n选择在 Codex 内确认权限，或在 AgentHalo 桌面弹窗中允许、拒绝。\n在 Codex 内确认\n在桌面弹窗确认\nCodex 权限提示音\n在 Codex 内确认权限时，是否播放桌面提示音。关闭后仍显示提醒动画，任务完成音效不受影响。\nCodex 权限连接异常时提醒\n启动时检查权限连接，同一种问题只提醒一次。\n在桌面处理权限请求\n应用需要你允许某项操作时，在桌面显示确认弹窗。关闭后请回到原应用确认。",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hans",
+      "tab": "about",
+      "lang": "zh",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\nAgentHalo\n\n陪你把想法慢慢变成现实。\n\n给 AgentHalo 评分…\n版本\nv1.0.7\n代码仓库\nai-martin-lau / AgentHalo-mas\n问题反馈\n向 AgentHalo 反馈\n隐私\n阅读隐私政策\n支持\n帮助与联系\n入门\n重新打开入门指南\n更新方式\n通过 Mac App Store 获取更新\n开源协议\nAGPL-3.0-only\n\n基于 Clawd on Desk 继续开发。感谢 Ruller_Lulu（鹿鹿）及原项目所有贡献者。\n\n原始项目\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hans",
+      "tab": "bubble",
+      "text": "权限请求\nBASH\nAgentHalo · #107\nnpm test\n批准\n拒绝\n前往终端",
+      "errors": []
+    },
+    {
+      "locale": "zh-Hant",
+      "tab": "theme",
+      "lang": "zh-TW",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n桌面夥伴\n\n選擇並裝扮你的桌寵。\n\n動畫與聲音\n內建\nHalo\n內建\n✓ 目前\n小狐狸\n內建\n熊貓\n內建\n小章魚\n內建\n橘貓\n內建\n小兔\n內建\n小龍\n內建\n企鵝\n內建\n六角恐龍\n內建\n孫悟空\n內建\n匯入夥伴\n\n支援 AgentHalo 和 Codex Pet 角色包，自動辨識格式。\n\n匯入角色包（.zip）\n開啟主題資料夾\n重新整理主題",
+      "themeCount": 10,
+      "activeTheme": "Halo內建✓ 目前",
+      "errors": []
+    },
+    {
+      "locale": "zh-Hant",
+      "tab": "general",
+      "lang": "zh-TW",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n偏好設定\n\n設定 AgentHalo 在桌面上怎麼動作。\n\n外觀\n語言\n選單和對話框的介面語言。\n繁體中文\n介面配色\n全應用程式共用，隨系統切換深淺色。\n經典暖橘\n青苔綠\n海鹽藍\n柔霧紫\n玫瑰粉\n大小\n30%\n文字大小\n每個螢幕分別記憶。\n100%\n提醒與回饋\n音效\nAgentHalo 完成任務或要等輸入時會播放提示聲。\n完成提示音\n長任務（30 秒以上）\n音量\n開啟音效後可調整。\n50%\n行為與位置\n自由漫步\n閒置 8 秒後開始漫步；工作、思考或移動滑鼠時暫停。\n移動方式\n自然\n水平 / 垂直\n活動範圍\n範圍檔案無效或仍在讀取；自由漫步會保持暫停。\n框選範圍…\n啟動與顯示\n登入時啟動\n在選單列顯示\n在 Dock 顯示\n快速鍵\n足跡",
+      "themeCount": 0,
+      "completion": "長任務（30 秒以上）長任務（30 秒以上）每次關閉",
+      "soundBox": {
+        "x": 216,
+        "y": 507.671875,
+        "width": 546,
+        "height": 250.59375
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hant",
+      "tab": "agents",
+      "lang": "zh-TW",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n連接應用\n\n接入你常用的 AI 應用，在桌面查看任務狀態。\n\n連接檢查\n已接入\n探索並加入\nClaude Code\n已接入\n中斷\n尚未授權目錄\n商店版只會在你選中該工具的設定資料夾後寫入 hook。\n選擇資料夾\n自動管理 Claude hooks\n啟動及執行期間自動修復被覆寫的 hooks。\n關閉後保留現有 hooks；按「中斷連線」才會移除。\n隨 Claude Code 啟動\nClaude Code 工作階段一開始就自動把 AgentHalo 叫起來。\n收集本機 Claude 使用資訊\n透過 AgentHalo 狀態列讀取上下文及可用額度，不取代自訂狀態列。關閉後移除該狀態列及本機快取。\n顯示彈出視窗\n關閉後回到應用程式自己的終端處理。\n子 agent 權限彈窗\n關閉後，子任務的請求回到終端處理。\n等待輸入提醒\n應用程式等待輸入時響鈴，與權限氣泡獨立。\nCodex CLI\n已接入\n中斷\n尚未授權目錄\n商店版只會在你選中該工具的設定資料夾後寫入 hook。\n選擇資料夾\n隨 Codex 啟動\n僅本機工作階段觸發，不含 Remote SSH 和 WSL。\nCodex 權限模式\nNative 維持 Codex AutoReview 和終端機原本的提示；Intercept 改成顯示 AgentHalo 的允許或拒絕對話框。\nNative\nIntercept\nNative 通知音\n關閉後，Codex Native 權限提示仍會顯示通知動畫，但不播放提示音；完成音效仍會播放。\nCodex hook 失效時提醒\n啟動時檢查審批 hook，每種問題只提醒一次。\n顯示彈出視窗\n關閉後回到應用程式自己的終端處理。",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hant",
+      "tab": "about",
+      "lang": "zh-TW",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\nAgentHalo\n\n陪你把想法慢慢變成現實。\n\n為 AgentHalo 評分…\n版本\nv1.0.7\n程式碼儲存庫\nai-martin-lau / AgentHalo-mas\n問題回報\n向 AgentHalo 回報\n隱私\n閱讀隱私權政策\n支援\n說明與聯絡\n入門\n重新開啟入門指南\n更新方式\n透過 Mac App Store 取得更新\n開源授權\nAGPL-3.0-only\n\n基於 Clawd on Desk 繼續開發。感謝 Ruller_Lulu（鹿鹿）及原專案所有貢獻者。\n\n原始專案\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "zh-Hant",
+      "tab": "bubble",
+      "text": "權限請求\nBASH\nAgentHalo · #107\nnpm test\n允許\n拒絕\n跳至終端機",
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "tab": "theme",
+      "lang": "ja",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\nデスクトップの仲間\n\nデスクトップペットを選んでカスタマイズします。\n\nアニメーションとサウンド\n組み込み\nHalo\n組み込み\n✓ 使用中\nキツネ\n組み込み\nパンダ\n組み込み\nタコ\n組み込み\nネコ\n組み込み\nウサギ\n組み込み\nドラゴン\n組み込み\nペンギン\n組み込み\nウーパールーパー\n組み込み\n孫悟空\n組み込み\n仲間を読み込む\n\nAgentHalo と Codex Pet に対応。形式は自動で判別します。\n\nキャラクターパッケージをインポート（.zip）\nテーマフォルダを開く\nテーマを更新",
+      "themeCount": 10,
+      "activeTheme": "Halo組み込み✓ 使用中",
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "tab": "general",
+      "lang": "ja",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\n環境設定\n\nAgentHalo のデスクトップでの動作を設定します。\n\n外観\n言語\nメニューと吹き出しの表示言語です。\n日本語\n画面の配色\nアプリ全体に適用され、システムのライト・ダークモードに従います。\nクラシックオレンジ\nモスグリーン\nオーシャンブルー\nラベンダー\nローズピンク\nサイズ\n30%\n文字サイズ\nディスプレイごとに保存されます。\n100%\n通知とフィードバック\n効果音\nAgentHalo がタスクを完了したとき、または入力を求めたときに音を再生します。\n完了通知音\n長いタスク（30秒以上）\n音量\n効果音がオンのときに調整できます。\n50%\n動作と位置\n自由散策\n8秒間待機すると歩き始めます。作業中・思考中やマウス操作時は停止します。\n移動スタイル\n自然\n水平 / 垂直\n活動範囲\n範囲ファイルが無効または読み込み中です。自由散策は一時停止します。\n範囲を選択…\n起動と表示\nログイン時に開く\nメニューバーに表示\nDock に表示\nショートカット\n足跡",
+      "themeCount": 0,
+      "completion": "長いタスク（30秒以上）長いタスク（30秒以上）毎回オフ",
+      "soundBox": {
+        "x": 216,
+        "y": 551.515625,
+        "width": 546,
+        "height": 271.390625
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "tab": "agents",
+      "lang": "ja",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\nアプリ連携\n\nよく使うAIアプリを連携して、タスクの状態を確認できます。\n\n接続を確認\n接続済み\n検出して追加\nClaude Code\n接続済み\n接続解除\nフォルダ未許可\nApp Store 版は、このツールの設定フォルダを選んだあとだけ hook を書き込みます。\nフォルダを選ぶ\nClaude hooks を自動管理\n起動時と実行中に上書きされた hook を自動修復します。\nオフにしても hook は残ります。削除するには接続を解除してください。\nClaude Code と同時に起動\nClaude Code セッションが開始するたびに AgentHalo を自動起動します。\nローカル Claude 使用情報を収集\n独自のステータスラインでコンテキストと取得可能な残量を読み取ります。既存の設定は置き換えません。オフにすると独自の表示とローカルキャッシュを削除します。\nポップアップ吹き出しを表示\nオフの場合はアプリ側のターミナルで処理します。\nサブエージェントの権限吹き出し\nオフの場合はサブエージェントの要求をターミナルで処理します。\n入力待ちアラート\n入力待ちをベルで知らせます。権限バブルとは独立しています。\nCodex CLI\n接続済み\n接続解除\nフォルダ未許可\nApp Store 版は、このツールの設定フォルダを選んだあとだけ hook を書き込みます。\nフォルダを選ぶ\nCodex と同時に起動\nローカルセッションのみ対象です。Remote SSH と WSL は除きます。\nCodex 権限モード\nNative は Codex AutoReview とターミナルの標準プロンプトに任せます。Intercept は AgentHalo の許可/拒否吹き出しを表示します。\nNative\nIntercept\nNative 通知音\nオフにすると、Codex Native の権限プロンプトは通知アニメーションのみ表示し、通知音は鳴らしません。完了音は引き続き再生されます。\nCodex フックが無効なとき通知\n起動時に承認 hook の問題を検出し、問題ごとに一度通知します。\nポップアップ吹き出しを表示\nオフの場合はアプリ側のターミナルで処理します。",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "tab": "about",
+      "lang": "ja",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\nAgentHalo\n\nアイデアが形になるまで、そばに。\n\nAgentHalo を評価…\nバージョン\nv1.0.7\nリポジトリ\nai-martin-lau / AgentHalo-mas\nフィードバック\nAgentHalo に報告\nプライバシー\nプライバシーポリシーを読む\nサポート\nヘルプと連絡先\nはじめに\nウェルカムガイドを開く\n更新方法\nアップデートは Mac App Store から届きます\nライセンス\nAGPL-3.0-only\n\nClawd on Desk をもとに開発しています。Ruller_Lulu と元プロジェクトのすべての貢献者に感謝します。\n\n元のプロジェクト\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "tab": "bubble",
+      "text": "権限リクエスト\nBASH\nAgentHalo · #107\nnpm test\n許可\n拒否\nターミナルへ移動",
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "tab": "theme",
+      "lang": "ko",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n데스크톱 친구\n\n데스크톱 펫을 선택하고 꾸밀 수 있습니다.\n\n애니메이션 및 소리\n기본 제공\nHalo\n기본 제공\n✓ 활성\n여우\n기본 제공\n판다\n기본 제공\n문어\n기본 제공\n고양이\n기본 제공\n토끼\n기본 제공\n용\n기본 제공\n펭귄\n기본 제공\n우파루파\n기본 제공\n손오공\n기본 제공\n친구 가져오기\n\nAgentHalo와 Codex Pet 패키지를 지원하며 형식을 자동으로 인식합니다.\n\n캐릭터 패키지 가져오기 (.zip)\n테마 폴더 열기\n테마 새로고침",
+      "themeCount": 10,
+      "activeTheme": "Halo기본 제공✓ 활성",
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "tab": "general",
+      "lang": "ko",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n환경설정\n\n데스크톱에서 AgentHalo의 동작 방식을 설정합니다.\n\n외관\n언어\n메뉴와 말풍선의 인터페이스 언어입니다.\n한국어\n인터페이스 색상\n앱 전체에 적용되며 시스템의 밝은 모드와 어두운 모드를 따릅니다.\n클래식 오렌지\n모스 그린\n오션 블루\n라벤더\n로즈 핑크\n크기\n30%\n텍스트 크기\n화면별로 따로 저장합니다.\n100%\n알림 및 피드백\n효과음\nAgentHalo가 작업을 마치거나 입력을 요청할 때 알림음을 재생합니다.\n완료 알림음\n긴 작업(30초 이상)\n볼륨\n효과음이 켜져 있을 때 조절할 수 있습니다.\n50%\n동작 및 위치\n자유 배회\n8초 동안 대기하면 걷기 시작합니다. 작업, 생각 또는 마우스 이동 시 멈춥니다.\n이동 방식\n자연스럽게\n가로 / 세로\n활동 영역\n영역 파일이 잘못되었거나 로딩 중입니다. 자유 배회는 일시 정지됩니다.\n영역 선택…\n시작 및 표시\n로그인 시 자동 실행\n메뉴바에 표시\nDock에 표시\n단축키\n발자취",
+      "themeCount": 0,
+      "completion": "긴 작업(30초 이상)긴 작업(30초 이상)매번끄기",
+      "soundBox": {
+        "x": 216,
+        "y": 544.515625,
+        "width": 546,
+        "height": 248.59375
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "tab": "agents",
+      "lang": "ko",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n앱 연결\n\n자주 사용하는 AI 앱을 연결하고 작업 상태를 확인하세요.\n\n연결 확인\n연결됨\n검색 및 추가\nClaude Code\n연결됨\n연결 해제\n폴더가 아직 허용되지 않음\nApp Store 빌드는 이 도구의 설정 폴더를 선택한 뒤에만 hook을 씁니다.\n폴더 선택\nClaude hooks 자동 관리\n시작 시와 실행 중에 덮어쓴 hook을 자동으로 복구합니다.\n꺼도 설치된 hook은 유지됩니다. 제거하려면 연결 해제를 누르세요.\nClaude Code와 함께 시작\nClaude Code 세션이 시작될 때마다 AgentHalo를 자동으로 실행합니다.\n로컬 Claude 사용 정보 수집\nAgentHalo 상태 표시줄에서 컨텍스트와 가용 할당량을 읽으며 기존 사용자 설정은 바꾸지 않습니다. 끄면 해당 표시줄과 로컬 캐시를 제거합니다.\n팝업 말풍선 표시\n끄면 앱의 터미널에서 요청을 처리합니다.\n서브 에이전트 권한 말풍선\n끄면 하위 에이전트 요청은 터미널에서 처리합니다.\n입력 대기 알림\n앱이 입력을 요청하면 알림음을 냅니다. 권한 말풍선과는 별개입니다.\nCodex CLI\n연결됨\n연결 해제\n폴더가 아직 허용되지 않음\nApp Store 빌드는 이 도구의 설정 폴더를 선택한 뒤에만 hook을 씁니다.\n폴더 선택\nCodex와 함께 시작\n로컬 세션에서만 시작합니다. Remote SSH와 WSL은 제외됩니다.\nCodex 권한 모드\nNative는 Codex AutoReview와 터미널 프롬프트를 그대로 사용합니다. Intercept는 AgentHalo 허용/거부 말풍선을 표시합니다.\nNative\nIntercept\nNative 알림 소리\n끄면 Codex Native 권한 프롬프트는 알림 애니메이션만 표시하고 프롬프트 소리는 재생하지 않습니다. 완료 소리는 계속 재생됩니다.\nCodex 훅이 비활성일 때 알림\n시작 시 승인 hook에 문제가 있으면 문제당 한 번 알립니다.\n팝업 말풍선 표시\n끄면 앱의 터미널에서 요청을 처리합니다.",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "tab": "about",
+      "lang": "ko",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\nAgentHalo\n\n아이디어가 현실이 될 때까지 곁에서 함께해요.\n\nAgentHalo 평가하기…\n버전\nv1.0.7\n저장소\nai-martin-lau / AgentHalo-mas\n피드백\nAgentHalo에 문제 보고\n개인정보\n개인정보 처리방침 읽기\n지원\n도움말 및 문의\n시작하기\n시작 가이드 다시 열기\n업데이트\nMac App Store를 통해 업데이트됩니다\n라이선스\nAGPL-3.0-only\n\nClawd on Desk를 기반으로 개발했습니다. Ruller_Lulu와 원본 프로젝트의 모든 기여자에게 감사합니다.\n\n원본 프로젝트\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "tab": "bubble",
+      "text": "권한 요청\nBASH\nAgentHalo · #107\nnpm test\n허용\n거부\n터미널로 이동",
+      "errors": []
+    },
+    {
+      "locale": "es-ES",
+      "tab": "theme",
+      "lang": "es",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nCompañero de escritorio\n\nElige y personaliza tu mascota de escritorio.\n\nAnimación y sonido\nIntegrados\nHalo\nINTEGRADO\n✓ Activo\nZorro\nINTEGRADO\nPanda\nINTEGRADO\nPulpo\nINTEGRADO\nGato\nINTEGRADO\nConejo\nINTEGRADO\nDragón\nINTEGRADO\nPingüino\nINTEGRADO\nAjolote\nINTEGRADO\nRey Mono\nINTEGRADO\nImportar compañeros\n\nAdmite paquetes AgentHalo y Codex Pet. El formato se detecta automáticamente.\n\nImportar personaje (.zip)\nAbrir carpeta de temas\nActualizar temas",
+      "themeCount": 10,
+      "activeTheme": "HaloIntegrado✓ Activo",
+      "errors": []
+    },
+    {
+      "locale": "es-ES",
+      "tab": "general",
+      "lang": "es",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nPreferencias\n\nConfigura cómo se comporta AgentHalo en tu escritorio.\n\nApariencia\nIdioma\nIdioma de la interfaz para menús y globos.\nEspañol\nColores de la interfaz\nSe aplica a toda la app y sigue el modo claro u oscuro del sistema.\nNaranja clásico\nVerde musgo\nAzul océano\nLavanda suave\nRosa\nTamaño\n30%\nTamaño del texto\nSe guarda por separado para cada pantalla.\n100%\nAlertas y comentarios\nEfectos de sonido\nReproduce un tono cuando AgentHalo termina una tarea o pide entrada.\nSonido de finalización\nTareas largas (30 segundos o más)\nVolumen\nDisponible con los efectos de sonido activados.\n50%\nComportamiento y posición\nDeambular libre\nEmpieza a pasear tras 8 segundos de inactividad. Se detiene al trabajar, pensar o mover el ratón.\nEstilo de movimiento\nNatural\nHorizontal / vertical\nÁrea de actividad\nEl archivo del área no es válido o todavía se está cargando; el paseo permanece en pausa.\nElegir área…\nInicio y visualización\nAbrir al iniciar sesión\nMostrar en la barra de menús\nMostrar en el Dock\nAtajos\nHuellas",
+      "themeCount": 0,
+      "completion": "Tareas largas (30 segundos o más)Tareas largas (30 segundos o más)SiempreDesactivado",
+      "soundBox": {
+        "x": 216,
+        "y": 544.515625,
+        "width": 626,
+        "height": 248.59375
+      },
+      "soundMenuOpen": true,
+      "errors": []
+    },
+    {
+      "locale": "es-ES",
+      "tab": "agents",
+      "lang": "es",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nAplicaciones conectadas\n\nConecta tus aplicaciones de IA y consulta sus tareas.\n\nRevisar conexiones\nConectados\nDescubrir y añadir\nClaude Code\nCONECTADO\nDesconectar\nCarpeta aún no autorizada\nEn la versión de App Store, AgentHalo solo escribe hooks después de que eliges la carpeta de configuración de esta herramienta.\nElegir carpeta\nGestionar hooks de Claude automáticamente\nRestaura hooks sobrescritos al iniciar y durante el uso.\nAl desactivar, los hooks se conservan. Usa Desconectar para eliminarlos.\nIniciar con Claude Code\nInicia AgentHalo automáticamente cada vez que arranca una sesión de Claude Code.\nRecopilar el uso local de Claude\nLee contexto y cuota disponible mediante la línea de estado de AgentHalo sin sustituir la tuya. Al desactivar, elimina su línea y la caché local.\nMostrar globos emergentes\nAl desactivar, las solicitudes se gestionan en el terminal de la app.\nGlobos de permiso de subagentes\nAl desactivar, las solicitudes de subagentes se gestionan en el terminal.\nAlertas de espera de entrada\nSuena una campana al solicitar entrada; los globos de permisos son independientes.\nCodex CLI\nCONECTADO\nDesconectar\nCarpeta aún no autorizada\nEn la versión de App Store, AgentHalo solo escribe hooks después de que eliges la carpeta de configuración de esta herramienta.\nElegir carpeta\nIniciar con Codex\nSolo inicia con sesiones locales; excluye Remote SSH y WSL.\nModo de permisos de Codex\nNativo deja a cargo el AutoReview de Codex y los avisos de la terminal. Interceptar muestra globos Permitir/Denegar de AgentHalo.\nNativo\nInterceptar\nSonido de notificación nativo\nCuando está desactivado, los avisos de permiso nativos de Codex siguen mostrando la animación de notificación pero sin el sonido del aviso. El sonido de finalización sigue sonando.\nAvisar cuando el hook de Codex esté inactivo\nAl iniciar, avisa si el hook de aprobación requiere atención, una vez por problema.\nMostrar globos emergentes\nAl desactivar, las solicitudes se gestionan en el terminal de la app.",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "es-ES",
+      "tab": "about",
+      "lang": "es",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nAgentHalo\n\nCompañía mientras tus ideas toman forma.\n\nValorar AgentHalo…\nVersión\nv1.0.7\nRepositorio\nai-martin-lau / AgentHalo-mas\nComentarios\nInformar a AgentHalo\nPrivacidad\nLeer la política de privacidad\nSoporte\nAyuda y contacto\nPrimeros pasos\nAbrir la guía de bienvenida\nActualizaciones\nLas actualizaciones llegan a través de la Mac App Store\nLicencia\nAGPL-3.0-only\n\nBasado en Clawd on Desk. Gracias a Ruller_Lulu y a todos los colaboradores del proyecto original.\n\nProyecto original\nClawd on Desk\n\n© 2026 Addsum\n\n© 2026 Ruller_Lulu and contributors",
+      "themeCount": 0,
+      "errors": []
+    },
+    {
+      "locale": "es-ES",
+      "tab": "bubble",
+      "text": "Solicitud de permiso\nBASH\nAgentHalo · #107\nnpm test\nPermitir\nDenegar\nIr a la terminal",
+      "errors": []
+    }
+  ],
+  "slides": [
+    {
+      "locale": "en-US",
+      "name": "01-walk-away",
+      "title": "Walk away. It calls you back.",
+      "subtitle": "Your pet shows what each AI coding task is doing.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "name": "02-approve",
+      "title": "Approve commands from your desktop",
+      "subtitle": "See the exact command, then allow or deny.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "name": "03-characters",
+      "title": "10 pixel friends, each with its own moves",
+      "subtitle": "Halo the owl, a fox, a panda, the Monkey King and more. Import your own packs too.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "name": "04-quiet",
+      "title": "Only chimes when it matters",
+      "subtitle": "A soft sound after tasks of 30 seconds or more. Or every time, or never.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "name": "05-privacy",
+      "title": "Stays on your Mac",
+      "subtitle": "No account, no analytics. Listens on 127.0.0.1 only.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "name": "01-walk-away",
+      "title": "交给 AI，去忙别的",
+      "subtitle": "桌宠显示每个 AI 编程任务的进度，干完了喊你回来",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "name": "02-approve",
+      "title": "在桌面上批准命令",
+      "subtitle": "看清要执行的命令，再决定允许还是拒绝",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "name": "03-characters",
+      "title": "10 个像素小伙伴，各有各的动作",
+      "subtitle": "猫头鹰 Halo、小狐狸、熊猫、孙悟空等，也能导入自己的角色包",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "name": "04-quiet",
+      "title": "该响的时候才响",
+      "subtitle": "任务跑满 30 秒才轻轻提示一声，也可以改成每次或关闭",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "name": "05-privacy",
+      "title": "数据只留在你的 Mac 上",
+      "subtitle": "没有账号，没有统计，只监听本机 127.0.0.1",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "name": "01-walk-away",
+      "title": "交給 AI，去忙別的",
+      "subtitle": "桌寵顯示每個 AI 程式任務的進度，做完了叫你回來",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "name": "02-approve",
+      "title": "在桌面上批准指令",
+      "subtitle": "看清要執行的指令，再決定允許或拒絕",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "name": "03-characters",
+      "title": "10 個像素小夥伴，各有各的動作",
+      "subtitle": "貓頭鷹 Halo、小狐狸、熊貓、孫悟空等，也能匯入自己的角色包",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "name": "04-quiet",
+      "title": "該響的時候才響",
+      "subtitle": "任務跑滿 30 秒才輕輕提示一聲，也可以改成每次或關閉",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "name": "05-privacy",
+      "title": "資料只留在你的 Mac 上",
+      "subtitle": "沒有帳號，沒有統計，只監聽本機 127.0.0.1",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "name": "01-walk-away",
+      "title": "任せて、ほかのことを。",
+      "subtitle": "AIコーディングの進み具合をペットが見せて、終わったら呼んでくれます",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "name": "02-approve",
+      "title": "コマンドはデスクトップで承認",
+      "subtitle": "実行されるコマンドを確かめてから、許可か拒否を選べます",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "name": "03-characters",
+      "title": "10体のピクセル仲間、それぞれの動き",
+      "subtitle": "フクロウのHalo、キツネ、パンダ、孫悟空など。自作のパックも読み込めます",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "name": "04-quiet",
+      "title": "鳴るのは必要なときだけ",
+      "subtitle": "30秒以上のタスクが終わったときだけ、やさしく一音。毎回やオフにもできます",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "name": "05-privacy",
+      "title": "データはMacの中だけ",
+      "subtitle": "アカウントも解析もなし。127.0.0.1 でのみ待ち受け",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "name": "01-walk-away",
+      "title": "맡겨 두고 다른 일을 하세요",
+      "subtitle": "펫이 AI 코딩 작업의 진행 상황을 보여 주고, 끝나면 불러 줍니다",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "name": "02-approve",
+      "title": "데스크톱에서 명령 승인",
+      "subtitle": "실행될 명령을 확인하고 허용 또는 거부하세요",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "name": "03-characters",
+      "title": "픽셀 친구 10종, 저마다의 동작",
+      "subtitle": "부엉이 Halo, 여우, 판다, 손오공 등. 직접 만든 팩도 가져올 수 있습니다",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "name": "04-quiet",
+      "title": "필요할 때만 울려요",
+      "subtitle": "30초 이상 걸린 작업이 끝났을 때만 부드럽게 한 번. 매번 또는 끄기도 가능",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "ko",
+      "name": "05-privacy",
+      "title": "데이터는 Mac 안에만",
+      "subtitle": "계정도 분석도 없이 127.0.0.1에서만 수신",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 193.609375,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "es-ES",
+      "name": "01-walk-away",
+      "title": "Déjalo trabajar. Te avisará.",
+      "subtitle": "Tu mascota muestra cómo va cada tarea de programación con IA y te llama al terminar.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "es-ES",
+      "name": "02-approve",
+      "title": "Aprueba comandos desde el escritorio",
+      "subtitle": "Mira el comando exacto y luego permítelo o recházalo.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "6",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "es-ES",
+      "name": "03-characters",
+      "title": "10 amigos pixelados, cada uno con sus gestos",
+      "subtitle": "Halo el búho, un zorro, un panda, el Rey Mono y más. También puedes importar los tuyos.",
+      "titleLines": 2,
+      "titleRight": 1352,
+      "subtitleBottom": 269.890625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "fox",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "panda",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "octopus",
+          "row": "7",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "cat",
+          "row": "8",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "bunny",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "dragon",
+          "row": "0",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "penguin",
+          "row": "4",
+          "column": "3",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "axolotl",
+          "row": "6",
+          "column": "0",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        },
+        {
+          "id": "wukong",
+          "row": "3",
+          "column": "2",
+          "scale": "1",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "es-ES",
+      "name": "04-quiet",
+      "title": "Solo suena cuando importa",
+      "subtitle": "Un aviso suave tras tareas de 30 segundos o más. O siempre, o nunca.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "8",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    },
+    {
+      "locale": "es-ES",
+      "name": "05-privacy",
+      "title": "Todo se queda en tu Mac",
+      "subtitle": "Sin cuenta ni analítica. Solo escucha en 127.0.0.1.",
+      "titleLines": 1,
+      "titleRight": 1352,
+      "subtitleBottom": 200.140625,
+      "pets": [
+        {
+          "id": "halo",
+          "row": "0",
+          "column": "0",
+          "scale": "2",
+          "imageRendering": "pixelated"
+        }
+      ]
+    }
+  ]
+}
