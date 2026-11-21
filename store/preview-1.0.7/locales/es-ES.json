@@ -1,0 +1,13 @@
+{
+  "locale": "es-ES",
+  "appLanguage": "es",
+  "captions": [
+    "Dale una tarea larga.",
+    "Ve a hacer otra cosa.",
+    "Te pregunta antes de ejecutar nada.",
+    "Y te avisa cuando termina.",
+    "10 amigos pixelados para elegir."
+  ],
+  "task": "Refactorizar la página de ajustes",
+  "tagline": "Un compañero tranquilo para tus tareas de IA."
+}

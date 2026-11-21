@@ -5,8 +5,8 @@
 html,body { margin:0; width:1920px; height:1080px; overflow:hidden; }
 body { background:linear-gradient(125deg,#f7f1e3 0%,#f0f2e6 40%,#e3f1ea 100%); color:#17382f; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif; -webkit-font-smoothing:antialiased; }
 #caption { position:absolute; left:120px; top:122px; width:1680px; margin:0; font-size:64px; font-weight:760; line-height:1.22; letter-spacing:-1.8px; }
-#desk { position:absolute; inset:0; }
-#other { position:absolute; left:130px; top:360px; width:650px; height:470px; border-radius:18px; background:#fafbf8; border:1px solid rgba(23,56,47,.10); box-shadow:0 24px 65px -35px rgba(23,56,47,.22); overflow:hidden; }
+#desk { position:absolute; inset:0; will-change:opacity; }
+#other { will-change:opacity,transform; position:absolute; left:130px; top:360px; width:650px; height:470px; border-radius:18px; background:#fafbf8; border:1px solid rgba(23,56,47,.10); box-shadow:0 24px 65px -35px rgba(23,56,47,.22); overflow:hidden; }
 .editor-titlebar { height:54px; display:flex; align-items:center; gap:10px; padding:0 22px; border-bottom:1px solid rgba(23,56,47,.07); background:#f0f2ee; }
 .traffic-light { width:13px; height:13px; border-radius:50%; }
 .traffic-light:nth-child(1) { background:#ed8e86; }
@@ -115,25 +115,25 @@ window.initialize = async c => {
   window.renderAt(0);
 };
 window.renderAt = t => {
-  t=Math.max(0,Math.min(21,t));
-  const ranges=[[0,3.5],[3.5,7],[7,12],[12,15.5],[15.5,19]];
+  t=Math.max(0,Math.min(16.5,t));
+  const ranges=[[0,2.2],[2.2,4.6],[4.6,8.6],[8.6,11.4],[11.4,14.4]];
   const ci=ranges.findIndex(([a,b])=>t>=a&&t<b);
   $('caption').textContent=ci<0?'':config.captions[ci];
   // First frame is already readable; remaining captions softly enter/leave.
-  $('caption').style.opacity=ci<0?0:(ci===0?ease((3.5-t)/.2):fade(t,...ranges[ci],.2));
-  const deskOpacity=ease((15.7-t)/.2); $('desk').style.opacity=deskOpacity;
-  const busy=ease((t-3.5)/.45);
-  const editorOpacity=(.30+.7*busy)*(1-.4*ease((t-12)/.3));
+  $('caption').style.opacity=ci<0?0:(ci===0?ease((2.2-t)/.25):fade(t,...ranges[ci],.25));
+  const deskOpacity=ease((11.6-t)/.2); $('desk').style.opacity=deskOpacity;
+  const busy=ease((t-2.2)/.45);
+  const editorOpacity=(.30+.7*busy)*(1-.4*ease((t-8.6)/.3));
   $('other').style.opacity=editorOpacity;
   $('other').style.transform=`translate(${Math.round(28*busy)}px,${Math.round(-12*busy)}px)`;
   $('hud').style.opacity=ease((t-.55)/.32);
   const hd=$('hud').contentDocument;
-  const state=t<3.5?'thinking':t<13.2?'working':'done';
+  const state=t<2.2?'thinking':t<9?'working':'done';
   hd.getElementById('state').textContent=config.states[state];
   hd.getElementById('state').className='state-chip '+(state==='done'?'chip-sweeping':state==='thinking'?'chip-thinking':'chip-working');
   hd.getElementById('dot').className='dot dot-'+(state==='done'?'done':'running');
   const bell=hd.getElementById('bell');bell.style.display=state==='done'?'inline-flex':'none';
-  const completePhase=(t-13.2)/.6;
+  const completePhase=(t-9)/.6;
   const completionPulse=completePhase>=0&&completePhase<1?Math.sin(Math.PI*completePhase):0;
   const hudScale=1+.04*completionPulse;
   $('hud').style.transform=`translate(${-420*(hudScale-1)}px,${-47*(hudScale-1)}px) scale(${2*hudScale})`;
@@ -141,31 +141,31 @@ window.renderAt = t => {
   const bellAngle=completePhase>=0&&completePhase<1?16*Math.sin(4*Math.PI*completePhase)*(1-.35*completePhase):0;
   bell.style.transform=`rotate(${bellAngle}deg)`;
   let action='idle', since=0;
-  if(t>=3.5&&t<7){action='running';since=3.5;}
-  if(t>=7&&t<11.6){action='waiting';since=7;}
-  if(t>=11.6&&t<13.2){action='running';since=11.6;}
-  if(t>=13.2&&t<13.8){action='jumping';since=13.2;}
-  if(t>=13.8){action='waving';since=13.8;}
-  sprite($('hero'),'halo',action,t-since,2,t<3.5?0:undefined);
-  const bubbleOpacity=fade(t,7,11.65,.18);
+  if(t>=2.2&&t<4.8){action='running';since=2.2;}
+  if(t>=4.8&&t<7.98){action='waiting';since=4.8;}
+  if(t>=7.98&&t<9){action='running';since=7.98;}
+  if(t>=9&&t<9.6){action='jumping';since=9;}
+  if(t>=9.6){action='waving';since=9.6;}
+  sprite($('hero'),'halo',action,t-since,2,t<2.2?0:undefined);
+  const bubbleOpacity=fade(t,4.8,7.98,.18);
   $('bubble').style.opacity=bubbleOpacity;
   $('bubble').style.transform=`translateX(${Math.round(10*(1-bubbleOpacity))}px) scale(2)`;
-  const pressed=t>=11.22&&t<11.42;
+  const pressed=t>=7.3&&t<7.5;
   const button=$('bubble').contentDocument.getElementById('btnAllow');
   button.style.transform=pressed?'scale(.96)':'none';
   button.style.filter=pressed?'brightness(.90)':'none';
-  const cursorOpacity=fade(t,9.55,11.62,.15);
-  const q=ease((t-9.65)/1.35), target=config.allowTarget;
+  const cursorOpacity=fade(t,6.5,7.95,.15);
+  const q=ease((t-6.6)/.65), target=config.allowTarget;
   $('cursor').style.left=Math.round(720+(target.x-720)*q)+'px';
   $('cursor').style.top=Math.round(855+(target.y-855)*q)+'px';
   $('cursor').style.opacity=cursorOpacity;
-  $('friends').style.opacity=ease((19.2-t)/.2);
-  const floatY=t>=16.8?Math.round(4*Math.sin(2*Math.PI*(t-16.8)/2.4)):0;
+  $('friends').style.opacity=ease((14.6-t)/.2);
+  const floatY=t>=12.35?Math.round(4*Math.sin(2*Math.PI*(t-12.35)/2.4)):0;
   friendCanvases.forEach((el,i)=>{
-    const since=15.5+i*.12, p=ease((t-since)/.18);
+    const since=11.4+i*.08, p=ease((t-since)/.18);
     el.style.opacity=p;el.style.transform=`translateY(${Math.round(12*(1-p))+floatY}px)`;
   });
-  $('end').style.opacity=fade(t,19,21,.20);
-  return {t,state,action,caption:ci,allowPressed:pressed,heroFixedFrame:t<3.5?0:null,editorOpacity,hudScale,bellAngle,friendsFrame:0,floatY,friendLayout:config.friendLayout};
+  $('end').style.opacity=Math.min(ease((t-14.4)/.1),ease((16.5-t)/.4));
+  return {t,state,action,caption:ci,allowPressed:pressed,heroFixedFrame:t<2.2?0:null,editorOpacity,hudScale,bellAngle,friendsFrame:0,floatY,friendLayout:config.friendLayout};
 };
 </script></body></html>

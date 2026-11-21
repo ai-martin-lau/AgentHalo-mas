@@ -1,0 +1,726 @@
+{
+  "duration": 16.5,
+  "spriteFrameSeconds": 0.12,
+  "firstSegmentOpen": true,
+  "editorCodeLines": 14,
+  "trafficLights": 3,
+  "friendsSource": "idle row 0, frame 0",
+  "deterministicScreenshot": true,
+  "fullDisplaySeconds": [
+    1.95,
+    1.9,
+    3.5,
+    2.3,
+    2.5,
+    1.6
+  ],
+  "captionChecks": [
+    {
+      "text": "Dale una tarea larga.",
+      "bounds": {
+        "x": 120,
+        "y": 122,
+        "width": 1680,
+        "height": 78.078125,
+        "right": 1800,
+        "bottom": 200.078125
+      },
+      "inkBounds": {
+        "x": 120,
+        "y": 123,
+        "width": 565.515625,
+        "height": 76,
+        "right": 685.515625,
+        "bottom": 199
+      },
+      "lines": 1,
+      "inside": true,
+      "overlap": false
+    },
+    {
+      "text": "Ve a hacer otra cosa.",
+      "bounds": {
+        "x": 120,
+        "y": 122,
+        "width": 1680,
+        "height": 78.078125,
+        "right": 1800,
+        "bottom": 200.078125
+      },
+      "inkBounds": {
+        "x": 120,
+        "y": 123,
+        "width": 574.265625,
+        "height": 76,
+        "right": 694.265625,
+        "bottom": 199
+      },
+      "lines": 1,
+      "inside": true,
+      "overlap": false
+    },
+    {
+      "text": "Te pregunta antes de ejecutar nada.",
+      "bounds": {
+        "x": 120,
+        "y": 122,
+        "width": 1680,
+        "height": 78.078125,
+        "right": 1800,
+        "bottom": 200.078125
+      },
+      "inkBounds": {
+        "x": 120,
+        "y": 123,
+        "width": 992.296875,
+        "height": 76,
+        "right": 1112.296875,
+        "bottom": 199
+      },
+      "lines": 1,
+      "inside": true,
+      "overlap": false
+    },
+    {
+      "text": "Y te avisa cuando termina.",
+      "bounds": {
+        "x": 120,
+        "y": 122,
+        "width": 1680,
+        "height": 78.078125,
+        "right": 1800,
+        "bottom": 200.078125
+      },
+      "inkBounds": {
+        "x": 120,
+        "y": 123,
+        "width": 731.984375,
+        "height": 76,
+        "right": 851.984375,
+        "bottom": 199
+      },
+      "lines": 1,
+      "inside": true,
+      "overlap": false
+    },
+    {
+      "text": "10 amigos pixelados para elegir.",
+      "bounds": {
+        "x": 120,
+        "y": 122,
+        "width": 1680,
+        "height": 78.078125,
+        "right": 1800,
+        "bottom": 200.078125
+      },
+      "inkBounds": {
+        "x": 120,
+        "y": 123,
+        "width": 886.8125,
+        "height": 76,
+        "right": 1006.8125,
+        "bottom": 199
+      },
+      "lines": 1,
+      "inside": true,
+      "overlap": false
+    }
+  ],
+  "taskChecks": [
+    {
+      "t": 0.8,
+      "text": "Refactorizar la página de ajustes",
+      "clipped": false,
+      "bounds": {
+        "x": 50,
+        "y": 14,
+        "width": 291.65625,
+        "height": 12,
+        "right": 341.65625,
+        "bottom": 26
+      }
+    },
+    {
+      "t": 3,
+      "text": "Refactorizar la página de ajustes",
+      "clipped": false,
+      "bounds": {
+        "x": 50,
+        "y": 14,
+        "width": 285.0625,
+        "height": 12,
+        "right": 335.0625,
+        "bottom": 26
+      }
+    },
+    {
+      "t": 9.3,
+      "text": "Refactorizar la página de ajustes",
+      "clipped": false,
+      "bounds": {
+        "x": 50,
+        "y": 14,
+        "width": 299.953125,
+        "height": 12,
+        "right": 349.953125,
+        "bottom": 26
+      }
+    }
+  ],
+  "tagline": {
+    "x": 0,
+    "y": 660,
+    "width": 1920,
+    "height": 51.296875,
+    "right": 1920,
+    "bottom": 711.296875
+  },
+  "samples": [
+    {
+      "t": 0,
+      "state": "thinking",
+      "action": "idle",
+      "caption": 0,
+      "allowPressed": false,
+      "heroFixedFrame": 0,
+      "editorOpacity": 0.3,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 0.5,
+      "state": "thinking",
+      "action": "idle",
+      "caption": 0,
+      "allowPressed": false,
+      "heroFixedFrame": 0,
+      "editorOpacity": 0.3,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 1,
+      "state": "thinking",
+      "action": "idle",
+      "caption": 0,
+      "allowPressed": false,
+      "heroFixedFrame": 0,
+      "editorOpacity": 0.3,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 2,
+      "state": "thinking",
+      "action": "idle",
+      "caption": 0,
+      "allowPressed": false,
+      "heroFixedFrame": 0,
+      "editorOpacity": 0.3,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 2.7,
+      "state": "working",
+      "action": "running",
+      "caption": 1,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 4.8,
+      "state": "working",
+      "action": "waiting",
+      "caption": 2,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 5.5,
+      "state": "working",
+      "action": "waiting",
+      "caption": 2,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 6.6,
+      "state": "working",
+      "action": "waiting",
+      "caption": 2,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 7.3,
+      "state": "working",
+      "action": "waiting",
+      "caption": 2,
+      "allowPressed": true,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 7.8,
+      "state": "working",
+      "action": "waiting",
+      "caption": 2,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 7.98,
+      "state": "working",
+      "action": "running",
+      "caption": 2,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 1,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 8.95,
+      "state": "working",
+      "action": "running",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.0666666667,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1.013680805739587,
+      "bellAngle": 15.14415478121224,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.2333333333,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1.0375877048290485,
+      "bellAngle": -13.61223161028417,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.3,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1.04,
+      "bellAngle": 1.96074169830959e-13,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.3666666667,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1.0375877048290485,
+      "bellAngle": 12.386693072438646,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.5333333333,
+      "state": "done",
+      "action": "jumping",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1.013680805739587,
+      "bellAngle": -10.854769901510497,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 9.6,
+      "state": "done",
+      "action": "waving",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": -7.899097520350341e-14,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 10.5,
+      "state": "done",
+      "action": "waving",
+      "caption": 3,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 12.4,
+      "state": "done",
+      "action": "waving",
+      "caption": 4,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 1,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 12.95,
+      "state": "done",
+      "action": "waving",
+      "caption": 4,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 4,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 13.55,
+      "state": "done",
+      "action": "waving",
+      "caption": 4,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": 0,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 14.5,
+      "state": "done",
+      "action": "waving",
+      "caption": -1,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": -2,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 16.1,
+      "state": "done",
+      "action": "waving",
+      "caption": -1,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": -2,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    },
+    {
+      "t": 16.4,
+      "state": "done",
+      "action": "waving",
+      "caption": -1,
+      "allowPressed": false,
+      "heroFixedFrame": null,
+      "editorOpacity": 0.6,
+      "hudScale": 1,
+      "bellAngle": 0,
+      "friendsFrame": 0,
+      "floatY": -4,
+      "friendLayout": {
+        "height": 200,
+        "gap": 18,
+        "width": 1726,
+        "left": 97,
+        "right": 97,
+        "centerY": 640
+      }
+    }
+  ]
+}

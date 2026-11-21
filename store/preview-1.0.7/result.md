@@ -1,106 +1,107 @@
-# AgentHalo 1.0.7 App Preview — 制作结果
+# AgentHalo 1.0.7 App Preview — 16.5 秒六语版
 
-已完成 en-US、zh-Hans 两条 21 秒成片、两张每 0.5 秒抽帧的总览图及可复用生成脚本。本次改动仅限 `store/preview-1.0.7/`；未修改 `agenthalo/`，未操作并行截图任务目录。未推送、未上传。全程未打开 GUI 窗口、未启动 AgentHalo、未播放声音。
+六条成片已完成并通过本地自检，使用同一套已验收画面和新的 16.5 秒节奏。en-US／zh-Hans 保留已确认文案，zh-Hant／ja／ko／es-ES 使用本轮指定的逐字文案。改动仅限 `store/preview-1.0.7/`，未修改产品或并行截图目录，未推送、未上传。
 
-## 本轮验收修改
+## 成片与抽帧总览
 
-1. 空白卡已替换为通用代码编辑器：三个红黄绿圆点、14 行长短和缩进不同的圆角代码色条，无应用名、产品图标或真实代码文字。第一段 opacity 0.3；第二段起完整显示，12 秒后继续保留；12.0–12.3 秒轻降到 0.6，保留至 15.5 秒场景交接。
-2. 13.2 秒变 Done／已完成并播放完成音效时，任务条开始一次 0.6 秒的轻微放大：13.5 秒达到 1.04，13.8 秒恢复 1.00；同一时段铃铛轻晃两轮。Halo 的 jumping 五帧一次与随后 waving 保留。总览最底行使用成片的 13.200／13.267／13.433／13.500／13.567／13.733 秒真实局部抽帧，直接展示提醒变化。
-3. 十只角色全部固定真实图集 idle 第 0 帧，已逐只检查，特别检查狐狸、企鹅、六角恐龙与熊猫的睁眼状态。可见高度 200px，按透明边界裁切后排布，总宽 1726px、左右边距均 97px；标题下方可用区间的中心为 y=640，角色中心与之对齐。全员出场后整排统一上下浮动至多 4px，不再切换表情帧。
-4. 第一段 Halo 固定平和睁眼的 idle 第 0 帧，0／0.5／1／2／3.4 秒的角色 canvas 内容完全相同；其余段的动作时序保留。
+| 语言 | 成片 | 每约 0.33 秒抽帧 | 大小（bytes） | 自检 |
+| --- | --- | --- | ---: | --- |
+| en-US | [MP4](AgentHalo-preview-en-US.mp4) | [总览](en-US-frames.png) | 1,448,690 | 通过 |
+| zh-Hans | [MP4](AgentHalo-preview-zh-Hans.mp4) | [总览](zh-Hans-frames.png) | 1,432,879 | 通过 |
+| zh-Hant | [MP4](AgentHalo-preview-zh-Hant.mp4) | [总览](zh-Hant-frames.png) | 1,437,837 | 通过 |
+| ja | [MP4](AgentHalo-preview-ja.mp4) | [总览](ja-frames.png) | 1,533,418 | 通过 |
+| ko | [MP4](AgentHalo-preview-ko.mp4) | [总览](ko-frames.png) | 1,428,140 | 通过 |
+| es-ES | [MP4](AgentHalo-preview-es-ES.mp4) | [总览](es-ES-frames.png) | 1,471,452 | 通过 |
 
-以上修改均已重新渲染到两条 MP4 中；两张总览及所有媒体检测数据已重新生成。
+每张总览为 2880×2940，含 **50 张全画面**：严格从 30fps 视频中每 10 帧取一次，时间为 0.000／0.333／0.667…16.333 秒。底部另有 6 张完成提醒局部抽帧（9.000／9.067／9.233／9.300／9.367／9.533 秒），可查看任务条放大和铃铛两轮晃动。
 
-## 交付物
+## 时间与局部动效
 
-| 文件 | 内容 |
+| 段落 | 时间 |
 | --- | --- |
-| `AgentHalo-preview-en-US.mp4` | 英文成片，1,669,059 bytes |
-| `AgentHalo-preview-zh-Hans.mp4` | 简体中文成片，1,636,854 bytes |
-| `en-US-frames.png`、`zh-Hans-frames.png` | 各 42 张全画面（0.0s 至 20.5s，每 15 帧一次）＋底部 6 张完成提醒局部；2880×2352 总览 |
-| `render.mjs` | 无第三方 Node 依赖；通过 CDP 控制无头 Chrome，逐帧截图，交给 ffmpeg 编码和混音 |
-| `preview.html` | 固定 1920×1080 场景，`window.initialize(config)` + `window.renderAt(t)` |
-| `locales/*.json` | 字幕、任务标题、收尾文案与 App 语言键 |
-| `verify.py` | ffprobe 规格断言、完整解码、分段 volumedetect、音效时点分析、抽帧与拼图 |
-| `verification.json` | 媒体规格、音量值、实际音效区间、命令参数和成片 SHA-256 |
-| `*-ffprobe.json` | 两条视频完整 ffprobe 输出 |
-| `*-acceptance.json` | 本轮四项验收的时间采样、固定睁眼帧检查、透明度、缩放、铃铛角度和横排布局 |
-| `source-manifest.json` | 所用真实产品源码与素材 SHA-256，验证前后完全一致 |
-| `design.md` | 分镜落实、真实素材来源、尺寸取舍 |
+| 交出任务 | 0–2.2s |
+| 去忙别的 | 2.2–4.6s |
+| 执行前询问 | 4.6–8.6s；4.8s 弹出气泡及 confirm；6.6s 起移动鼠标；7.3s 点击；7.8s 开始收起 |
+| 完成提醒 | 8.6–11.4s；9.0s Done 及 complete、任务条轻弹与铃铛晃动；jumping 一次后 waving |
+| 十只角色 | 11.4–14.4s；依次相隔 0.08s 出场，然后统一轻浮 |
+| 收尾卡 | 14.4–16.5s；16.1–16.5s 淡出 |
 
-## 重现命令
+通过缩短各段停留时间调整节奏，没有整体倍速、插帧或新增配音。桌宠动画保持约 120ms 一帧；气泡出入各 0.18s；鼠标 0.65s 平滑移动；按钮按下 0.2s；任务条轻弹、铃铛两轮晃动和 jumping 仍用 0.6s。第一段和横排继续使用已确认的睁眼 idle 0。
 
-从仓库根目录运行，要求 macOS、Node >=22、Chrome、ffmpeg/ffprobe、Python + Pillow。此次版本为 Node v26.0.0、Chrome 157.0.8103.80、ffmpeg 8.1.2、Python 3.14.7。
+字幕进出约 0.25s，第一句直接可读；收尾卡 0.1s 入场、0.4s 退场。六句完整显示时间依次为 **1.95／1.9／3.5／2.3／2.5／1.6 秒**。
+
+## 界面语言来源
+
+任务状态直接读取 `agenthalo/src/i18n.js`，气泡 DOM、CSS 和文案使用真实 `bubble.html`、`bubble.css`、`bubble-renderer.js`。无副作用桥接只填充分镜数据，不执行命令或修改 App 权限。
+
+| 成片 | App 语言键 | 思考／工作／完成 | 批准／拒绝按钮 |
+| --- | --- | --- | --- |
+| en-US | en | Thinking／Working／Done | Allow／Deny |
+| zh-Hans | zh | 思考中／工作中／已完成 | 批准／拒绝 |
+| zh-Hant | zh-TW | 思考中／工作中／已完成 | 允許／拒絕 |
+| ja | ja | 思考中／作業中／完了 | 許可／拒否 |
+| ko | ko | 생각 중／작업 중／완료 | 허용／거부 |
+| es-ES | es | Pensando／Trabajando／Listo | Permitir／Denegar |
+
+## 自检结果
+
+六条均为 **1920×1080、H.264、yuv420p、30/1 fps、495 帧、16.500 秒**，满足本轮 15–17 秒要求。音轨全部为 **AAC、48kHz、2 声道 stereo**。各文件小于 500MB；全片解码错误均为 0。
+
+六种语言均完成乱序跳转后同一时刻截图逐字节一致检查；第一段 Halo 固定帧检查通过；代码编辑器、完成提示、十角色布局检查保留。`*-acceptance.json` 中记录字幕实际文字范围、行数、元素重叠检查和任务名裁切检查。所有五屏字幕均为单行，全部在画幅内，未与桌面或横排角色重叠，任务名没有省略或裁切。
+
+已逐张检查六张总览中的 300 张全画面及提醒局部，并重点检查日语、西语原尺寸权限画面和西语收尾长句：文字清晰完整，没有换行出界、与主体重叠、意外空白或闪烁。结尾按要求淡出。日语最长字幕右边界约 1302px、西语约 1112px，均远离 1800px 的字幕安全边界。
+
+分段 `volumedetect` 六条结果一致（dBFS）：
+
+| 区间 | 内容 | mean_volume | max_volume |
+| --- | --- | ---: | ---: |
+| 0–4.7s | 静音 | -91.0 | -91.0 |
+| 4.8–5.4s | confirm | -27.1 | -13.5 |
+| 5.5–8.9s | 静音 | -91.0 | -91.0 |
+| 9.0–9.7s | complete | -27.2 | -12.5 |
+| 9.8–16.5s | 静音 | -91.0 | -91.0 |
+
+`volumedetect` 的静音显示下限为 -91dB。解码 AAC 后，以 10ms RMS、-60dB 阈值定位，实际可听片段均为 **4.80–5.15s** 与 **9.00–9.39s**，与事件时点一致。六条提取出的 AAC 音轨哈希完全相同，无背景音乐。
+
+统一 AAC SHA-256：`e7dd41d79438dc8f6fad75e3df7ef323d0c2e8f251b4c6867a2455058ffeb375`。
+
+## 重现命令与证据文件
+
+从仓库根目录运行；需要 macOS、Node >=22、Chrome、ffmpeg／ffprobe、Python + Pillow。默认一次输出全部六语：
 
 ```sh
 node store/preview-1.0.7/render.mjs
 python3 store/preview-1.0.7/verify.py
 ```
 
-只渲染一种语言，或只输出关键 PNG 供检查：
+只处理一种语言，或只生成关键帧：
 
 ```sh
-node store/preview-1.0.7/render.mjs en-US
-node store/preview-1.0.7/render.mjs --stills zh-Hans
-python3 store/preview-1.0.7/verify.py en-US
+node store/preview-1.0.7/render.mjs ja
+python3 store/preview-1.0.7/verify.py ja
+node store/preview-1.0.7/render.mjs --stills es-ES
 ```
 
-脚本默认使用 `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`，可通过 `CHROME_BIN` 指定。Chrome 始终带 `--headless=new --disable-gpu --mute-audio`，使用本目录 `.work/chrome-profile/`；只加载本地素材，用回环 CDP 控制，不调用系统桌面或现有浏览器。每帧设置 `n / 30` 后截图；CSS 自行动画和过渡关闭，桌宠通过无插值 canvas 绘制真实图集。
+渲染采用本目录隔离 profile 的 `--headless=new --disable-gpu --mute-audio` Chrome，以 `window.renderAt(n / 30)` 设置每一帧，再截图交给 ffmpeg。没有实时录屏，没有打开 GUI、切换前台或播放声音。`CHROME_BIN` 可覆盖 Chrome 可执行路径。
 
-更换语言时新增 `locales/<locale>.json`，保持五条 `captions`、`task`、`tagline`，并将 `appLanguage` 设为 App 已有的 `zh-TW`、`ja`、`ko`、`es` 等，然后以该文件名作为命令参数。HUD 状态和权限按钮自动读取真实 App 对应语言。本次未渲染其他语言。
-
-H.264 编码使用 `libx264 -preset medium -crf 18 -pix_fmt yuv420p -r 30 -fps_mode cfr`，标记 BT.709，启用 faststart；AAC 为 `192k / 48000Hz / 2ch`。音效与静音底轨的滤镜为：
+编码为 `libx264 -preset medium -crf 18 -pix_fmt yuv420p -r 30 -fps_mode cfr`，BT.709、faststart。音轨为 192k AAC／48kHz／2ch，时长 `-t 16.5`。静音底轨与两段原始音效的混音滤镜：
 
 ```text
-[2:a]aresample=48000,aformat=channel_layouts=stereo,adelay=7000|7000[c];
-[3:a]aresample=48000,aformat=channel_layouts=stereo,adelay=13200|13200[d];
+[2:a]aresample=48000,aformat=channel_layouts=stereo,adelay=4800|4800[c];
+[3:a]aresample=48000,aformat=channel_layouts=stereo,adelay=9000|9000[d];
 [1:a][c][d]amix=inputs=3:duration=first:normalize=0[a]
 ```
 
-输入 0 是逐帧 PNG，输入 1 是 `anullsrc=r=48000:cl=stereo`，输入 2/3 是 Halo 的 `confirm.mp3` / `complete.mp3`。输出以 `-t 21` 截止。
+输入 0 为逐帧 PNG，输入 1 为 `anullsrc=r=48000:cl=stereo`，输入 2／3 分别为 `agenthalo/pets/halo/sounds/confirm.mp3`／`complete.mp3`。
 
-## 自检结果
-
-| 项目 | en-US | zh-Hans |
-| --- | --- | --- |
-| 画幅 | 1920×1080 | 1920×1080 |
-| 编码／像素格式 | H.264 / yuv420p | H.264 / yuv420p |
-| r_frame_rate / avg_frame_rate | 30/1 / 30/1 | 30/1 / 30/1 |
-| 视频帧数 | 630 | 630 |
-| 时长 | 21.000s | 21.000s |
-| 音轨 | AAC / 48kHz / 2ch stereo | AAC / 48kHz / 2ch stereo |
-| 文件大小 | 1.67MB，低于 500MB | 1.64MB，低于 500MB |
-| 全片解码错误 | 0 | 0 |
-| 同时刻乱序回访截图 | 逐字节相同 | 逐字节相同 |
-| 抽帧总览 | 42 全画面＋6 提醒局部，已目视检查 | 42 全画面＋6 提醒局部，已目视检查 |
-
-目视检查：五屏字幕与收尾文案均完整；中英文权限标题、`npm test`、Allow／批准按钮清晰；像素角色轮廓清晰；十只角色顺序正确；抽帧中无意外空白、裁切或闪烁。3.5／7.0／12.0／15.5／19.0 秒是文字淡入淡出的边界，场景交接保留可见主体。另检查了原尺寸权限画面及按钮按下的关键帧。
-
-分段 `volumedetect` 两种语言结果相同（dBFS）：
-
-| 区间 | mean_volume | max_volume |
-| --- | ---: | ---: |
-| 0–6.9s，静音 | -91.0 | -91.0 |
-| 7.0–7.6s，confirm | -27.1 | -13.5 |
-| 7.7–13.1s，静音 | -91.0 | -91.0 |
-| 13.2–13.9s，complete | -27.2 | -12.5 |
-| 14–21s，静音 | -91.0 | -91.0 |
-
-注意 `volumedetect` 的静音显示下限为 -91dB。实际命令先做 `atrim` 再做 `volumedetect`，避免输出寻址被误当成滤镜输入裁剪。例如：
+单段音量核对示例（先 `atrim` 再 `volumedetect`）：
 
 ```sh
 ffmpeg -hide_banner -nostats \
-  -i store/preview-1.0.7/AgentHalo-preview-en-US.mp4 \
-  -vn -af 'atrim=start=7:end=7.6,volumedetect' -f null -
+  -i store/preview-1.0.7/AgentHalo-preview-es-ES.mp4 \
+  -vn -af 'atrim=start=4.8:end=5.4,volumedetect' -f null -
 ```
 
-解码 AAC 后按 10ms RMS、-60dB 阈值定位，可听片段只有 **7.00–7.35s** 与 **13.20–13.59s**，与气泡出现／Done 变化时点对应。没有背景音乐。
+`verification.json` 保存每条规格、音效区间、音量值、实际命令及视频／音轨 SHA-256；`*-ffprobe.json` 保存完整媒体信息；`*-acceptance.json` 保存布局与时序采样；`source-manifest.json` 证明使用的真实产品素材与源码在渲染前后未改变。`design.md` 记录最终时间轴。
 
-## 已知取舍与未解决问题
-
-- 无阻塞问题。主 Halo 真实帧可见高度为 160px；为满足整数倍放大且不插值，采用 2 倍、约 320px 可见高度，而非非整数缩放至 260px。十角色横排按本轮验收的约 200px 高度要求，采用原帧 1.25 倍最近邻绘制、关闭插值；这一尺寸调整取代首版横排整数 1 倍的安排。
-- HUD 按真实 CSS 与行结构展示分镜指定的完整任务标题及 Thinking／Working／Done 状态；权限气泡使用真正 DOM、CSS 与 renderer。它们的数据是分镜演示数据，未运行 App 或真实任务。
-- 保留真实 UI 的状态色、权限按钮色及 Claude Code 图标原色；没有为了单一青绿色而重涂产品界面。背景、文字使用指定的米色／薄荷色／深绿色，通用编辑器按本轮要求加入柔和灰／淡青／淡橙色条及红黄绿圆点。
-- 未上传 App Store Connect，因此没有远端处理结果。交付视频已按本任务给定的媒体规格本地验证。
-
-临时 Chrome profile、关键帧、拆分检查图与调试文件已清理；保留最终视频、两张总览、脚本与证据文件。开始任务前已存在的空文件 `codex-last.md` 未修改、未纳入本次提交。
+无待解决问题。临时 profile、拆帧与检查用图片已清理，保留视频、六张总览、生成脚本、字幕 JSON 和证据文件；已有 `codex-last.md` 未修改、未纳入提交。

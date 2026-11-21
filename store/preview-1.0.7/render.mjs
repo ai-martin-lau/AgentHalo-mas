@@ -16,7 +16,7 @@ const pets=['halo','fox','panda','octopus','cat','bunny','dragon','penguin','axo
 const chrome=process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const args=process.argv.slice(2), stills=args.includes('--stills');
 const locales=args.filter(s=>!s.startsWith('--'));
-if(!locales.length) locales.push('en-US','zh-Hans');
+if(!locales.length) locales.push('en-US','zh-Hans','zh-Hant','ja','ko','es-ES');
 await fs.mkdir(work,{recursive:true});
 const read=rel=>fs.readFile(path.join(app,rel),'utf8');
 const assetUrl=rel=>pathToFileURL(path.join(app,rel)).href;
@@ -74,40 +74,57 @@ try {
       const r=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false,optimizeForSpeed:true});return Buffer.from(r.data,'base64');
     };
     // Out-of-order seeks and identical hashes check that pixels depend only on t.
-    const a=await capture(8.5);await capture(14);const b=await capture(8.5);
+    const a=await capture(5.5);await capture(12.8);const b=await capture(5.5);
     if(!a.equals(b)){await fs.writeFile(path.join(work,'determinism-a.png'),a);await fs.writeFile(path.join(work,'determinism-b.png'),b);throw Error('Non-deterministic frame '+locale);}
     const acceptance=await evaluate(`(()=>{
-      const times=[0,.5,1,2,3.4,4,8.5,12.3,13.2,13.2666666667,13.4333333333,13.5,13.5666666667,13.7333333333,13.8,14.5,17,17.5,18];
+      const times=[0,.5,1,2,2.7,4.8,5.5,6.6,7.3,7.8,7.98,8.95,9,9.0666666667,9.2333333333,9.3,9.3666666667,9.5333333333,9.6,10.5,12.4,12.95,13.55,14.5,16.1,16.4];
       const samples=times.map(t=>window.renderAt(t));
-      const heroFrames=[0,.5,1,2,3.4].map(t=>{window.renderAt(t);return document.getElementById('hero').toDataURL();});
+      const heroFrames=[0,.5,1,2].map(t=>{window.renderAt(t);return document.getElementById('hero').toDataURL();});
       const firstSegmentOpen=heroFrames.every(x=>x===heroFrames[0]);
       const layout=config.friendLayout;
-      const ok=firstSegmentOpen&&samples.find(s=>s.t===12.3).editorOpacity===.6
-        &&Math.abs(samples.find(s=>s.t===13.5).hudScale-1.04)<1e-8
-        &&samples.find(s=>s.t===13.8).hudScale===1
-        &&Math.abs(layout.left-layout.right)<1e-8&&layout.height===200;
-      if(!ok)throw Error('Acceptance regression');
-      return {firstSegmentOpen,editorCodeLines:document.querySelectorAll('.code-line').length,
+      const rect=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom};};
+      const overlaps=(a,b)=>a.x<b.right&&a.right>b.x&&a.y<b.bottom&&a.bottom>b.y;
+      const captionChecks=config.captions.map((text,i)=>{
+        const t=[.8,3,5.5,10,12.8][i];window.renderAt(t);
+        const el=document.getElementById('caption'),b=rect(el),lineHeight=parseFloat(getComputedStyle(el).lineHeight);
+        const range=document.createRange();range.selectNodeContents(el);const ink=rect(range);
+        const subjects=i===4?[...document.querySelectorAll('#friends canvas')]:[document.getElementById('other'),document.getElementById('hud'),document.getElementById('hero')];
+        return {text,bounds:b,inkBounds:ink,lines:Math.round(b.height/lineHeight),inside:ink.x>=0&&ink.right<=1920&&ink.y>=0&&ink.bottom<=1080,overlap:subjects.some(other=>overlaps(b,rect(other)))};
+      });
+      const hd=document.getElementById('hud').contentDocument;
+      const taskChecks=[.8,3,9.3].map(t=>{
+        window.renderAt(t);const el=hd.getElementById('title');return {t,text:el.textContent,clipped:el.scrollWidth>el.clientWidth,bounds:rect(el)};
+      });
+      window.renderAt(15);const tagline=rect(document.getElementById('tagline'));
+      const fullDisplaySeconds=[1.95,1.9,3.5,2.3,2.5,1.6];
+      const ok=firstSegmentOpen&&samples.find(s=>s.t===8.95).editorOpacity===.6
+        &&Math.abs(samples.find(s=>s.t===9.3).hudScale-1.04)<1e-8
+        &&samples.find(s=>s.t===9.6).hudScale===1
+        &&Math.abs(layout.left-layout.right)<1e-8&&layout.height===200
+        &&captionChecks.every(c=>c.inside&&!c.overlap)&&taskChecks.every(c=>!c.clipped)
+        &&tagline.bottom<=1080&&tagline.y>600;
+      if(!ok)throw Error('Acceptance regression: '+JSON.stringify({captionChecks,taskChecks,tagline,samples}));
+      return {duration:16.5,spriteFrameSeconds:.12,firstSegmentOpen,editorCodeLines:document.querySelectorAll('.code-line').length,
         trafficLights:document.querySelectorAll('.traffic-light').length,friendsSource:'idle row 0, frame 0',
-        deterministicScreenshot:true,samples};
+        deterministicScreenshot:true,fullDisplaySeconds,captionChecks,taskChecks,tagline,samples};
     })()`);
     await fs.writeFile(path.join(dir,locale+'-acceptance.json'),JSON.stringify(acceptance,null,2)+'\n');
     const qa=await evaluate(`(()=>{const d=document.getElementById('bubble').contentDocument;return {states:config.states,permission:d.querySelector('.header-title').textContent,allow:d.getElementById('btnAllow').textContent,deny:d.getElementById('btnDeny').textContent,command:d.getElementById('compactBlock').textContent,bubbleHeight:d.getElementById('card').getBoundingClientRect().height,allowTarget:config.allowTarget};})()`);
     console.log(locale,JSON.stringify(qa));
     await fs.writeFile(path.join(work,locale+'-ui-check.json'),JSON.stringify(qa,null,2));
     if(stills){
-      for(const t of [0,1,4,8.5,11.3,12.3,13.2,13.2666666667,13.4333333333,13.5,13.5666666667,13.7333333333,13.8,14.5,17.5,19.5])await fs.writeFile(path.join(work,`${locale}-${t}.png`),await capture(t));
+      for(const t of [0,1,3,5.5,7.3,8.95,9,9.0666666667,9.2333333333,9.3,9.3666666667,9.5333333333,9.6,10.5,12.8,15])await fs.writeFile(path.join(work,`${locale}-${t}.png`),await capture(t));
       console.log(locale+' stills ready');continue;
     }
     const output=path.join(dir,`AgentHalo-preview-${locale}.mp4`);
-    const filter='[2:a]aresample=48000,aformat=channel_layouts=stereo,adelay=7000|7000[c];[3:a]aresample=48000,aformat=channel_layouts=stereo,adelay=13200|13200[d];[1:a][c][d]amix=inputs=3:duration=first:normalize=0[a]';
-    const ffargs=['-y','-hide_banner','-loglevel','warning','-f','image2pipe','-framerate','30','-vcodec','png','-i','pipe:0','-f','lavfi','-i','anullsrc=r=48000:cl=stereo', '-i',path.join(app,'pets/halo/sounds/confirm.mp3'),'-i',path.join(app,'pets/halo/sounds/complete.mp3'),'-filter_complex',filter,'-map','0:v','-map','[a]','-t','21','-c:v','libx264','-preset','medium','-crf','18','-pix_fmt','yuv420p','-r','30','-fps_mode','cfr','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-movflags','+faststart',output];
+    const filter='[2:a]aresample=48000,aformat=channel_layouts=stereo,adelay=4800|4800[c];[3:a]aresample=48000,aformat=channel_layouts=stereo,adelay=9000|9000[d];[1:a][c][d]amix=inputs=3:duration=first:normalize=0[a]';
+    const ffargs=['-y','-hide_banner','-loglevel','warning','-f','image2pipe','-framerate','30','-vcodec','png','-i','pipe:0','-f','lavfi','-i','anullsrc=r=48000:cl=stereo', '-i',path.join(app,'pets/halo/sounds/confirm.mp3'),'-i',path.join(app,'pets/halo/sounds/complete.mp3'),'-filter_complex',filter,'-map','0:v','-map','[a]','-t','16.5','-c:v','libx264','-preset','medium','-crf','18','-pix_fmt','yuv420p','-r','30','-fps_mode','cfr','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-movflags','+faststart',output];
     const ff=spawn('ffmpeg',ffargs,{stdio:['pipe','ignore','pipe']});let fferr='';ff.stderr.on('data',b=>fferr+=b);
     const completed=new Promise((resolve,reject)=>{ff.on('error',reject);ff.on('close',code=>code===0?resolve():reject(Error('ffmpeg '+code+' '+fferr)));});
-    for(let n=0;n<630;n++){
+    for(let n=0;n<495;n++){
       const frame=await capture(n/30);
       if(!ff.stdin.write(frame))await once(ff.stdin,'drain');
-      if(n%90===0)console.log(`${locale}: ${n}/630 frames`);
+      if(n%90===0)console.log(`${locale}: ${n}/495 frames`);
     }
     ff.stdin.end();await completed;
     const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_streams','-show_format','-of','json',output],{encoding:'utf8'}));
