@@ -75,18 +75,18 @@ desktop,pet,AI,coding,companion,productivity,agent,developer,terminal,tasks,noti
 
 ---
 
-AgentHalo is a desktop companion for AI coding tools the user already has, such as Claude Code. It has no account, server or analytics, and provides no AI service of its own.
+AgentHalo is a desktop companion for local AI coding tools. No account, analytics, hosted backend or AI service is provided. It DOES run a local HTTP server; network.server is required for incoming connections from tools on the same Mac.
 
 A. INSIDE THE APP (nothing else needed)
 
-1. Launch AgentHalo. The companion appears on the desktop and an icon in the menu bar; a short welcome guide opens on first launch.
+1. Launch AgentHalo. The companion and menu bar icon appear; a welcome guide opens on first launch.
 2. Right-click the companion (or click the menu bar icon) and choose "Settings…".
 3. "Desktop companion": click any character card and the companion switches. All 18 companions react to clicks, double-clicks and drags.
 4. "Animation and sound": click a row's thumbnail and the companion plays that state once.
 
 B. SIMULATE A CODING TOOL FROM TERMINAL (no AI tool or account needed)
 
-These commands send the same local messages a tool's hook sends. AgentHalo listens on the first free port from 23333 to 23337; on a clean Mac that is 23333.
+Use 23333 on a clean Mac. If occupied, use the AgentHalo port in 23333-23337 shown by: lsof -nP -iTCP:23333-23337 -sTCP:LISTEN
 
 1. Working:
 
@@ -108,9 +108,9 @@ In Settings → Connected apps, click "Choose folder" next to Claude Code and se
 
 ENTITLEMENTS
 
-- network.server: a small HTTP server bound to 127.0.0.1 only (first free port 23333-23337). The user's coding tools post task status to it through hook scripts. It is not reachable from the network.
+- com.apple.security.network.server: required to accept incoming HTTP connections on 127.0.0.1, first free TCP port 23333-23337. Local tool hooks POST /state to update animations and tasks, and POST /permission to display an approval bubble and receive the user's decision. network.client alone cannot accept these connections. The listener never binds to 0.0.0.0 or a LAN address. Section B demonstrates the functionality without an AI account.
 - network.client: only for requests the user starts: importing a companion pack from a link they opened, or Kimi Code usage after the user saves their own Kimi API key.
-- user-selected files and app-scoped bookmarks: App Sandbox blocks tool folders such as ~/.claude. The user chooses the folder in Settings; AgentHalo accepts only that folder or its parent and keeps a bookmark in its container. It uses the folder to add or remove its hook entries, read the tool's session files, and keep a small "agenthalo" subfolder (the local port for the hooks, the Codex auto-start setting, and short-lived records of running Claude Code tasks). Disconnecting removes both.
+- user-selected files and app-scoped bookmarks: App Sandbox blocks tool folders such as ~/.claude. The user chooses the folder in Settings; AgentHalo accepts only that folder or its parent and keeps a bookmark in its container. It adds its hook entries, reads tool session files and keeps an "agenthalo" subfolder for the local port, Codex auto-start setting and temporary Claude task records. Disconnecting removes its entries and subfolder.
 
 DATA
 

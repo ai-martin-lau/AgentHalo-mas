@@ -1,8 +1,8 @@
 {
   "appId": "6814860893",
   "platform": "MAC_OS",
-  "version": "1.0.5",
-  "build": "10501",
+  "version": "1.0.6",
+  "build": "10601",
   "localizations": {
     "en-US": {
       "name": "AgentHalo",
@@ -14,11 +14,11 @@
       "promotionalText": "Keep track of local AI coding tasks with a quiet desktop companion. See progress, respond to permission requests and choose from 18 built-in characters.",
       "whatsNew": "Added localized App Store text and screenshots in multiple languages. App functionality is unchanged.",
       "screenshots": [
-        "screenshots/en-US/01-desktop.png",
-        "screenshots/en-US/02-choose-folder.png",
-        "screenshots/en-US/03-authorized.png",
-        "screenshots/en-US/04-characters.png",
-        "screenshots/en-US/05-about.png"
+        "screenshots-1.0.6/en-US/01-walk-away.png",
+        "screenshots-1.0.6/en-US/02-approve.png",
+        "screenshots-1.0.6/en-US/03-characters.png",
+        "screenshots-1.0.6/en-US/04-connect.png",
+        "screenshots-1.0.6/en-US/05-privacy.png"
       ]
     },
     "zh-Hans": {
@@ -31,11 +31,11 @@
       "promotionalText": "让桌宠陪你完成 AI 任务：查看本机编程助手的任务状态，及时处理权限请求，18 个内置角色可选。无需账号，任务信息留在 Mac 上。",
       "whatsNew": "补齐多语言 App Store 文案与截图，应用功能保持不变。",
       "screenshots": [
-        "screenshots/01-desktop.png",
-        "screenshots/02-choose-folder.png",
-        "screenshots/03-authorized.png",
-        "screenshots/04-characters.png",
-        "screenshots/05-about.png"
+        "screenshots-1.0.6/zh-Hans/01-walk-away.png",
+        "screenshots-1.0.6/zh-Hans/02-approve.png",
+        "screenshots-1.0.6/zh-Hans/03-characters.png",
+        "screenshots-1.0.6/zh-Hans/04-connect.png",
+        "screenshots-1.0.6/zh-Hans/05-privacy.png"
       ]
     },
     "zh-Hant": {
@@ -48,11 +48,11 @@
       "promotionalText": "讓桌面夥伴陪你完成 AI 任務：查看本機程式開發工具的任務狀態、處理權限請求，還有 18 個內建角色可選。無需帳號，任務資訊留在 Mac 上。",
       "whatsNew": "補齊多語言 App Store 文案與截圖，應用程式功能保持不變。",
       "screenshots": [
-        "screenshots/zh-Hant/01-desktop.png",
-        "screenshots/zh-Hant/02-choose-folder.png",
-        "screenshots/zh-Hant/03-authorized.png",
-        "screenshots/zh-Hant/04-characters.png",
-        "screenshots/zh-Hant/05-about.png"
+        "screenshots-1.0.6/zh-Hant/01-walk-away.png",
+        "screenshots-1.0.6/zh-Hant/02-approve.png",
+        "screenshots-1.0.6/zh-Hant/03-characters.png",
+        "screenshots-1.0.6/zh-Hant/04-connect.png",
+        "screenshots-1.0.6/zh-Hant/05-privacy.png"
       ]
     },
     "ja": {
@@ -65,11 +65,11 @@
       "promotionalText": "AIコーディング作業を、デスクトップの小さな相棒と。タスクの進捗や権限リクエストを確認でき、18種類のキャラクターを選べます。アカウント不要、タスク情報はMac内で処理します。",
       "whatsNew": "App Storeの紹介文とスクリーンショットを多言語に対応しました。アプリの機能に変更はありません。",
       "screenshots": [
-        "screenshots/ja/01-desktop.png",
-        "screenshots/ja/02-choose-folder.png",
-        "screenshots/ja/03-authorized.png",
-        "screenshots/ja/04-characters.png",
-        "screenshots/ja/05-about.png"
+        "screenshots-1.0.6/ja/01-walk-away.png",
+        "screenshots-1.0.6/ja/02-approve.png",
+        "screenshots-1.0.6/ja/03-characters.png",
+        "screenshots-1.0.6/ja/04-connect.png",
+        "screenshots-1.0.6/ja/05-privacy.png"
       ]
     },
     "ko": {
@@ -82,11 +82,11 @@
       "promotionalText": "AI 코딩 작업을 데스크톱 친구와 함께하세요. 작업 진행 상황과 권한 요청을 확인하고, 18가지 기본 캐릭터를 선택할 수 있습니다. 계정 없이 작업 정보를 Mac 안에서 처리합니다.",
       "whatsNew": "App Store 소개 문구와 스크린샷을 여러 언어로 보완했습니다. 앱 기능은 변경되지 않았습니다.",
       "screenshots": [
-        "screenshots/ko/01-desktop.png",
-        "screenshots/ko/02-choose-folder.png",
-        "screenshots/ko/03-authorized.png",
-        "screenshots/ko/04-characters.png",
-        "screenshots/ko/05-about.png"
+        "screenshots-1.0.6/ko/01-walk-away.png",
+        "screenshots-1.0.6/ko/02-approve.png",
+        "screenshots-1.0.6/ko/03-characters.png",
+        "screenshots-1.0.6/ko/04-connect.png",
+        "screenshots-1.0.6/ko/05-privacy.png"
       ]
     },
     "es-ES": {
@@ -99,11 +99,11 @@
       "promotionalText": "Un compañero para tus tareas de programación con IA. Sigue el progreso, responde a solicitudes de permiso y elige entre 18 personajes. Todo en tu Mac, sin cuenta.",
       "whatsNew": "Hemos añadido textos y capturas de App Store en varios idiomas. Las funciones de la app no han cambiado.",
       "screenshots": [
-        "screenshots/es-ES/01-desktop.png",
-        "screenshots/es-ES/02-choose-folder.png",
-        "screenshots/es-ES/03-authorized.png",
-        "screenshots/es-ES/04-characters.png",
-        "screenshots/es-ES/05-about.png"
+        "screenshots-1.0.6/es-ES/01-walk-away.png",
+        "screenshots-1.0.6/es-ES/02-approve.png",
+        "screenshots-1.0.6/es-ES/03-characters.png",
+        "screenshots-1.0.6/es-ES/04-connect.png",
+        "screenshots-1.0.6/es-ES/05-privacy.png"
       ]
     }
   }

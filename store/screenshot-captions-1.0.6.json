@@ -1,0 +1,16 @@
+{
+ "order": ["01-walk-away","02-approve","03-characters","04-connect","05-privacy"],
+ "notes": {
+  "01-walk-away": "Desktop with the companion and the task list (from existing 01-desktop).",
+  "02-approve": "NEW: companion with the real permission bubble showing a Bash command (e.g. npm test) and Allow/Deny buttons, rendered from the app's own bubble HTML/CSS.",
+  "03-characters": "Character grid (from existing 04-characters).",
+  "04-connect": "Connected apps settings with a tool authorized (from existing 02/03).",
+  "05-privacy": "About/privacy (from existing 05-about)."
+ },
+ "en-US": {"01-walk-away":["Walk away. It calls you back.","Your desktop pet shows what each AI coding task is doing."],"02-approve":["Approve commands from your desktop","See the exact command, then allow or deny."],"03-characters":["18 characters, each with its own moves","17 originals plus Sun Wukong. Import your own packs too."],"04-connect":["Connect a tool in one step","Pick its config folder once. Disconnecting removes everything."],"05-privacy":["Stays on your Mac","No account, no analytics. Listens on 127.0.0.1 only."]},
+ "zh-Hans": {"01-walk-away":["交给 AI，去忙别的","桌宠显示每个 AI 编程任务的进度，干完了喊你回来"],"02-approve":["在桌面上批准命令","看清要执行的命令，再决定允许还是拒绝"],"03-characters":["18 个角色，各有各的动作","17 个原创角色和孙悟空，也能导入自己的角色包"],"04-connect":["选一次文件夹就连上","选择工具的配置文件夹即可连接，断开时全部移除"],"05-privacy":["数据只留在你的 Mac 上","没有账号，没有统计，只监听本机 127.0.0.1"]},
+ "zh-Hant": {"01-walk-away":["交給 AI，去忙別的","桌寵顯示每個 AI 程式任務的進度，做完了叫你回來"],"02-approve":["在桌面上批准指令","看清要執行的指令，再決定允許或拒絕"],"03-characters":["18 個角色，各有各的動作","17 個原創角色和孫悟空，也能匯入自己的角色包"],"04-connect":["選一次資料夾就連上","選擇工具的設定資料夾即可連接，中斷時全部移除"],"05-privacy":["資料只留在你的 Mac 上","沒有帳號，沒有統計，只監聽本機 127.0.0.1"]},
+ "ja": {"01-walk-away":["任せて、ほかのことを。","AIコーディングの進み具合をペットが見せて、終わったら呼んでくれます"],"02-approve":["コマンドはデスクトップで承認","実行されるコマンドを確かめてから、許可か拒否を選べます"],"03-characters":["18体のキャラクター、それぞれの動き","オリジナル17体と孫悟空。自作パックも読み込めます"],"04-connect":["フォルダを選ぶだけで接続","ツールの設定フォルダを一度選ぶだけ。解除すればすべて削除"],"05-privacy":["データはMacの中だけ","アカウントも解析もなし。127.0.0.1 でのみ待ち受け"]},
+ "ko": {"01-walk-away":["맡겨 두고 다른 일을 하세요","펫이 AI 코딩 작업의 진행 상황을 보여 주고, 끝나면 불러 줍니다"],"02-approve":["데스크톱에서 명령 승인","실행될 명령을 확인하고 허용 또는 거부하세요"],"03-characters":["18가지 캐릭터, 저마다의 동작","오리지널 17종과 손오공. 직접 만든 팩도 가져올 수 있습니다"],"04-connect":["폴더 한 번 선택으로 연결","도구의 설정 폴더를 한 번 고르면 끝. 연결 해제 시 모두 삭제"],"05-privacy":["데이터는 Mac 안에만","계정도 분석도 없이 127.0.0.1에서만 수신"]},
+ "es-ES": {"01-walk-away":["Déjalo trabajar. Te avisará.","Tu mascota muestra cómo va cada tarea de programación con IA y te llama al terminar."],"02-approve":["Aprueba comandos desde el escritorio","Mira el comando exacto y luego permítelo o recházalo."],"03-characters":["18 personajes, cada uno con sus gestos","17 originales y Sun Wukong. También puedes importar los tuyos."],"04-connect":["Conecta una herramienta en un paso","Elige su carpeta de configuración una vez. Al desconectar se borra todo."],"05-privacy":["Todo se queda en tu Mac","Sin cuenta ni analítica. Solo escucha en 127.0.0.1."]}
+}
