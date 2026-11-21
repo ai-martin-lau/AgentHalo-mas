@@ -106,7 +106,26 @@
         }
       ],
       "category": "public.app-category.productivity",
+      "electronLanguages": [
+        "en",
+        "zh_CN",
+        "zh_TW",
+        "ja",
+        "ko",
+        "pt_BR",
+        "es"
+      ],
       "extendInfo": {
+        "CFBundleDevelopmentRegion": "en",
+        "CFBundleLocalizations": [
+          "en",
+          "zh_CN",
+          "zh_TW",
+          "ja",
+          "ko",
+          "pt_BR",
+          "es"
+        ],
         "LSUIElement": true,
         "ITSAppUsesNonExemptEncryption": false
       }
