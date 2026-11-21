@@ -20,12 +20,13 @@
     "legal": "License or distribution notice with permanent retention requirements"
   },
   "thresholds": {
-    "trackedTreeWarningBytes": 62914560,
-    "trackedTreeHardBytes": 67108864,
+    "trackedTreeWarningBytes": 79691776,
+    "trackedTreeHardBytes": 83886080,
     "largeTrackedBinaryMediaBytes": 1048576,
     "duplicatePackagedPayloadWarningBytes": 262144,
     "artifactGrowthWarningBytes": 5242880,
-    "artifactGrowthWarningRatio": 0.05
+    "artifactGrowthWarningRatio": 0.05,
+    "_budgetNote": "Raised for 1.0.7: the ten built-in Codex v2 pet atlases in pets/ add about 18 MiB of runtime art. Generated themes/ are no longer tracked."
   },
   "pathRules": [
     {

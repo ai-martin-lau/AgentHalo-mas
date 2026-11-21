@@ -11344,6 +11344,31 @@ describe("settings renderer browser environment", () => {
     );
   });
 
+  it("renders built-in pets from their atlas instead of the external-image SVG", () => {
+    const { content } = loadThemeTabForTest({
+      themes: [
+        {
+          id: "halo",
+          name: "Halo",
+          builtin: true,
+          active: true,
+          previewFileUrl: "file:///themes/halo/assets/codex-pet-idle-loop.svg",
+          codexPet: {
+            previewAtlasUrl: "file:///themes/halo/assets/spritesheet.webp",
+            atlasColumns: 8,
+            atlasRows: 11,
+          },
+        },
+      ],
+    });
+
+    const previews = content.querySelectorAll(".theme-thumb-atlas-frame");
+    assert.strictEqual(previews.length, 1);
+    const img = previews[0].querySelector("img");
+    assert.strictEqual(img.src, "file:///themes/halo/assets/spritesheet.webp");
+    assert.deepStrictEqual([img.style.width, img.style.height], ["800%", "1100%"]);
+  });
+
   it("keeps customization visible on every capable pet while omitting Calico", () => {
     const supported = loadThemeTabForTest({
       themes: [

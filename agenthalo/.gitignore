@@ -87,3 +87,8 @@ clawd-emoji-final/
 
 # proc-info helper binary, compiled by scripts/build-proc-info.js at build time.
 /native/proc-info/build/
+
+# Built-in pet themes are generated from pets/ by scripts/generate-builtin-pets.js
+# (start, test and every build script run it first). Only the template is source.
+/themes/*
+!/themes/template/

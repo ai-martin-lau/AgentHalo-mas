@@ -12,6 +12,10 @@ const {
   getStateFiles,
   buildCapabilities,
 } = require("./theme-schema");
+const {
+  ATLAS_BY_SPRITE_VERSION,
+  DEFAULT_SPRITE_VERSION_NUMBER,
+} = require("./codex-pet-adapter");
 
 function fileUrl(absPath) {
   try { return pathToFileURL(absPath).href; } catch { return null; }
@@ -97,12 +101,32 @@ function computePreviewContentOffsetPct(raw) {
   };
 }
 
+// Built-in pets render from a raster atlas. Their generated preview SVG links
+// to spritesheet.webp, and an SVG loaded through <img> never fetches external
+// resources, so the settings tile would stay blank. Hand the atlas itself to
+// the settings page instead, the same way imported Codex pets are shown.
+function buildBuiltinPetPreview(raw, themeDir, isBuiltin) {
+  const source = raw && raw.source;
+  if (!isBuiltin || !isPlainObject(source) || source.type !== "builtin-pet") return null;
+  const name = typeof source.spritesheetPath === "string" && path.basename(source.spritesheetPath);
+  if (!name) return null;
+  const atlasPath = path.join(themeDir, "assets", name);
+  if (!fs.existsSync(atlasPath)) return null;
+  const previewAtlasUrl = fileUrl(atlasPath);
+  if (!previewAtlasUrl) return null;
+  const atlas = ATLAS_BY_SPRITE_VERSION[source.spriteVersionNumber]
+    || ATLAS_BY_SPRITE_VERSION[DEFAULT_SPRITE_VERSION_NUMBER];
+  return { previewAtlasUrl, atlasColumns: atlas.columns, atlasRows: atlas.rows };
+}
+
 function buildThemeMetadata(themeId, raw, isBuiltin, themeDir, options = {}) {
   if (!raw) return null;
+  const builtinPetPreview = buildBuiltinPetPreview(raw, themeDir, isBuiltin);
   return {
     id: themeId,
     name: raw.name || themeId,
     builtin: !!isBuiltin,
+    ...(builtinPetPreview ? { codexPet: builtinPetPreview } : {}),
     previewFileUrl: buildPreviewUrl(raw, themeDir, isBuiltin, options),
     previewContentRatio: computePreviewContentRatio(raw),
     previewContentOffsetPct: computePreviewContentOffsetPct(raw),
