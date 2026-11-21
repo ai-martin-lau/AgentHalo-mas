@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>AgentHalo App Preview</title>
+<style>
+* { box-sizing:border-box; }
+html,body { margin:0; width:1920px; height:1080px; overflow:hidden; }
+body { background:linear-gradient(125deg,#f7f1e3 0%,#f0f2e6 40%,#e3f1ea 100%); color:#17382f; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif; -webkit-font-smoothing:antialiased; }
+#caption { position:absolute; left:120px; top:122px; width:1680px; margin:0; font-size:64px; font-weight:760; line-height:1.22; letter-spacing:-1.8px; }
+#desk { position:absolute; inset:0; }
+#other { position:absolute; left:130px; top:390px; width:650px; height:430px; border-radius:22px; background:rgba(255,255,255,.42); border:1px solid rgba(255,255,255,.8); box-shadow:0 24px 65px -35px rgba(23,56,47,.18); filter:blur(2px); }
+#other:before { content:""; position:absolute; left:0; right:0; top:53px; border-top:1px solid rgba(23,56,47,.045); }
+iframe { position:absolute; border:0; background:transparent; transform-origin:0 0; pointer-events:none; }
+#hud { left:970px; top:424px; width:420px; height:47px; transform:scale(2); }
+#bubble { left:880px; top:540px; width:330px; height:210px; transform:scale(2); }
+canvas { position:absolute; image-rendering:pixelated; }
+#hero { left:1500px; top:566px; width:384px; height:416px; }
+#cursor { position:absolute; width:32px; height:42px; transform-origin:0 0; filter:drop-shadow(0 1px 1px #0004); }
+#friends { position:absolute; inset:0; }
+#end { position:absolute; inset:0; text-align:center; }
+#icon { position:absolute; width:220px; height:220px; left:850px; top:288px; }
+#name { position:absolute; top:552px; width:100%; margin:0; font-size:72px; line-height:1.1; font-weight:760; letter-spacing:-2px; }
+#tagline { position:absolute; top:660px; width:100%; margin:0; font-size:38px; font-weight:500; line-height:1.35; }
+</style></head><body>
+<h1 id="caption"></h1>
+<div id="desk"><div id="other"></div><iframe id="hud"></iframe><canvas id="hero" width="384" height="416"></canvas><iframe id="bubble"></iframe>
+<svg id="cursor" viewBox="0 0 24 32" aria-label="macOS pointer"><path d="M2 1.5V25L8 19L12.5 29L17 27L12.5 17.5H21Z" fill="#111" stroke="white" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+<div id="friends"></div>
+<div id="end"><img id="icon"><h2 id="name">AgentHalo</h2><p id="tagline"></p></div>
+<script>
+const $ = id => document.getElementById(id);
+const clamp = v => Math.max(0,Math.min(1,v));
+const ease = v => { v=clamp(v); return v*v*(3-2*v); };
+const fade = (t,a,b,d=.24) => Math.min(ease((t-a)/d),ease((b-t)/d));
+const rows = { idle:[0,6], running:[7,6], waiting:[6,6], jumping:[4,5], waving:[3,4] };
+let config, images={}, friendCanvases=[];
+function sprite(canvas,id,state,t,scale) {
+  const ctx=canvas.getContext('2d'); ctx.imageSmoothingEnabled=false;
+  const [row,n]=rows[state];
+  const frame=Math.floor(Math.max(0,t)/.12+1e-7)%n;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.drawImage(images[id],frame*192,row*208,192,208,0,0,192*scale,208*scale);
+}
+window.initialize = async c => {
+  config=c; document.documentElement.lang=c.locale;
+  $('hud').src=c.hudUrl; $('bubble').src=c.bubbleUrl;
+  const frameReady = iframe => new Promise(resolve=>iframe.onload=resolve);
+  const frames=[frameReady($('hud')),frameReady($('bubble'))];
+  await Promise.all(c.pets.map(async id=>{
+    const img=new Image(); img.src=c.assets+`pets/${id}/spritesheet.webp`; await img.decode(); images[id]=img;
+  }));
+  $('icon').src=c.assets+'assets/icon.png'; await $('icon').decode();
+  $('tagline').textContent=c.tagline;
+  for(let i=0;i<c.pets.length;i++) {
+    const el=document.createElement('canvas'); el.width=192;el.height=208;
+    el.style.left=(103+i*169)+'px'; el.style.top='554px';
+    $('friends').appendChild(el); friendCanvases.push(el);
+  }
+  await Promise.all(frames); await document.fonts.ready;
+  // Actual renderer has now populated the permission card. Freeze autonomous CSS.
+  const bd=$('bubble').contentDocument;
+  bd.getElementById('card').classList.add('visible');
+  $('bubble').style.height=(bd.getElementById('card').getBoundingClientRect().height+16)+'px';
+  const btn=bd.getElementById('btnAllow').getBoundingClientRect();
+  config.allowTarget={x:880+2*(btn.x+btn.width*.5),y:540+2*(btn.y+btn.height*.5)};
+  window.renderAt(0);
+};
+window.renderAt = t => {
+  t=Math.max(0,Math.min(21,t));
+  const ranges=[[0,3.5],[3.5,7],[7,12],[12,15.5],[15.5,19]];
+  const ci=ranges.findIndex(([a,b])=>t>=a&&t<b);
+  $('caption').textContent=ci<0?'':config.captions[ci];
+  // First frame is already readable; remaining captions softly enter/leave.
+  $('caption').style.opacity=ci<0?0:(ci===0?ease((3.5-t)/.2):fade(t,...ranges[ci],.2));
+  const deskOpacity=ease((15.7-t)/.2); $('desk').style.opacity=deskOpacity;
+  const busy=ease((t-3.5)/.45);
+  $('other').style.opacity=(.30+.7*busy)*ease((12-t)/.3);
+  $('other').style.transform=`translate(${Math.round(28*busy)}px,${Math.round(-12*busy)}px)`;
+  $('hud').style.opacity=ease((t-.55)/.32);
+  const hd=$('hud').contentDocument;
+  const state=t<3.5?'thinking':t<13.2?'working':'done';
+  hd.getElementById('state').textContent=config.states[state];
+  hd.getElementById('state').className='state-chip '+(state==='done'?'chip-sweeping':state==='thinking'?'chip-thinking':'chip-working');
+  hd.getElementById('dot').className='dot dot-'+(state==='done'?'done':'running');
+  hd.getElementById('bell').style.display=state==='done'?'inline-flex':'none';
+  let action='idle', since=0;
+  if(t>=3.5&&t<7){action='running';since=3.5;}
+  if(t>=7&&t<11.6){action='waiting';since=7;}
+  if(t>=11.6&&t<13.2){action='running';since=11.6;}
+  if(t>=13.2&&t<13.8){action='jumping';since=13.2;}
+  if(t>=13.8){action='waving';since=13.8;}
+  sprite($('hero'),'halo',action,t-since,2);
+  const bubbleOpacity=fade(t,7,11.65,.18);
+  $('bubble').style.opacity=bubbleOpacity;
+  $('bubble').style.transform=`translateX(${Math.round(10*(1-bubbleOpacity))}px) scale(2)`;
+  const pressed=t>=11.22&&t<11.42;
+  const button=$('bubble').contentDocument.getElementById('btnAllow');
+  button.style.transform=pressed?'scale(.96)':'none';
+  button.style.filter=pressed?'brightness(.90)':'none';
+  const cursorOpacity=fade(t,9.55,11.62,.15);
+  const q=ease((t-9.65)/1.35), target=config.allowTarget;
+  $('cursor').style.left=Math.round(720+(target.x-720)*q)+'px';
+  $('cursor').style.top=Math.round(855+(target.y-855)*q)+'px';
+  $('cursor').style.opacity=cursorOpacity;
+  $('friends').style.opacity=ease((19.2-t)/.2);
+  friendCanvases.forEach((el,i)=>{
+    const since=15.5+i*.12, p=ease((t-since)/.18);
+    el.style.opacity=p;el.style.transform=`translateY(${Math.round(12*(1-p))}px)`;
+    sprite(el,config.pets[i],i%3===0?'waving':'idle',Math.max(0,t-since),1);
+  });
+  $('end').style.opacity=fade(t,19,21,.20);
+  return {t,state,action,caption:ci,allowPressed:pressed};
+};
+</script></body></html>

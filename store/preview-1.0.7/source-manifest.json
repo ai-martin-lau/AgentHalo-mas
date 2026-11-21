@@ -1,0 +1,23 @@
+{
+  "agenthalo/src/session-hud.html": "729e85dc58da35ddc92cba68ab80d8d159c6bda1c065f36d9e6fc59c73706527",
+  "agenthalo/src/session-hud-renderer.js": "cb2b46b6dd9a1d670980204cf4b46c11d847ef0678d11047be79c7b018ff153c",
+  "agenthalo/src/bubble.html": "e33ab96b104b1435695398bf69150db9d340598ee1030baf8bd12770a1730c84",
+  "agenthalo/src/bubble.css": "0b6e2c762d21b35dd46a85a0614896dae27c5ff3a08d3bf55ed81416d4211b6b",
+  "agenthalo/src/bubble-renderer.js": "2a60ffc16dfb64111d7575210c75e04a01fe31f803a55ccefbec4dc312a8fd03",
+  "agenthalo/src/bubble-format.js": "cf7947f183cf68ec68d9e1d5e3da0da735641d1528594b04ae329b2a920db97f",
+  "agenthalo/src/i18n.js": "c79263679fb7c8239123d7f637f487b2d088a7eab2f908582c5ae4d06e416d89",
+  "agenthalo/assets/icon.png": "ba92a033ffe64f7ff013a163d94f8f4af6eff1c2e68cb0a2046e56b94f26335b",
+  "agenthalo/assets/icons/agents/claude-code.png": "1e047c9c72130a1cbafc1797dfd6fabe31daf0dca350e08d3b8bed3f02374f4f",
+  "agenthalo/pets/halo/spritesheet.webp": "733652d8b2e6b93654ac294fc215ef171cbbcf29a235e5cb4f1524847dc0540b",
+  "agenthalo/pets/fox/spritesheet.webp": "e8f21c9d2e155d5a117449d50fabc187b3ff30461152c4864730c3087936ac09",
+  "agenthalo/pets/panda/spritesheet.webp": "bd6471c5a545ba809acbc56a4a32be0c6f09c1a36ded4ba2b74fd9bacbd2aa09",
+  "agenthalo/pets/octopus/spritesheet.webp": "e1b86f7b8f9c704982ad885a974b98c004ef3961a743d0bfba5c8d5e40068812",
+  "agenthalo/pets/cat/spritesheet.webp": "a2c5bba37a1e0edc9fa39f8a7edc7b16c7cc9c6c2dfe6b00ce65d2668c33beb5",
+  "agenthalo/pets/bunny/spritesheet.webp": "52c6cef9f74a90391f398617bfbbcdc57c1df5ccd14f600e6756ab092694137e",
+  "agenthalo/pets/dragon/spritesheet.webp": "9c0e81b172d916b441c8c322f5869b15a0b5b18fb3b6d04972ec917d0313a951",
+  "agenthalo/pets/penguin/spritesheet.webp": "a16b4057c9ec76badce9c2dd8c8363dbe531e7ca68f69b224ea75e03d5f8e977",
+  "agenthalo/pets/axolotl/spritesheet.webp": "6aae5b191cca200008fb466a44672038d2df4dd6f791605c04fbc3364e7e04a4",
+  "agenthalo/pets/wukong/spritesheet.webp": "0eb8ef2a10ee90fbfc9bbfc84571e28532ff6e4a32b8d3d196501287b425f5a0",
+  "agenthalo/pets/halo/sounds/confirm.mp3": "fa696f6e5e891e08d083f4deb0917e3d7a9f7f04ae3abca996cd55866113bd4a",
+  "agenthalo/pets/halo/sounds/complete.mp3": "112ffaaae98ccfc415ef86a842e35d2a548edf3b9f36ceafe31c382ef39d8e75"
+}

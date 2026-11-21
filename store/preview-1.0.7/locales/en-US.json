@@ -1,0 +1,13 @@
+{
+  "locale": "en-US",
+  "appLanguage": "en",
+  "captions": [
+    "Hand it a long task.",
+    "Go do something else.",
+    "It asks before it runs.",
+    "And calls you back when it's done.",
+    "10 pixel friends to choose from."
+  ],
+  "task": "Refactor the settings page",
+  "tagline": "A quiet companion for AI coding tasks."
+}

@@ -1,0 +1,282 @@
+{
+  "en-US": {
+    "video": "AgentHalo-preview-en-US.mp4",
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30/1",
+    "frames": 630,
+    "duration": 21.0,
+    "bytes": 2475214,
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000
+    },
+    "volume_windows": [
+      {
+        "start": 0,
+        "end": 6.9,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=0:end=6.9,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 7,
+        "end": 7.6,
+        "mean_volume": -27.1,
+        "max_volume": -13.5,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=7:end=7.6,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 7.7,
+        "end": 13.1,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=7.7:end=13.1,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 13.2,
+        "end": 13.9,
+        "mean_volume": -27.2,
+        "max_volume": -12.5,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=13.2:end=13.9,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 21,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=14:end=21,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      }
+    ],
+    "audible_segments_above_minus60dB": [
+      [
+        7.0,
+        7.35
+      ],
+      [
+        13.2,
+        13.59
+      ]
+    ],
+    "extract_command": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+      "-vf",
+      "select=not(mod(n\\,15))",
+      "-fps_mode",
+      "vfr",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/en-US-frames/%03d.png"
+    ],
+    "contact_sheet_frames": 42,
+    "decode_errors": 0,
+    "sha256": "4109856bccf16dedc09822dc371466a5b7b623fe0cfc6d3c8a5c23e2e48e7cbb"
+  },
+  "zh-Hans": {
+    "video": "AgentHalo-preview-zh-Hans.mp4",
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30/1",
+    "frames": 630,
+    "duration": 21.0,
+    "bytes": 2526185,
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000
+    },
+    "volume_windows": [
+      {
+        "start": 0,
+        "end": 6.9,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=0:end=6.9,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 7,
+        "end": 7.6,
+        "mean_volume": -27.1,
+        "max_volume": -13.5,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=7:end=7.6,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 7.7,
+        "end": 13.1,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=7.7:end=13.1,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 13.2,
+        "end": 13.9,
+        "mean_volume": -27.2,
+        "max_volume": -12.5,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=13.2:end=13.9,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 21,
+        "mean_volume": -91.0,
+        "max_volume": -91.0,
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostats",
+          "-i",
+          "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+          "-vn",
+          "-af",
+          "atrim=start=14:end=21,volumedetect",
+          "-f",
+          "null",
+          "-"
+        ]
+      }
+    ],
+    "audible_segments_above_minus60dB": [
+      [
+        7.0,
+        7.35
+      ],
+      [
+        13.2,
+        13.59
+      ]
+    ],
+    "extract_command": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+      "-vf",
+      "select=not(mod(n\\,15))",
+      "-fps_mode",
+      "vfr",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/zh-Hans-frames/%03d.png"
+    ],
+    "contact_sheet_frames": 42,
+    "decode_errors": 0,
+    "sha256": "94739f8c4a67a49cdd90acf8d00546bf602097eeca17e0348b92ada1ec6a5f02"
+  }
+}
