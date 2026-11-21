@@ -76,11 +76,27 @@ try {
     // Out-of-order seeks and identical hashes check that pixels depend only on t.
     const a=await capture(8.5);await capture(14);const b=await capture(8.5);
     if(!a.equals(b)){await fs.writeFile(path.join(work,'determinism-a.png'),a);await fs.writeFile(path.join(work,'determinism-b.png'),b);throw Error('Non-deterministic frame '+locale);}
+    const acceptance=await evaluate(`(()=>{
+      const times=[0,.5,1,2,3.4,4,8.5,12.3,13.2,13.2666666667,13.4333333333,13.5,13.5666666667,13.7333333333,13.8,14.5,17,17.5,18];
+      const samples=times.map(t=>window.renderAt(t));
+      const heroFrames=[0,.5,1,2,3.4].map(t=>{window.renderAt(t);return document.getElementById('hero').toDataURL();});
+      const firstSegmentOpen=heroFrames.every(x=>x===heroFrames[0]);
+      const layout=config.friendLayout;
+      const ok=firstSegmentOpen&&samples.find(s=>s.t===12.3).editorOpacity===.6
+        &&Math.abs(samples.find(s=>s.t===13.5).hudScale-1.04)<1e-8
+        &&samples.find(s=>s.t===13.8).hudScale===1
+        &&Math.abs(layout.left-layout.right)<1e-8&&layout.height===200;
+      if(!ok)throw Error('Acceptance regression');
+      return {firstSegmentOpen,editorCodeLines:document.querySelectorAll('.code-line').length,
+        trafficLights:document.querySelectorAll('.traffic-light').length,friendsSource:'idle row 0, frame 0',
+        deterministicScreenshot:true,samples};
+    })()`);
+    await fs.writeFile(path.join(dir,locale+'-acceptance.json'),JSON.stringify(acceptance,null,2)+'\n');
     const qa=await evaluate(`(()=>{const d=document.getElementById('bubble').contentDocument;return {states:config.states,permission:d.querySelector('.header-title').textContent,allow:d.getElementById('btnAllow').textContent,deny:d.getElementById('btnDeny').textContent,command:d.getElementById('compactBlock').textContent,bubbleHeight:d.getElementById('card').getBoundingClientRect().height,allowTarget:config.allowTarget};})()`);
     console.log(locale,JSON.stringify(qa));
     await fs.writeFile(path.join(work,locale+'-ui-check.json'),JSON.stringify(qa,null,2));
     if(stills){
-      for(const t of [0,1,4,8.5,11.3,12.3,13.3,14.5,17.5,19.5])await fs.writeFile(path.join(work,`${locale}-${t}.png`),await capture(t));
+      for(const t of [0,1,4,8.5,11.3,12.3,13.2,13.2666666667,13.4333333333,13.5,13.5666666667,13.7333333333,13.8,14.5,17.5,19.5])await fs.writeFile(path.join(work,`${locale}-${t}.png`),await capture(t));
       console.log(locale+' stills ready');continue;
     }
     const output=path.join(dir,`AgentHalo-preview-${locale}.mp4`);

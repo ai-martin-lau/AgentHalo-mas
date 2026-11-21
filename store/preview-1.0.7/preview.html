@@ -6,8 +6,17 @@ html,body { margin:0; width:1920px; height:1080px; overflow:hidden; }
 body { background:linear-gradient(125deg,#f7f1e3 0%,#f0f2e6 40%,#e3f1ea 100%); color:#17382f; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif; -webkit-font-smoothing:antialiased; }
 #caption { position:absolute; left:120px; top:122px; width:1680px; margin:0; font-size:64px; font-weight:760; line-height:1.22; letter-spacing:-1.8px; }
 #desk { position:absolute; inset:0; }
-#other { position:absolute; left:130px; top:390px; width:650px; height:430px; border-radius:22px; background:rgba(255,255,255,.42); border:1px solid rgba(255,255,255,.8); box-shadow:0 24px 65px -35px rgba(23,56,47,.18); filter:blur(2px); }
-#other:before { content:""; position:absolute; left:0; right:0; top:53px; border-top:1px solid rgba(23,56,47,.045); }
+#other { position:absolute; left:130px; top:360px; width:650px; height:470px; border-radius:18px; background:#fafbf8; border:1px solid rgba(23,56,47,.10); box-shadow:0 24px 65px -35px rgba(23,56,47,.22); overflow:hidden; }
+.editor-titlebar { height:54px; display:flex; align-items:center; gap:10px; padding:0 22px; border-bottom:1px solid rgba(23,56,47,.07); background:#f0f2ee; }
+.traffic-light { width:13px; height:13px; border-radius:50%; }
+.traffic-light:nth-child(1) { background:#ed8e86; }
+.traffic-light:nth-child(2) { background:#e9c77a; }
+.traffic-light:nth-child(3) { background:#91c59d; }
+#code { display:flex; flex-direction:column; gap:13px; padding:29px 32px; }
+.code-line { height:9px; display:flex; gap:9px; align-items:center; }
+.code-token { display:block; height:7px; border-radius:4px; background:#c9cfcb; flex-shrink:0; }
+.code-token.teal { background:#a4c9c2; }
+.code-token.orange { background:#e0bf9e; }
 iframe { position:absolute; border:0; background:transparent; transform-origin:0 0; pointer-events:none; }
 #hud { left:970px; top:424px; width:420px; height:47px; transform:scale(2); }
 #bubble { left:880px; top:540px; width:330px; height:210px; transform:scale(2); }
@@ -21,7 +30,7 @@ canvas { position:absolute; image-rendering:pixelated; }
 #tagline { position:absolute; top:660px; width:100%; margin:0; font-size:38px; font-weight:500; line-height:1.35; }
 </style></head><body>
 <h1 id="caption"></h1>
-<div id="desk"><div id="other"></div><iframe id="hud"></iframe><canvas id="hero" width="384" height="416"></canvas><iframe id="bubble"></iframe>
+<div id="desk"><div id="other" aria-label="Generic code editor"><div class="editor-titlebar"><i class="traffic-light"></i><i class="traffic-light"></i><i class="traffic-light"></i></div><div id="code"></div></div><iframe id="hud"></iframe><canvas id="hero" width="384" height="416"></canvas><iframe id="bubble"></iframe>
 <svg id="cursor" viewBox="0 0 24 32" aria-label="macOS pointer"><path d="M2 1.5V25L8 19L12.5 29L17 27L12.5 17.5H21Z" fill="#111" stroke="white" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
 <div id="friends"></div>
 <div id="end"><img id="icon"><h2 id="name">AgentHalo</h2><p id="tagline"></p></div>
@@ -32,10 +41,27 @@ const ease = v => { v=clamp(v); return v*v*(3-2*v); };
 const fade = (t,a,b,d=.24) => Math.min(ease((t-a)/d),ease((b-t)/d));
 const rows = { idle:[0,6], running:[7,6], waiting:[6,6], jumping:[4,5], waving:[3,4] };
 let config, images={}, friendCanvases=[];
-function sprite(canvas,id,state,t,scale) {
+// Fourteen lines of abstract syntax bars. No app name, icon, or real source text.
+const codeLines = [
+  [0,[54,'teal'],[92,'gray'],[37,'orange']],
+  [20,[34,'gray'],[102,'teal'],[53,'gray'],[70,'orange']],
+  [20,[70,'orange'],[139,'gray']],
+  [40,[48,'teal'],[69,'gray'],[39,'orange'],[100,'gray']],
+  [40,[105,'gray'],[44,'teal']],
+  [20,[24,'gray']],
+  [0,[39,'teal'],[73,'gray'],[41,'orange'],[56,'gray']],
+  [20,[65,'orange'],[99,'gray']],
+  [40,[41,'teal'],[113,'gray'],[45,'orange']],
+  [40,[84,'gray'],[55,'teal'],[80,'gray']],
+  [20,[24,'gray']],
+  [0,[62,'teal'],[98,'gray'],[46,'orange']],
+  [20,[83,'gray'],[51,'teal']],
+  [0,[24,'gray']]
+];
+function sprite(canvas,id,state,t,scale,fixedFrame) {
   const ctx=canvas.getContext('2d'); ctx.imageSmoothingEnabled=false;
   const [row,n]=rows[state];
-  const frame=Math.floor(Math.max(0,t)/.12+1e-7)%n;
+  const frame=fixedFrame ?? Math.floor(Math.max(0,t)/.12+1e-7)%n;
   ctx.clearRect(0,0,canvas.width,canvas.height);
   ctx.drawImage(images[id],frame*192,row*208,192,208,0,0,192*scale,208*scale);
 }
@@ -49,10 +75,35 @@ window.initialize = async c => {
   }));
   $('icon').src=c.assets+'assets/icon.png'; await $('icon').decode();
   $('tagline').textContent=c.tagline;
+  for(const [indent,...tokens] of codeLines) {
+    const line=document.createElement('div'); line.className='code-line'; line.style.paddingLeft=indent+'px';
+    for(const [width,color] of tokens) {
+      const token=document.createElement('i'); token.className='code-token '+color;token.style.width=width+'px';line.appendChild(token);
+    }
+    $('code').appendChild(line);
+  }
+  // Crop only transparent margins from the approved idle-0 frame. All ten have
+  // 160px visible height; nearest-neighbor drawing meets the revised 200px target.
+  const scratch=document.createElement('canvas');scratch.width=192;scratch.height=208;
+  const ctx=scratch.getContext('2d',{willReadFrequently:true});
+  const crops=c.pets.map(id=>{
+    ctx.clearRect(0,0,192,208);ctx.drawImage(images[id],0,0,192,208,0,0,192,208);
+    const rgba=ctx.getImageData(0,0,192,208).data;let x0=192,y0=208,x1=0,y1=0;
+    for(let y=0;y<208;y++)for(let x=0;x<192;x++)if(rgba[(y*192+x)*4+3]){x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x+1);y1=Math.max(y1,y+1);}
+    return {x:x0,y:y0,width:x1-x0,height:y1-y0};
+  });
+  const widths=crops.map(b=>Math.round(b.width*200/b.height)),gap=18;
+  const total=widths.reduce((a,b)=>a+b,0)+gap*(c.pets.length-1);
+  let x=(1920-total)/2;
+  $('caption').textContent=c.captions[4];
+  const centerY=Math.round(($('caption').getBoundingClientRect().bottom+1080)/2);
+  config.friendLayout={height:200,gap,width:total,left:x,right:1920-x-total,centerY};
   for(let i=0;i<c.pets.length;i++) {
-    const el=document.createElement('canvas'); el.width=192;el.height=208;
-    el.style.left=(103+i*169)+'px'; el.style.top='554px';
-    $('friends').appendChild(el); friendCanvases.push(el);
+    const el=document.createElement('canvas');el.width=widths[i];el.height=200;
+    el.style.left=x+'px';el.style.top=(centerY-100)+'px';
+    const draw=el.getContext('2d');draw.imageSmoothingEnabled=false;const b=crops[i];
+    draw.drawImage(images[c.pets[i]],b.x,b.y,b.width,b.height,0,0,el.width,200);
+    $('friends').appendChild(el);friendCanvases.push(el);x+=el.width+gap;
   }
   await Promise.all(frames); await document.fonts.ready;
   // Actual renderer has now populated the permission card. Freeze autonomous CSS.
@@ -72,7 +123,8 @@ window.renderAt = t => {
   $('caption').style.opacity=ci<0?0:(ci===0?ease((3.5-t)/.2):fade(t,...ranges[ci],.2));
   const deskOpacity=ease((15.7-t)/.2); $('desk').style.opacity=deskOpacity;
   const busy=ease((t-3.5)/.45);
-  $('other').style.opacity=(.30+.7*busy)*ease((12-t)/.3);
+  const editorOpacity=(.30+.7*busy)*(1-.4*ease((t-12)/.3));
+  $('other').style.opacity=editorOpacity;
   $('other').style.transform=`translate(${Math.round(28*busy)}px,${Math.round(-12*busy)}px)`;
   $('hud').style.opacity=ease((t-.55)/.32);
   const hd=$('hud').contentDocument;
@@ -80,14 +132,21 @@ window.renderAt = t => {
   hd.getElementById('state').textContent=config.states[state];
   hd.getElementById('state').className='state-chip '+(state==='done'?'chip-sweeping':state==='thinking'?'chip-thinking':'chip-working');
   hd.getElementById('dot').className='dot dot-'+(state==='done'?'done':'running');
-  hd.getElementById('bell').style.display=state==='done'?'inline-flex':'none';
+  const bell=hd.getElementById('bell');bell.style.display=state==='done'?'inline-flex':'none';
+  const completePhase=(t-13.2)/.6;
+  const completionPulse=completePhase>=0&&completePhase<1?Math.sin(Math.PI*completePhase):0;
+  const hudScale=1+.04*completionPulse;
+  $('hud').style.transform=`translate(${-420*(hudScale-1)}px,${-47*(hudScale-1)}px) scale(${2*hudScale})`;
+  bell.style.transformOrigin='50% 20%';
+  const bellAngle=completePhase>=0&&completePhase<1?16*Math.sin(4*Math.PI*completePhase)*(1-.35*completePhase):0;
+  bell.style.transform=`rotate(${bellAngle}deg)`;
   let action='idle', since=0;
   if(t>=3.5&&t<7){action='running';since=3.5;}
   if(t>=7&&t<11.6){action='waiting';since=7;}
   if(t>=11.6&&t<13.2){action='running';since=11.6;}
   if(t>=13.2&&t<13.8){action='jumping';since=13.2;}
   if(t>=13.8){action='waving';since=13.8;}
-  sprite($('hero'),'halo',action,t-since,2);
+  sprite($('hero'),'halo',action,t-since,2,t<3.5?0:undefined);
   const bubbleOpacity=fade(t,7,11.65,.18);
   $('bubble').style.opacity=bubbleOpacity;
   $('bubble').style.transform=`translateX(${Math.round(10*(1-bubbleOpacity))}px) scale(2)`;
@@ -101,12 +160,12 @@ window.renderAt = t => {
   $('cursor').style.top=Math.round(855+(target.y-855)*q)+'px';
   $('cursor').style.opacity=cursorOpacity;
   $('friends').style.opacity=ease((19.2-t)/.2);
+  const floatY=t>=16.8?Math.round(4*Math.sin(2*Math.PI*(t-16.8)/2.4)):0;
   friendCanvases.forEach((el,i)=>{
     const since=15.5+i*.12, p=ease((t-since)/.18);
-    el.style.opacity=p;el.style.transform=`translateY(${Math.round(12*(1-p))}px)`;
-    sprite(el,config.pets[i],i%3===0?'waving':'idle',Math.max(0,t-since),1);
+    el.style.opacity=p;el.style.transform=`translateY(${Math.round(12*(1-p))+floatY}px)`;
   });
   $('end').style.opacity=fade(t,19,21,.20);
-  return {t,state,action,caption:ci,allowPressed:pressed};
+  return {t,state,action,caption:ci,allowPressed:pressed,heroFixedFrame:t<3.5?0:null,editorOpacity,hudScale,bellAngle,friendsFrame:0,floatY,friendLayout:config.friendLayout};
 };
 </script></body></html>

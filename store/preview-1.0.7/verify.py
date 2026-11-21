@@ -68,7 +68,7 @@ for locale in LOCALES:
     paths = sorted(frames.glob('*.png'))
     assert len(paths) == 42
     # 6 columns x 7 rows; every thumbnail has its exact source timestamp.
-    sheet = Image.new('RGB', (2880, 2058), '#f7f8f6')
+    sheet = Image.new('RGB', (2880, 2352), '#f7f8f6')
     draw = ImageDraw.Draw(sheet)
     font = ImageFont.truetype('/System/Library/Fonts/Menlo.ttc', 17)
     for i, frame in enumerate(paths):
@@ -78,7 +78,30 @@ for locale in LOCALES:
         x = (i % 6) * 480; y = (i // 6) * 294
         draw.text((x+9,y+3), f'{locale}   {i*.5:04.1f}s', font=font, fill='#17382f')
         sheet.paste(image.resize((480,270),Image.Resampling.LANCZOS),(x,y+24))
+    # Add six real video crops so both bell swings and the 1.04 pulse are visible.
+    detail_frames = WORK / (locale+'-completion')
+    detail_frames.mkdir(exist_ok=True)
+    detail_indices = [396, 398, 403, 405, 407, 412]
+    detail_select = '+'.join(f'eq(n\\,{n})' for n in detail_indices)
+    detail_extract = ['ffmpeg', '-y', '-hide_banner', '-loglevel', 'error', '-i', str(video), '-vf', 'select='+detail_select, '-fps_mode', 'vfr', str(detail_frames/'%03d.png')]
+    run(detail_extract)
+    detail_paths = sorted(detail_frames.glob('*.png'))
+    assert len(detail_paths) == 6
+    for i, frame in enumerate(detail_paths):
+        x=i*480; y=7*294
+        draw.text((x+9,y+3), f'CALLBACK {detail_indices[i]/30:06.3f}s', font=font, fill='#17382f')
+        crop=Image.open(frame).convert('RGB').crop((1520,380,1840,560))
+        sheet.paste(crop.resize((480,270),Image.Resampling.LANCZOS),(x,y+24))
     sheet.save(ROOT / (locale+'-frames.png'))
+    acceptance = json.loads((ROOT/(locale+'-acceptance.json')).read_text())
+    assert acceptance['firstSegmentOpen'] and acceptance['deterministicScreenshot']
+    assert acceptance['editorCodeLines'] == 14 and acceptance['trafficLights'] == 3
+    samples = acceptance['samples']
+    peak = next(s for s in samples if s['t'] == 13.5)
+    assert abs(peak['hudScale']-1.04)<1e-8
+    assert next(s for s in samples if s['t'] == 12.3)['editorOpacity'] == .6
+    assert all(s['friendLayout']['height']==200 and s['friendsFrame']==0 for s in samples)
+
     # Inspection strips preserve 640px previews; these are temporary, not deliverables.
     for block in range(3):
         subset=paths[block*14:(block+1)*14]
@@ -94,7 +117,8 @@ for locale in LOCALES:
         'duration':float(p['format']['duration']), 'bytes':int(p['format']['size']),
         'audio': {'codec':a['codec_name'], 'channels':a['channels'], 'sample_rate':int(a['sample_rate'])},
         'volume_windows':windows, 'audible_segments_above_minus60dB':segments,
-        'extract_command':extract, 'contact_sheet_frames':42, 'decode_errors':0,
+        'extract_command':extract, 'contact_sheet_frames':42, 'completion_detail_frames':6,
+        'completion_extract_command':detail_extract, 'acceptance':acceptance, 'decode_errors':0,
         'sha256':hashlib.sha256(video.read_bytes()).hexdigest()
     }
     print(locale, json.dumps({k:report[locale][k] for k in ['duration','bytes','audio','audible_segments_above_minus60dB','decode_errors']}))
@@ -104,4 +128,4 @@ for rel, expected in manifest.items():
     actual=hashlib.sha256((ROOT.parent.parent/rel).read_bytes()).hexdigest()
     assert expected==actual, 'Product source changed during render: '+rel
 (ROOT/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-print('All requested media checks passed; 42-frame contact sheets written.')
+print('All requested media checks passed; 42-frame contact sheets with six callback details written.')

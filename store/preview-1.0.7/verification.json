@@ -8,7 +8,7 @@
     "frame_rate": "30/1",
     "frames": 630,
     "duration": 21.0,
-    "bytes": 2475214,
+    "bytes": 1669059,
     "audio": {
       "codec": "aac",
       "channels": 2,
@@ -136,8 +136,431 @@
       "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/en-US-frames/%03d.png"
     ],
     "contact_sheet_frames": 42,
+    "completion_detail_frames": 6,
+    "completion_extract_command": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-en-US.mp4",
+      "-vf",
+      "select=eq(n\\,396)+eq(n\\,398)+eq(n\\,403)+eq(n\\,405)+eq(n\\,407)+eq(n\\,412)",
+      "-fps_mode",
+      "vfr",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/en-US-completion/%03d.png"
+    ],
+    "acceptance": {
+      "firstSegmentOpen": true,
+      "editorCodeLines": 14,
+      "trafficLights": 3,
+      "friendsSource": "idle row 0, frame 0",
+      "deterministicScreenshot": true,
+      "samples": [
+        {
+          "t": 0,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 0.5,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 1,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 2,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 3.4,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 4,
+          "state": "working",
+          "action": "running",
+          "caption": 1,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 1,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 8.5,
+          "state": "working",
+          "action": "waiting",
+          "caption": 2,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 1,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 12.3,
+          "state": "working",
+          "action": "running",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.2,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.2666666667,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0136808057395874,
+          "bellAngle": 15.144154781212324,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.4333333333,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0375877048290487,
+          "bellAngle": -13.612231610284061,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.5,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.04,
+          "bellAngle": 1.96074169830959e-13,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.5666666667,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0375877048290485,
+          "bellAngle": 12.386693072438646,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.7333333333,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.013680805739587,
+          "bellAngle": -10.854769901510497,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.8,
+          "state": "done",
+          "action": "waving",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 14.5,
+          "state": "done",
+          "action": "waving",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 17,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 2,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 17.5,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 4,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 18,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        }
+      ]
+    },
     "decode_errors": 0,
-    "sha256": "4109856bccf16dedc09822dc371466a5b7b623fe0cfc6d3c8a5c23e2e48e7cbb"
+    "sha256": "8c4e283f726b35ab3ea1ec9a46cae03750246f5e5a1db508767142fccf74b2c5"
   },
   "zh-Hans": {
     "video": "AgentHalo-preview-zh-Hans.mp4",
@@ -148,7 +571,7 @@
     "frame_rate": "30/1",
     "frames": 630,
     "duration": 21.0,
-    "bytes": 2526185,
+    "bytes": 1636854,
     "audio": {
       "codec": "aac",
       "channels": 2,
@@ -276,7 +699,430 @@
       "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/zh-Hans-frames/%03d.png"
     ],
     "contact_sheet_frames": 42,
+    "completion_detail_frames": 6,
+    "completion_extract_command": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/AgentHalo-preview-zh-Hans.mp4",
+      "-vf",
+      "select=eq(n\\,396)+eq(n\\,398)+eq(n\\,403)+eq(n\\,405)+eq(n\\,407)+eq(n\\,412)",
+      "-fps_mode",
+      "vfr",
+      "/Users/martin/Desktop/AgentHalo-MAS/store/preview-1.0.7/.work/zh-Hans-completion/%03d.png"
+    ],
+    "acceptance": {
+      "firstSegmentOpen": true,
+      "editorCodeLines": 14,
+      "trafficLights": 3,
+      "friendsSource": "idle row 0, frame 0",
+      "deterministicScreenshot": true,
+      "samples": [
+        {
+          "t": 0,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 0.5,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 1,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 2,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 3.4,
+          "state": "thinking",
+          "action": "idle",
+          "caption": 0,
+          "allowPressed": false,
+          "heroFixedFrame": 0,
+          "editorOpacity": 0.3,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 4,
+          "state": "working",
+          "action": "running",
+          "caption": 1,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 1,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 8.5,
+          "state": "working",
+          "action": "waiting",
+          "caption": 2,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 1,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 12.3,
+          "state": "working",
+          "action": "running",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.2,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.2666666667,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0136808057395874,
+          "bellAngle": 15.144154781212324,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.4333333333,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0375877048290487,
+          "bellAngle": -13.612231610284061,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.5,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.04,
+          "bellAngle": 1.96074169830959e-13,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.5666666667,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.0375877048290485,
+          "bellAngle": 12.386693072438646,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.7333333333,
+          "state": "done",
+          "action": "jumping",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1.013680805739587,
+          "bellAngle": -10.854769901510497,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 13.8,
+          "state": "done",
+          "action": "waving",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 14.5,
+          "state": "done",
+          "action": "waving",
+          "caption": 3,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 17,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 2,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 17.5,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 4,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        },
+        {
+          "t": 18,
+          "state": "done",
+          "action": "waving",
+          "caption": 4,
+          "allowPressed": false,
+          "heroFixedFrame": null,
+          "editorOpacity": 0.6,
+          "hudScale": 1,
+          "bellAngle": 0,
+          "friendsFrame": 0,
+          "floatY": 0,
+          "friendLayout": {
+            "height": 200,
+            "gap": 18,
+            "width": 1726,
+            "left": 97,
+            "right": 97,
+            "centerY": 640
+          }
+        }
+      ]
+    },
     "decode_errors": 0,
-    "sha256": "94739f8c4a67a49cdd90acf8d00546bf602097eeca17e0348b92ada1ec6a5f02"
+    "sha256": "a313bc1185b65ef35458df163dda0d41840ada166750fb99befdeb6b0c649181"
   }
 }
