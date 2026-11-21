@@ -106,7 +106,7 @@
     },
     {
       "file": "src/settings-actions.js",
-      "sha256": "f6613f3e627c3dd6c1f1c618f360cb56a2009ebfa5e5dc8812893d2ba2324cca",
+      "sha256": "99813896de078f93fdd6a258fb94c81b546999e4bfe9fb0fcbc52f5d80520020",
       "packaged": true,
       "matches": true
     },
@@ -154,7 +154,7 @@
     },
     {
       "file": "src/settings-i18n.js",
-      "sha256": "6b6b1f56a3e7d34e2a623de170b108a975a7d35b9bb9f01317a9090e15577519",
+      "sha256": "f4c8969bec42de804aeb8210beb706704bb99a3145273fd0c91d5aa9016b8f1a",
       "packaged": true,
       "matches": true
     },
@@ -225,7 +225,7 @@
     },
     {
       "file": "src/settings-tab-general.js",
-      "sha256": "501a31ae1d3603a55ce4d1bdba6eb6be9be60485da7a6dbf34d1755906a05ded",
+      "sha256": "9646d99b7f127a5b9ae7a5374e483f76dfc9e831891fa8f605c2f84648765479",
       "packaged": true,
       "matches": true
     },
@@ -445,7 +445,7 @@
       "locale": "en-US",
       "tab": "general",
       "lang": "en",
-      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nPreferences\n\nConfigure how AgentHalo behaves on your desktop.\n\nAppearance\nLanguage\nInterface language for menus and bubbles.\nEnglish\nInterface colors\nShared across the app; follows system light and dark mode.\nClassic Orange\nMoss Green\nOcean Blue\nSoft Lavender\nRose Pink\nSize\n30%\nText size\nSaved separately for each display.\n100%\nAlerts & feedback\nSound effects\nPlay a chime when AgentHalo finishes a task or asks for input.\nCompletion sound\nLong tasks (30s+)\nVolume\nAvailable when sound effects are on.\n50%\nBehavior & position\nFree roam\nStarts wandering after 8 seconds idle. Working, thinking or moving the mouse stops it.\nMovement style\nNatural\nHorizontal / vertical\nActivity area\nThe area file is invalid or still loading; roaming stays paused.\nChoose area…\nStartup and display\nOpen at login\nShow in menu bar\nShow in Dock\nShortcuts\nFootprints",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nPreferences\n\nConfigure how AgentHalo behaves on your desktop.\n\nAppearance\nLanguage\nInterface language for menus and bubbles.\nEnglish\nInterface colors\nShared across the app; follows system light and dark mode.\nClassic Orange\nMoss Green\nOcean Blue\nSoft Lavender\nRose Pink\nSize\n30%\nText size\nSaved separately for each display.\n100%\nAlerts & feedback\nSound effects\nPlay a chime when AgentHalo finishes a task or asks for input.\nCompletion sound\nLong tasks (30s+)\nVolume\nAvailable when sound effects are on.\n50%\nBehavior & position\nFree roam\nStarts wandering after 8 seconds idle. Working, thinking or moving the mouse stops it.\nMovement style\nNatural\nHorizontal / vertical\nActivity area\nThe area file is invalid or still loading; roaming stays paused.\nChoose area…\nStartup and display\nOpen at login\nShow in menu bar\nShortcuts\nFootprints",
       "themeCount": 0,
       "completion": "Long tasks (30s+)Long tasks (30s+)Every timeOff",
       "soundBox": {
@@ -492,7 +492,7 @@
       "locale": "zh-Hans",
       "tab": "general",
       "lang": "zh",
-      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n偏好设置\n\n配置 AgentHalo 在桌面上的行为。\n\n外观\n语言\n设置应用、菜单和弹窗的显示语言。\n简体中文\n界面配色\n全应用共用，随系统切换深浅色。\n经典暖橘\n青苔绿\n海盐蓝\n柔雾紫\n玫瑰粉\n大小\n30%\n文字大小\n每块屏幕分别记忆。\n100%\n提醒与反馈\n音效\nAI 完成任务或需要你回复时播放提示音。\n完成提示音\n长任务（30 秒以上）\n音量\n开启音效后可调节。\n50%\n行为与位置\n自由漫步\n空闲 8 秒后开始漫步；工作、思考或移动鼠标时暂停。\n移动方式\n自然\n横向 / 纵向\n活动范围\n范围文件无效或仍在读取；自由漫步会保持暂停。\n框选范围…\n启动与显示\n登录时自动启动\n在菜单栏显示\n在 Dock 显示\n快捷键\n足迹",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n偏好设置\n\n配置 AgentHalo 在桌面上的行为。\n\n外观\n语言\n设置应用、菜单和弹窗的显示语言。\n简体中文\n界面配色\n全应用共用，随系统切换深浅色。\n经典暖橘\n青苔绿\n海盐蓝\n柔雾紫\n玫瑰粉\n大小\n30%\n文字大小\n每块屏幕分别记忆。\n100%\n提醒与反馈\n音效\nAI 完成任务或需要你回复时播放提示音。\n完成提示音\n长任务（30 秒以上）\n音量\n开启音效后可调节。\n50%\n行为与位置\n自由漫步\n空闲 8 秒后开始漫步；工作、思考或移动鼠标时暂停。\n移动方式\n自然\n横向 / 纵向\n活动范围\n范围文件无效或仍在读取；自由漫步会保持暂停。\n框选范围…\n启动与显示\n登录时自动启动\n在菜单栏显示\n快捷键\n足迹",
       "themeCount": 0,
       "completion": "长任务（30 秒以上）长任务（30 秒以上）每次关闭",
       "soundBox": {
@@ -539,7 +539,7 @@
       "locale": "zh-Hant",
       "tab": "general",
       "lang": "zh-TW",
-      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n偏好設定\n\n設定 AgentHalo 在桌面上怎麼動作。\n\n外觀\n語言\n選單和對話框的介面語言。\n繁體中文\n介面配色\n全應用程式共用，隨系統切換深淺色。\n經典暖橘\n青苔綠\n海鹽藍\n柔霧紫\n玫瑰粉\n大小\n30%\n文字大小\n每個螢幕分別記憶。\n100%\n提醒與回饋\n音效\nAgentHalo 完成任務或要等輸入時會播放提示聲。\n完成提示音\n長任務（30 秒以上）\n音量\n開啟音效後可調整。\n50%\n行為與位置\n自由漫步\n閒置 8 秒後開始漫步；工作、思考或移動滑鼠時暫停。\n移動方式\n自然\n水平 / 垂直\n活動範圍\n範圍檔案無效或仍在讀取；自由漫步會保持暫停。\n框選範圍…\n啟動與顯示\n登入時啟動\n在選單列顯示\n在 Dock 顯示\n快速鍵\n足跡",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n偏好設定\n\n設定 AgentHalo 在桌面上怎麼動作。\n\n外觀\n語言\n選單和對話框的介面語言。\n繁體中文\n介面配色\n全應用程式共用，隨系統切換深淺色。\n經典暖橘\n青苔綠\n海鹽藍\n柔霧紫\n玫瑰粉\n大小\n30%\n文字大小\n每個螢幕分別記憶。\n100%\n提醒與回饋\n音效\nAgentHalo 完成任務或要等輸入時會播放提示聲。\n完成提示音\n長任務（30 秒以上）\n音量\n開啟音效後可調整。\n50%\n行為與位置\n自由漫步\n閒置 8 秒後開始漫步；工作、思考或移動滑鼠時暫停。\n移動方式\n自然\n水平 / 垂直\n活動範圍\n範圍檔案無效或仍在讀取；自由漫步會保持暫停。\n框選範圍…\n啟動與顯示\n登入時啟動\n在選單列顯示\n快速鍵\n足跡",
       "themeCount": 0,
       "completion": "長任務（30 秒以上）長任務（30 秒以上）每次關閉",
       "soundBox": {
@@ -586,7 +586,7 @@
       "locale": "ja",
       "tab": "general",
       "lang": "ja",
-      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\n環境設定\n\nAgentHalo のデスクトップでの動作を設定します。\n\n外観\n言語\nメニューと吹き出しの表示言語です。\n日本語\n画面の配色\nアプリ全体に適用され、システムのライト・ダークモードに従います。\nクラシックオレンジ\nモスグリーン\nオーシャンブルー\nラベンダー\nローズピンク\nサイズ\n30%\n文字サイズ\nディスプレイごとに保存されます。\n100%\n通知とフィードバック\n効果音\nAgentHalo がタスクを完了したとき、または入力を求めたときに音を再生します。\n完了通知音\n30秒以上のタスク\n音量\n効果音がオンのときに調整できます。\n50%\n動作と位置\n自由散策\n8秒間待機すると歩き始めます。作業中・思考中やマウス操作時は停止します。\n移動スタイル\n自然\n水平 / 垂直\n活動範囲\n範囲ファイルが無効または読み込み中です。自由散策は一時停止します。\n範囲を選択…\n起動と表示\nログイン時に開く\nメニューバーに表示\nDock に表示\nショートカット\n足跡",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\n環境設定\n\nAgentHalo のデスクトップでの動作を設定します。\n\n外観\n言語\nメニューと吹き出しの表示言語です。\n日本語\n画面の配色\nアプリ全体に適用され、システムのライト・ダークモードに従います。\nクラシックオレンジ\nモスグリーン\nオーシャンブルー\nラベンダー\nローズピンク\nサイズ\n30%\n文字サイズ\nディスプレイごとに保存されます。\n100%\n通知とフィードバック\n効果音\nAgentHalo がタスクを完了したとき、または入力を求めたときに音を再生します。\n完了通知音\n30秒以上のタスク\n音量\n効果音がオンのときに調整できます。\n50%\n動作と位置\n自由散策\n8秒間待機すると歩き始めます。作業中・思考中やマウス操作時は停止します。\n移動スタイル\n自然\n水平 / 垂直\n活動範囲\n範囲ファイルが無効または読み込み中です。自由散策は一時停止します。\n範囲を選択…\n起動と表示\nログイン時に開く\nメニューバーに表示\nショートカット\n足跡",
       "themeCount": 0,
       "completion": "30秒以上のタスク30秒以上のタスク毎回オフ",
       "soundBox": {
@@ -633,7 +633,7 @@
       "locale": "ko",
       "tab": "general",
       "lang": "ko",
-      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n환경설정\n\n데스크톱에서 AgentHalo의 동작 방식을 설정합니다.\n\n외관\n언어\n메뉴와 말풍선의 인터페이스 언어입니다.\n한국어\n인터페이스 색상\n앱 전체에 적용되며 시스템의 밝은 모드와 어두운 모드를 따릅니다.\n클래식 오렌지\n모스 그린\n오션 블루\n라벤더\n로즈 핑크\n크기\n30%\n텍스트 크기\n화면별로 따로 저장합니다.\n100%\n알림 및 피드백\n효과음\nAgentHalo가 작업을 마치거나 입력을 요청할 때 알림음을 재생합니다.\n완료 알림음\n긴 작업(30초 이상)\n볼륨\n효과음이 켜져 있을 때 조절할 수 있습니다.\n50%\n동작 및 위치\n자유 배회\n8초 동안 대기하면 걷기 시작합니다. 작업, 생각 또는 마우스 이동 시 멈춥니다.\n이동 방식\n자연스럽게\n가로 / 세로\n활동 영역\n영역 파일이 잘못되었거나 로딩 중입니다. 자유 배회는 일시 정지됩니다.\n영역 선택…\n시작 및 표시\n로그인 시 자동 실행\n메뉴바에 표시\nDock에 표시\n단축키\n발자취",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n환경설정\n\n데스크톱에서 AgentHalo의 동작 방식을 설정합니다.\n\n외관\n언어\n메뉴와 말풍선의 인터페이스 언어입니다.\n한국어\n인터페이스 색상\n앱 전체에 적용되며 시스템의 밝은 모드와 어두운 모드를 따릅니다.\n클래식 오렌지\n모스 그린\n오션 블루\n라벤더\n로즈 핑크\n크기\n30%\n텍스트 크기\n화면별로 따로 저장합니다.\n100%\n알림 및 피드백\n효과음\nAgentHalo가 작업을 마치거나 입력을 요청할 때 알림음을 재생합니다.\n완료 알림음\n긴 작업(30초 이상)\n볼륨\n효과음이 켜져 있을 때 조절할 수 있습니다.\n50%\n동작 및 위치\n자유 배회\n8초 동안 대기하면 걷기 시작합니다. 작업, 생각 또는 마우스 이동 시 멈춥니다.\n이동 방식\n자연스럽게\n가로 / 세로\n활동 영역\n영역 파일이 잘못되었거나 로딩 중입니다. 자유 배회는 일시 정지됩니다.\n영역 선택…\n시작 및 표시\n로그인 시 자동 실행\n메뉴바에 표시\n단축키\n발자취",
       "themeCount": 0,
       "completion": "긴 작업(30초 이상)긴 작업(30초 이상)매번끄기",
       "soundBox": {
@@ -680,7 +680,7 @@
       "locale": "es-ES",
       "tab": "general",
       "lang": "es",
-      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nPreferencias\n\nConfigura cómo se comporta AgentHalo en tu escritorio.\n\nApariencia\nIdioma\nIdioma de la interfaz para menús y globos.\nEspañol\nColores de la interfaz\nSe aplica a toda la app y sigue el modo claro u oscuro del sistema.\nNaranja clásico\nVerde musgo\nAzul océano\nLavanda suave\nRosa\nTamaño\n30%\nTamaño del texto\nSe guarda por separado para cada pantalla.\n100%\nAlertas y comentarios\nEfectos de sonido\nReproduce un tono cuando AgentHalo termina una tarea o pide entrada.\nSonido de finalización\nTareas de 30 s+\nVolumen\nDisponible con los efectos de sonido activados.\n50%\nComportamiento y posición\nDeambular libre\nEmpieza a pasear tras 8 segundos de inactividad. Se detiene al trabajar, pensar o mover el ratón.\nEstilo de movimiento\nNatural\nHorizontal / vertical\nÁrea de actividad\nEl archivo del área no es válido o todavía se está cargando; el paseo permanece en pausa.\nElegir área…\nInicio y visualización\nAbrir al iniciar sesión\nMostrar en la barra de menús\nMostrar en el Dock\nAtajos\nHuellas",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nPreferencias\n\nConfigura cómo se comporta AgentHalo en tu escritorio.\n\nApariencia\nIdioma\nIdioma de la interfaz para menús y globos.\nEspañol\nColores de la interfaz\nSe aplica a toda la app y sigue el modo claro u oscuro del sistema.\nNaranja clásico\nVerde musgo\nAzul océano\nLavanda suave\nRosa\nTamaño\n30%\nTamaño del texto\nSe guarda por separado para cada pantalla.\n100%\nAlertas y comentarios\nEfectos de sonido\nReproduce un tono cuando AgentHalo termina una tarea o pide entrada.\nSonido de finalización\nTareas de 30 s+\nVolumen\nDisponible con los efectos de sonido activados.\n50%\nComportamiento y posición\nDeambular libre\nEmpieza a pasear tras 8 segundos de inactividad. Se detiene al trabajar, pensar o mover el ratón.\nEstilo de movimiento\nNatural\nHorizontal / vertical\nÁrea de actividad\nEl archivo del área no es válido o todavía se está cargando; el paseo permanece en pausa.\nElegir área…\nInicio y visualización\nAbrir al iniciar sesión\nMostrar en la barra de menús\nAtajos\nHuellas",
       "themeCount": 0,
       "completion": "Tareas de 30 s+Tareas de 30 s+SiempreDesactivado",
       "soundBox": {
