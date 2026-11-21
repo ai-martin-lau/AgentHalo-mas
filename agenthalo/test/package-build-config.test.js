@@ -131,10 +131,16 @@ describe("Mac App Store configuration", () => {
   });
 
   it("declares only the Info.plist keys the store build needs", () => {
+    const STORE_LANGUAGES = ["en", "zh_CN", "zh_TW", "ja", "ko", "pt_BR", "es"];
     assert.deepStrictEqual(pkg.build.mac.extendInfo, {
+      CFBundleDevelopmentRegion: "en",
+      CFBundleLocalizations: STORE_LANGUAGES,
       LSUIElement: true,
       ITSAppUsesNonExemptEncryption: false,
     });
+    // The App Store derives the listed languages from the bundled lproj folders;
+    // only ship the seven languages the UI actually supports.
+    assert.deepStrictEqual(pkg.build.mac.electronLanguages, STORE_LANGUAGES);
     assert.strictEqual(pkg.build.mac.category, "public.app-category.productivity");
     assert.deepStrictEqual(pkg.build.protocols.flatMap((entry) => entry.schemes), ["agenthalo"]);
   });
