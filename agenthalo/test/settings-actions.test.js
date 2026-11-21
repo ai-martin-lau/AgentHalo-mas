@@ -2445,7 +2445,7 @@ describe("shortcut commands", () => {
   });
 });
 
-describe("updateRegistry independent visibility validators (showTray/showDock)", () => {
+describe("updateRegistry App Store visibility validators (showTray/showDock)", () => {
   it("allows disabling tray when dock is already off", () => {
     const snap = { ...prefs.getDefaults(), showTray: true, showDock: false };
     const r = updateRegistry.showTray(false, { snapshot: snap });
@@ -2458,15 +2458,30 @@ describe("updateRegistry independent visibility validators (showTray/showDock)",
     assert.strictEqual(r.status, "ok");
   });
 
-  it("allows disabling tray when dock is on", () => {
+  it("allows disabling tray even when a legacy snapshot still has dock on", () => {
     const snap = { ...prefs.getDefaults(), showTray: true, showDock: true };
     assert.strictEqual(updateRegistry.showTray(false, { snapshot: snap }).status, "ok");
   });
 
-  it("allows enabling either at any time", () => {
+  it("allows enabling tray while rejecting Dock activation", () => {
     const snap = { ...prefs.getDefaults(), showTray: false, showDock: false };
     assert.strictEqual(updateRegistry.showTray(true, { snapshot: snap }).status, "ok");
-    assert.strictEqual(updateRegistry.showDock(true, { snapshot: snap }).status, "ok");
+    assert.strictEqual(updateRegistry.showDock(true, { snapshot: snap }).status, "error");
+  });
+
+  it("returns error for showDock=true and ok only for false regardless of visibility state", () => {
+    for (const showTray of [false, true]) {
+      for (const showDock of [false, true]) {
+        const snapshot = { ...prefs.getDefaults(), showTray, showDock };
+        const rejected = updateRegistry.showDock(true, { snapshot });
+        assert.strictEqual(rejected.status, "error");
+        assert.match(rejected.message, /App Store.*full-screen.*without a Dock icon/);
+        assert.strictEqual(updateRegistry.showDock(false, { snapshot }).status, "ok");
+        for (const value of [undefined, null, 0, 1, "false", "true"]) {
+          assert.strictEqual(updateRegistry.showDock(value, { snapshot }).status, "error");
+        }
+      }
+    }
   });
 });
 

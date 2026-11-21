@@ -2645,13 +2645,13 @@ function createAnimOverridesRuntime(card, overrides = {}) {
 
 describe("settings renderer browser environment", () => {
 
-  it("keeps preferences compact without changing saved advanced values", () => {
+  it("keeps preferences compact with only menu bar visibility and preserves saved advanced values", () => {
     const snapshot = makeGeneralSnapshot({ permissionAutomationMode: "off", sessionStaleMs: 123000, showTray: true, showDock: false });
     const before = JSON.stringify(snapshot);
     const harness = loadGeneralTabForTest({ snapshot, platform: "MacIntel" });
     harness.renderContent();
-    for (const key of ["freeRoam", "openAtLogin", "showTray", "showDock"]) assert.ok(harness.getSwitch(key), key);
-    for (const key of ["sessionHudEnabled", "hideBubbles", "testReactionsEnabled", "lowPowerIdleMode", "keepAwakeWhileWorking"]) assert.equal(harness.getSwitch(key), null, key);
+    for (const key of ["freeRoam", "openAtLogin", "showTray"]) assert.ok(harness.getSwitch(key), key);
+    for (const key of ["showDock", "sessionHudEnabled", "hideBubbles", "testReactionsEnabled", "lowPowerIdleMode", "keepAwakeWhileWorking"]) assert.equal(harness.getSwitch(key), null, key);
     assert.equal(harness.core.state.mountedControls.permissionAutomationMode, null);
     assert.equal(JSON.stringify(snapshot), before);
     assert.equal(harness.core.state.snapshot.sessionStaleMs, 123000);
@@ -10188,12 +10188,12 @@ describe("settings renderer browser environment", () => {
     assert.ok(clearIndex < renderIndex, "broadcast cleanup must happen before full rerender");
   });
 
-  it("renders the macOS menu bar and Dock recovery switches independently in all four states", () => {
+  it("renders only the macOS menu bar switch in both tray states regardless of legacy Dock values", () => {
     const cases = [
-      { showTray: true, showDock: false, trayDisabled: false, dockDisabled: false },
-      { showTray: true, showDock: true, trayDisabled: false, dockDisabled: false },
-      { showTray: false, showDock: true, trayDisabled: false, dockDisabled: false },
-      { showTray: false, showDock: false, trayDisabled: false, dockDisabled: false },
+      { showTray: true, showDock: false },
+      { showTray: true, showDock: true },
+      { showTray: false, showDock: true },
+      { showTray: false, showDock: false },
     ];
 
     for (const entry of cases) {
@@ -10207,19 +10207,14 @@ describe("settings renderer browser environment", () => {
       harness.renderContent();
 
       const tray = harness.getSwitch("showTray");
-      const dock = harness.getSwitch("showDock");
       assert.ok(tray, `showTray should render for ${JSON.stringify(entry)}`);
-      assert.ok(dock, `showDock should render for ${JSON.stringify(entry)}`);
+      assert.strictEqual(harness.getSwitch("showDock"), null, `showDock should not render for ${JSON.stringify(entry)}`);
+      assert.doesNotMatch(collectText(harness.content), /Show in Dock|rowShowInDock/);
       assert.strictEqual(tray.getAttribute("role"), "switch");
-      assert.strictEqual(dock.getAttribute("role"), "switch");
       assert.strictEqual(tray.getAttribute("aria-label"), "Show in menu bar");
-      assert.strictEqual(dock.getAttribute("aria-label"), "Show in Dock");
       assert.strictEqual(tray.getAttribute("aria-checked"), String(entry.showTray));
-      assert.strictEqual(dock.getAttribute("aria-checked"), String(entry.showDock));
-      assert.strictEqual(tray.getAttribute("aria-disabled"), entry.trayDisabled ? "true" : undefined);
-      assert.strictEqual(dock.getAttribute("aria-disabled"), entry.dockDisabled ? "true" : undefined);
-      assert.strictEqual(tray.tabIndex, entry.trayDisabled ? -1 : 0);
-      assert.strictEqual(dock.tabIndex, entry.dockDisabled ? -1 : 0);
+      assert.strictEqual(tray.getAttribute("aria-disabled"), undefined);
+      assert.strictEqual(tray.tabIndex, 0);
     }
 
     const nonMac = loadGeneralTabForTest({
@@ -10231,15 +10226,15 @@ describe("settings renderer browser environment", () => {
     assert.strictEqual(nonMac.getSwitch("showDock"), null);
     const beforeNonMacRenderCount = nonMac.getContentRenderCount();
     nonMac.core.ops.applyChanges({
-      changes: { showDock: true },
-      snapshot: makeGeneralSnapshot({ showTray: true, showDock: true }),
+      changes: { showTray: false },
+      snapshot: makeGeneralSnapshot({ showTray: false, showDock: false }),
     });
     assert.strictEqual(nonMac.getContentRenderCount(), beforeNonMacRenderCount + 1);
     assert.strictEqual(nonMac.getSwitch("showTray"), null);
     assert.strictEqual(nonMac.getSwitch("showDock"), null);
   });
 
-  it("falls back to a full General render when a macOS recovery control is missing", () => {
+  it("falls back to a full General render when the macOS menu bar control is missing", () => {
     const initialSnapshot = makeGeneralSnapshot({ showTray: true, showDock: false });
     const harness = loadGeneralTabForTest({
       platform: "MacIntel",
@@ -10248,28 +10243,26 @@ describe("settings renderer browser environment", () => {
     harness.renderContent();
     const originalTray = harness.getSwitch("showTray");
     const beforeRenderCount = harness.getContentRenderCount();
-    harness.core.state.mountedControls.generalSwitches.delete("showDock");
+    harness.core.state.mountedControls.generalSwitches.delete("showTray");
 
     harness.core.ops.applyChanges({
-      changes: { showDock: true },
-      snapshot: { ...initialSnapshot, showDock: true },
+      changes: { showTray: false },
+      snapshot: { ...initialSnapshot, showTray: false },
     });
 
     assert.strictEqual(harness.getContentRenderCount(), beforeRenderCount + 1);
     assert.notStrictEqual(harness.getSwitch("showTray"), originalTray);
-    assert.ok(harness.getSwitch("showDock"));
+    assert.strictEqual(harness.getSwitch("showTray").getAttribute("aria-checked"), "false");
+    assert.strictEqual(harness.getSwitch("showDock"), null);
   });
 
-  it("writes each macOS recovery switch through the exact Settings update key", async () => {
-    for (const entry of [
-      { snapshot: { showTray: false, showDock: true }, clickKey: "showTray" },
-      { snapshot: { showTray: true, showDock: false }, clickKey: "showDock" },
-    ]) {
+  it("writes both macOS menu bar toggle directions through the showTray Settings key", async () => {
+    for (const showTray of [false, true]) {
       const updateCalls = [];
       const commandCalls = [];
       const harness = loadGeneralTabForTest({
         platform: "MacIntel",
-        snapshot: makeGeneralSnapshot(entry.snapshot),
+        snapshot: makeGeneralSnapshot({ showTray, showDock: false }),
         settingsAPI: {
           update: (key, value) => {
             updateCalls.push({ key, value });
@@ -10282,16 +10275,17 @@ describe("settings renderer browser environment", () => {
         },
       });
       harness.renderContent();
-      harness.getSwitch(entry.clickKey).dispatchEvent({ type: "click" });
+      assert.strictEqual(harness.getSwitch("showDock"), null);
+      harness.getSwitch("showTray").dispatchEvent({ type: "click" });
       await Promise.resolve();
       await Promise.resolve();
 
-      assert.deepStrictEqual(updateCalls, [{ key: entry.clickKey, value: true }]);
+      assert.deepStrictEqual(updateCalls, [{ key: "showTray", value: !showTray }]);
       assert.deepStrictEqual(commandCalls, []);
     }
   });
 
-  it("patches committed macOS visibility changes in place", async () => {
+  it("patches committed macOS menu bar changes in place without a Dock control", async () => {
     const updateCalls = [];
     const initialSnapshot = makeGeneralSnapshot({ showTray: true, showDock: false });
     const harness = loadGeneralTabForTest({
@@ -10307,44 +10301,46 @@ describe("settings renderer browser environment", () => {
     harness.renderContent();
 
     const tray = harness.getSwitch("showTray");
-    const dock = harness.getSwitch("showDock");
+    assert.strictEqual(harness.getSwitch("showDock"), null);
     const beforeRenderCount = harness.getContentRenderCount();
     harness.content.scrollTop = 247;
-    dock.focus();
-    dock.dispatchEvent({ type: "click" });
+    tray.focus();
+    tray.dispatchEvent({ type: "click" });
     await Promise.resolve();
     await Promise.resolve();
-    assert.deepStrictEqual(updateCalls, [{ key: "showDock", value: true }]);
+    assert.deepStrictEqual(updateCalls, [{ key: "showTray", value: false }]);
 
     harness.core.ops.applyChanges({
-      changes: { showDock: true },
-      snapshot: { ...initialSnapshot, showDock: true },
+      changes: { showTray: false },
+      snapshot: { ...initialSnapshot, showTray: false },
     });
 
     assert.strictEqual(harness.getContentRenderCount(), beforeRenderCount);
     assert.strictEqual(harness.getSwitch("showTray"), tray);
-    assert.strictEqual(harness.getSwitch("showDock"), dock);
-    assert.strictEqual(dock.focused, true);
+    assert.strictEqual(harness.getSwitch("showDock"), null);
+    assert.strictEqual(tray.focused, true);
     assert.strictEqual(harness.content.scrollTop, 247);
     assert.strictEqual(tray.getAttribute("aria-disabled"), undefined);
     assert.strictEqual(tray.tabIndex, 0);
-    assert.strictEqual(dock.getAttribute("aria-disabled"), undefined);
+    assert.strictEqual(tray.getAttribute("aria-checked"), "false");
 
     harness.core.ops.applyChanges({
-      changes: { showTray: false },
-      snapshot: { ...initialSnapshot, showTray: false, showDock: true },
+      changes: { showTray: true },
+      snapshot: initialSnapshot,
     });
     assert.strictEqual(harness.getContentRenderCount(), beforeRenderCount);
-    assert.strictEqual(tray.getAttribute("aria-checked"), "false");
-    assert.strictEqual(dock.getAttribute("aria-disabled"), undefined);
-    assert.strictEqual(dock.tabIndex, 0);
+    assert.strictEqual(harness.getSwitch("showTray"), tray);
+    assert.strictEqual(tray.getAttribute("aria-checked"), "true");
+    assert.strictEqual(tray.getAttribute("aria-disabled"), undefined);
+    assert.strictEqual(tray.tabIndex, 0);
+    assert.strictEqual(harness.getSwitch("showDock"), null);
   });
 
-  it("allows disabling the last visible macOS entry point", async () => {
+  it("allows disabling the macOS menu bar entry point while Dock is fixed off", async () => {
     const updateCalls = [];
     const harness = loadGeneralTabForTest({
       platform: "MacIntel",
-      snapshot: makeGeneralSnapshot({ showTray: false, showDock: true }),
+      snapshot: makeGeneralSnapshot({ showTray: true, showDock: false }),
       settingsAPI: {
         update: (key, value) => {
           updateCalls.push({ key, value });
@@ -10353,20 +10349,22 @@ describe("settings renderer browser environment", () => {
       },
     });
     harness.renderContent();
-    const dock = harness.getSwitch("showDock");
+    const tray = harness.getSwitch("showTray");
+    assert.strictEqual(harness.getSwitch("showDock"), null);
 
-    dock.dispatchEvent({ type: "click" });
-    dock.dispatchEvent(createKeyboardEventForTest(" "));
-    dock.dispatchEvent(createKeyboardEventForTest("Enter"));
+    tray.dispatchEvent({ type: "click" });
+    tray.dispatchEvent(createKeyboardEventForTest(" "));
+    tray.dispatchEvent(createKeyboardEventForTest("Enter"));
     await Promise.resolve();
     await Promise.resolve();
-    assert.deepStrictEqual(updateCalls, [{ key: "showDock", value: false }]);
+    assert.deepStrictEqual(updateCalls, [{ key: "showTray", value: false }]);
+    assert.strictEqual(tray.getAttribute("aria-checked"), "false");
   });
 
-  it("restores a macOS recovery switch after a rejected Settings update", async () => {
+  it("restores the macOS menu bar switch after a rejected Settings update", async () => {
     const harness = loadGeneralTabForTest({
       platform: "MacIntel",
-      snapshot: makeGeneralSnapshot({ showTray: false, showDock: true }),
+      snapshot: makeGeneralSnapshot({ showTray: false, showDock: false }),
       settingsAPI: {
         update: () => Promise.reject(new Error("rejected")),
       },
@@ -10384,7 +10382,7 @@ describe("settings renderer browser environment", () => {
     assert.strictEqual(tray.classList.contains("pending"), false);
   });
 
-  it("keeps macOS entry-point switches behind the Settings controller boundary", () => {
+  it("keeps the macOS menu bar switch behind the Settings controller boundary", () => {
     const generalSource = fs.readFileSync(SETTINGS_TAB_GENERAL, "utf8");
     for (const forbidden of [
       /require\(["']electron["']\)/,

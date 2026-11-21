@@ -159,9 +159,11 @@ const SCHEMA = {
   // upgrades. It stores only bounded aggregate/ticket data under ~/.clawd;
   // there is no network export and the user can disable or clear it later.
   recapEnabled: { type: "boolean", default: true },
-  // Show the macOS Dock icon on fresh installs. Persisted visibility choices
-  // still win, so users who explicitly hid it keep that preference.
-  showDock: { type: "boolean", default: true },
+  // The App Store build never shows a Dock icon. Keeping the pet above other
+  // apps' full-screen spaces needs an accessory (Dock-less) app without the
+  // private window APIs upstream used, and Electron's visibleOnFullScreen
+  // hides the Dock anyway. validate() pins this to false on every load.
+  showDock: { type: "boolean", default: false },
   manageClaudeHooksAutomatically: { type: "boolean", default: true },
   autoStartWithClaude: { type: "boolean", default: false },
   // Fresh installs require an explicit opt-in before a local Codex
@@ -666,6 +668,8 @@ function validate(raw) {
   }
   normalizeCustomAgentGates(out);
   normalizeStaleTriple(out);
+  // See the showDock schema note: older files may still say true.
+  out.showDock = false;
   return out;
 }
 

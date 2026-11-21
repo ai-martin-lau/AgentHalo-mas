@@ -568,7 +568,10 @@ const updateRegistry = {
 
   // Independent macOS visibility preferences.
   showTray: requireBoolean("showTray"),
-  showDock: requireBoolean("showDock"),
+  // Only "off" is valid in the App Store build (see prefs.js showDock).
+  showDock: (value) => (value === false
+    ? { status: "ok" }
+    : { status: "error", message: "showDock: the App Store build keeps the pet above full-screen apps, which macOS allows only without a Dock icon" }),
 
   // Strict activation gate. Startup uses the lenient path + hydrate() so
   // a deleted theme can't brick boot without polluting this effect.

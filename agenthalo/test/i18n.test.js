@@ -189,17 +189,13 @@ describe("i18n locales", () => {
     );
   });
 
-  it("provides non-empty macOS menu bar and Dock recovery strings in every Settings locale", () => {
+  it("provides menu bar recovery strings and omits Dock strings in every locale", () => {
     const settings = loadSettingsI18nStrings();
-    const keys = [
-      "rowShowInMenuBar",
-      "rowShowInDock",
-    ];
     for (const lang of SUPPORTED_LANGS) {
-      for (const key of keys) {
-        assert.strictEqual(typeof settings[lang][key], "string", `settings.${lang}.${key} should be a string`);
-        assert.ok(settings[lang][key].trim(), `settings.${lang}.${key} should not be empty`);
-      }
+      assert.strictEqual(typeof settings[lang].rowShowInMenuBar, "string", `settings.${lang}.rowShowInMenuBar should be a string`);
+      assert.ok(settings[lang].rowShowInMenuBar.trim(), `settings.${lang}.rowShowInMenuBar should not be empty`);
+      assert.strictEqual("rowShowInDock" in settings[lang], false, `settings.${lang} should omit rowShowInDock`);
+      assert.strictEqual("showInDock" in i18n[lang], false, `i18n.${lang} should omit showInDock`);
     }
   });
 

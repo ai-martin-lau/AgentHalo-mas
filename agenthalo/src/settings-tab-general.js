@@ -15,7 +15,6 @@
     "lowPowerIdleMode",
     "keepAwakeWhileWorking",
     "showTray",
-    "showDock",
     "sessionHudEnabled",
     "sessionHudShowStateLabels",
     "sessionHudShowElapsed",
@@ -116,10 +115,6 @@
       {
         key: "showTray",
         labelKey: "rowShowInMenuBar",
-      },
-      {
-        key: "showDock",
-        labelKey: "rowShowInDock",
       },
     ];
     const rows = definitions.map((definition) => {
@@ -2197,10 +2192,8 @@
   function syncMacAppPresenceSwitchesDisabled() {
     if (!i18n || !i18n.IS_MAC) return false;
     const tray = getMountedGeneralSwitch("showTray");
-    const dock = getMountedGeneralSwitch("showDock");
-    if (!tray || !dock) return false;
-    return setGeneralSwitchDisabled("showTray", false)
-      && setGeneralSwitchDisabled("showDock", false);
+    if (!tray) return false;
+    return setGeneralSwitchDisabled("showTray", false);
   }
 
   function getMountedRoamMovementStyle() {
@@ -2273,10 +2266,8 @@
       && !SESSION_HUD_CHILD_SWITCH_KEYS.every((key) => getMountedGeneralSwitch(key))) {
       return false;
     }
-    if (keys.some((key) => key === "showTray" || key === "showDock")
-      && (!i18n || !i18n.IS_MAC
-        || !getMountedGeneralSwitch("showTray")
-        || !getMountedGeneralSwitch("showDock"))) {
+    if (keys.includes("showTray")
+      && (!i18n || !i18n.IS_MAC || !getMountedGeneralSwitch("showTray"))) {
       return false;
     }
     if ((keys.includes("freeRoam") || keys.includes("roamConstrainAxis"))
@@ -2378,8 +2369,7 @@
     if ((keys.includes("freeRoam") || keys.includes("roamConstrainAxis"))
       && !syncRoamMovementStyleFromSnapshot()) return false;
     if (keys.includes("sessionHudEnabled") && !syncSessionHudChildSwitchesDisabled()) return false;
-    if (keys.some((key) => key === "showTray" || key === "showDock")
-      && !syncMacAppPresenceSwitchesDisabled()) return false;
+    if (keys.includes("showTray") && !syncMacAppPresenceSwitchesDisabled()) return false;
     if (keys.some((key) => SESSION_HUD_SUMMARY_KEYS.has(key))) {
       const summary = state.mountedControls.sessionHudSummary;
       if (summary && document.body.contains(summary.element)) summary.syncFromSnapshot();

@@ -1398,11 +1398,13 @@ describe("prefs.migrate v10 → v11 (on-demand agent integrations)", () => {
   });
 });
 
-describe("prefs Dock visibility defaults and v11 → v12 migration", () => {
-  it("backfills showDock=true for a pre-v12 file that lacks it (existing user keeps the Dock)", () => {
-    const validated = prefs.validate(prefs.migrate({ version: 11, lang: "en" }));
+describe("prefs App Store Dock visibility defaults and v11 → v12 migration", () => {
+  it("pins showDock=false after the legacy v11 migration backfills true", () => {
+    const migrated = prefs.migrate({ version: 11, lang: "en" });
+    assert.strictEqual(migrated.showDock, true);
+    const validated = prefs.validate(migrated);
     assert.strictEqual(validated.version, prefs.CURRENT_VERSION);
-    assert.strictEqual(validated.showDock, true);
+    assert.strictEqual(validated.showDock, false);
   });
 
   it("preserves an explicit showDock=false from a pre-v12 file", () => {
@@ -1410,9 +1412,20 @@ describe("prefs Dock visibility defaults and v11 → v12 migration", () => {
     assert.strictEqual(validated.showDock, false);
   });
 
-  it("fresh defaults (no prefs file, migrate never runs) show the Dock icon", () => {
+  it("fresh defaults (no prefs file, migrate never runs) hide the Dock icon", () => {
     const d = prefs.getDefaults();
-    assert.strictEqual(d.showDock, true);
+    assert.strictEqual(d.showDock, false);
+  });
+
+  it("loads showDock=true from legacy and current files as false", () => {
+    for (const version of [11, 12, prefs.CURRENT_VERSION]) {
+      const file = makeTempPath();
+      fs.writeFileSync(file, JSON.stringify({ version, showDock: true }));
+      const loaded = prefs.load(file);
+      assert.strictEqual(loaded.locked, false);
+      assert.strictEqual(loaded.snapshot.version, prefs.CURRENT_VERSION);
+      assert.strictEqual(loaded.snapshot.showDock, false, `version ${version}`);
+    }
   });
 
   it("is idempotent on v12 input (a fresh-install save is not re-backfilled)", () => {
