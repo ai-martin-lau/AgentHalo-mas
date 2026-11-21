@@ -132,6 +132,7 @@ test("every built-in pet gives the settings grid a real atlas preview", () => {
   const themes = listThemesWithMetadata({ builtinThemesDir: path.join(ROOT, "themes") });
   const ids = themes.map((theme) => theme.id).sort();
   assert.deepEqual(ids, Object.keys(BUILTIN_PET_NAMES).sort());
+  assert.deepEqual(themes.map((theme) => theme.id), Object.keys(BUILTIN_PET_NAMES), "settings grid follows product order, Halo first");
   for (const theme of themes) {
     assert.ok(theme.codexPet, `${theme.id} has no atlas preview`);
     assert.equal(theme.managedCodexPet, undefined, `${theme.id} must not look like an imported pet`);

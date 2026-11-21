@@ -16,6 +16,7 @@ const {
   ATLAS_BY_SPRITE_VERSION,
   DEFAULT_SPRITE_VERSION_NUMBER,
 } = require("./codex-pet-adapter");
+const { BUILTIN_PET_NAMES } = require("./builtin-pets");
 
 function fileUrl(absPath) {
   try { return pathToFileURL(absPath).href; } catch { return null; }
@@ -144,10 +145,26 @@ function getThemeMetadata(themeId, options = {}) {
   return buildThemeMetadata(themeId, raw, isBuiltin, themeDir, options);
 }
 
+// Built-in pets appear in the order the product presents them (Halo first),
+// not in directory order. Unknown built-ins keep their relative order after.
+const BUILTIN_ORDER = Object.keys(BUILTIN_PET_NAMES);
+function sortBuiltinThemes(themes) {
+  const rank = (theme) => {
+    const index = BUILTIN_ORDER.indexOf(theme.id);
+    return index === -1 ? BUILTIN_ORDER.length : index;
+  };
+  const indexed = themes.map((theme, index) => ({ theme, index }));
+  indexed.sort((a, b) => (rank(a.theme) - rank(b.theme)) || (a.index - b.index));
+  indexed.forEach((entry, index) => { themes[index] = entry.theme; });
+}
+
 function listThemesWithMetadata(options = {}) {
   const themes = [];
   const seen = new Set();
-  if (options.builtinThemesDir) scanMetadata(options.builtinThemesDir, true, themes, seen, options);
+  if (options.builtinThemesDir) {
+    scanMetadata(options.builtinThemesDir, true, themes, seen, options);
+    sortBuiltinThemes(themes);
+  }
   if (options.userThemesDir) scanMetadata(options.userThemesDir, false, themes, seen, options);
   return themes;
 }
