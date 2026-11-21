@@ -180,7 +180,7 @@ describe("Mac App Store configuration", () => {
       for (const [key, file] of [["aboutPrivacyUrl", "PRIVACY.md"], ["aboutSupportUrl", "SUPPORT.md"]]) {
         assert.strictEqual(
           strings[key],
-          `https://github.com/addsumtech/AgentHalo-mas/blob/main/docs/${file}`,
+          `https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/docs/${file}`,
           `${lang}.${key}`
         );
       }

@@ -3,6 +3,7 @@
 const defaultFs = require("fs");
 const defaultPath = require("path");
 const { pathToFileURL } = require("url");
+const { openAppStoreReview } = require("./app-store-review");
 const { detectAgentInstallations: defaultDetectAgentInstallations } = require("./agent-installation-detector");
 const { DEFAULT_INTEGRATION_INSTALLED_IDS } = require("./prefs");
 const settingsThemeImporter = require("./settings-theme-importer");
@@ -889,10 +890,10 @@ function registerSettingsIpc(options = {}) {
     // The store binary's AGPL source is the AgentHalo-mas repository.
     return {
       version: app.getVersion(),
-      repoUrl: "https://github.com/addsumtech/AgentHalo-mas",
-      repoLabel: "addsumtech / AgentHalo-mas",
-      issuesUrl: "https://github.com/addsumtech/AgentHalo-mas/issues",
-      licenseUrl: "https://github.com/addsumtech/AgentHalo-mas/blob/main/agenthalo/LICENSE",
+      repoUrl: "https://github.com/ai-martin-lau/AgentHalo-mas",
+      repoLabel: "ai-martin-lau / AgentHalo-mas",
+      issuesUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/issues",
+      licenseUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/agenthalo/LICENSE",
       upstreamUrl: "https://github.com/rullerzhou-afk/clawd-on-desk",
       license: "AGPL-3.0-only",
       copyright: "\u00a9 2026 Addsum",
@@ -920,6 +921,11 @@ function registerSettingsIpc(options = {}) {
     const boundedText = String(copyText == null ? "" : copyText).slice(0, 8 * 1024);
     if (!boundedText) return { status: "error", message: "empty update error report" };
     return copyUpdateError(boundedText);
+  });
+
+  handle("settings:rate-app", (event) => {
+    const rejection = rejectUntrustedSettingsEvent(event);
+    return rejection || openAppStoreReview(shell);
   });
 
   handle("settings:open-external", async (_event, url) => {

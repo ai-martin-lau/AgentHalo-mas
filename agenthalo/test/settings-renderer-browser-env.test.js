@@ -2365,6 +2365,7 @@ function assertVisibleFeishuLookupPreflight(card, lookupButton, expectedMessage)
 }
 
 function loadAboutTabForTest({
+  rateApp = () => Promise.resolve({ status: "ok" }),
   snapshot = {},
   update,
   aboutInfo = {},
@@ -2393,6 +2394,7 @@ function loadAboutTabForTest({
     window: null,
     globalThis: null,
     settingsAPI: {
+      rateApp,
       getAboutInfo: () => Promise.resolve({
         version: "1.0.0",
         autoUpdateCheck: snapshot.autoUpdateCheck !== false,
@@ -4094,14 +4096,31 @@ describe("settings renderer browser environment", () => {
     }
   });
 
+  it("offers rating only after the About button is clicked and reports failures", async () => {
+    let calls = 0;
+    const harness = loadAboutTabForTest({
+      rateApp: async () => { calls++; return { status: "error" }; },
+    });
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(calls, 0);
+    const button = harness.content.querySelector(".about-rate-button");
+    assert.ok(button);
+    assert.equal(button.tagName, "BUTTON");
+    assert.equal(button.textContent, "rateApp");
+    button.dispatchEvent({ type: "click" });
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(calls, 1);
+    assert.equal(harness.toasts[0].message, "aboutOpenExternalFailed");
+  });
+
   it("presents AgentHalo feedback separately from upstream credit without update controls", async () => {
     const opened = [];
     const harness = loadAboutTabForTest({
       aboutInfo: {
-        repoUrl: "https://github.com/addsumtech/AgentHalo-mas",
-        repoLabel: "addsumtech / AgentHalo-mas",
-        issuesUrl: "https://github.com/addsumtech/AgentHalo-mas/issues",
-        licenseUrl: "https://github.com/addsumtech/AgentHalo-mas/blob/main/agenthalo/LICENSE",
+        repoUrl: "https://github.com/ai-martin-lau/AgentHalo-mas",
+        repoLabel: "ai-martin-lau / AgentHalo-mas",
+        issuesUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/issues",
+        licenseUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/agenthalo/LICENSE",
         license: "AGPL-3.0-only",
         upstreamUrl: "https://github.com/rullerzhou-afk/clawd-on-desk",
         updateCheckSnapshot: { state: "error", error: { code: "OLD_ERROR" } },
@@ -4116,14 +4135,14 @@ describe("settings renderer browser environment", () => {
     const feedback = links.find((link) => link.textContent === "aboutFeedbackAction");
     feedback.dispatchEvent({ type: "click", preventDefault() {} });
     // The store binary's AGPL source: repository, issues and license.
-    links.find((link) => link.textContent === "addsumtech / AgentHalo-mas")
+    links.find((link) => link.textContent === "ai-martin-lau / AgentHalo-mas")
       .dispatchEvent({ type: "click", preventDefault() {} });
     links.find((link) => link.textContent === "AGPL-3.0-only")
       .dispatchEvent({ type: "click", preventDefault() {} });
     assert.deepStrictEqual(opened, [
-      "https://github.com/addsumtech/AgentHalo-mas/issues",
-      "https://github.com/addsumtech/AgentHalo-mas",
-      "https://github.com/addsumtech/AgentHalo-mas/blob/main/agenthalo/LICENSE",
+      "https://github.com/ai-martin-lau/AgentHalo-mas/issues",
+      "https://github.com/ai-martin-lau/AgentHalo-mas",
+      "https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/agenthalo/LICENSE",
     ]);
     assert.equal(harness.content.querySelector(".about-auto-update-switch"), null);
     assert.equal(harness.content.querySelector(".about-check-update-btn"), null);

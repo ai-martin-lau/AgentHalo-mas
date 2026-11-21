@@ -98,7 +98,7 @@ function buildBaseCtx(overrides = {}) {
 }
 
 describe("context menu hide pet action (#460)", () => {
-  it("exposes a Hide Pet item right before Quit that changes visibility", () => {
+  it("exposes a Hide Pet item before rating and Quit that changes visibility", () => {
     const initMenu = loadMenuWithElectron(fakeElectron());
     const visCalls = [];
     const ctx = buildBaseCtx({
@@ -113,7 +113,7 @@ describe("context menu hide pet action (#460)", () => {
     const quitIdx = labels.indexOf("Quit");
     assert.ok(hideIdx !== -1, "context menu should expose Hide Pet");
     assert.strictEqual(quitIdx, labels.length - 1, "Quit should stay the last item");
-    assert.strictEqual(hideIdx, quitIdx - 2, "Hide Pet should sit just above Quit");
+    assert.strictEqual(hideIdx, quitIdx - 3, "Hide Pet should sit before the rating and Quit group");
     assert.strictEqual(ctx.contextMenu.template[hideIdx + 1].type, "separator");
 
     ctx.contextMenu.template[hideIdx].click();

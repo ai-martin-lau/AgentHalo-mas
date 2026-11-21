@@ -1,6 +1,7 @@
 "use strict";
 
-const { app, BrowserWindow, screen, Menu, Tray, nativeImage } = require("electron");
+const { app, BrowserWindow, screen, Menu, Tray, nativeImage, shell } = require("electron");
+const { openAppStoreReview } = require("./app-store-review");
 const path = require("path");
 const { keepOutOfTaskbar } = require("./taskbar");
 const { loadTrayNormalIcon } = require("./tray-flash-icon");
@@ -106,7 +107,10 @@ module.exports = function initMenu(ctx) {
         { label: petHiddenAtBuild ? t("showPet") : t("hidePet"),
           click: () => ctx.setPetVisibility(petHiddenAtBuild) },
       ],
-      [{ label: t("quit"), click: () => requestAppQuit() }],
+      [
+        { label: t("rateApp"), click: () => openAppStoreReview(shell) },
+        { label: t("quit"), click: () => requestAppQuit() },
+      ],
     ]);
   }
 

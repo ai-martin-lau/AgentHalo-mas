@@ -4,18 +4,18 @@ Bundle id：`com.addsum.agenthalo`
 分类：Productivity  
 年龄分级：4+  
 价格：中国大陆免费，其他地区 USD 1.99 买断。价格表基准国家/地区选美国（其他地区由 Apple 自动换算），再手动管理中国大陆，价格选「免费」。没有应用内购买和订阅  
-许可：AGPL-3.0-only，源码：https://github.com/addsumtech/AgentHalo-mas
+许可：AGPL-3.0-only，源码：https://github.com/ai-martin-lau/AgentHalo-mas
 
 联系：addsumtech@gmail.com  
-隐私政策 URL：https://github.com/addsumtech/AgentHalo-mas/blob/main/docs/PRIVACY.md（建议）  
-支持 URL：https://github.com/addsumtech/AgentHalo-mas/blob/main/docs/SUPPORT.md（建议）
+隐私政策 URL：https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/docs/PRIVACY.md（建议）\
+支持 URL：https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/docs/SUPPORT.md（建议）
 
 ## 提交前检查
 
 - 收费 App 要先在 App Store Connect 的「协议、税务和银行业务」里签好「付费 App」协议，并填完银行账户和税务信息，状态变成「有效」后价格才会生效。中国大陆免费不影响这一条：其他地区收费就必须签。
 - 中国大陆的价格如果在手动管理里选不到「免费」，先别提交，重新规划定价方式。
 - 上架中国大陆可能需要 ICP 备案号；没有备案就先不在销售范围里勾选中国大陆。
-- 隐私政策 URL 必须在提交前就能公开打开。上面的建议地址要求 `addsumtech/AgentHalo-mas` 是公开仓库，并且 `main` 上已有 `docs/PRIVACY.md`。支持 URL 同理。
+- 隐私政策 URL 必须在提交前就能公开打开。上面的建议地址要求 `ai-martin-lau/AgentHalo-mas` 是公开仓库，并且 `main` 上已有 `docs/PRIVACY.md`。支持 URL 同理。
 - 审核备注和商店文案只链接本仓库。不要链接完整版仓库，它自带第三方角色。
 - App 隐私（App Privacy）问卷：开发者不收集任何数据，选「不收集数据」（Data Not Collected）。
 - 截图只出现商店版角色，尺寸见文末。
@@ -124,7 +124,7 @@ CHARACTERS
 
 17 original companions created for AgentHalo, plus Sun Wukong from the 16th-century novel Journey to the West, in original artwork. No real people or third-party characters. Imported character packs stay in the app's container.
 
-SOURCE CODE: AGPL-3.0-only, https://github.com/addsumtech/AgentHalo-mas
+SOURCE CODE: AGPL-3.0-only, https://github.com/ai-martin-lau/AgentHalo-mas
 Contact: addsumtech@gmail.com
 
 ---

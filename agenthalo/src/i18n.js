@@ -7,6 +7,7 @@
 // take effect without re-creating the translator.
 const i18n = {
   en: {
+    rateApp: "Rate AgentHalo…",
     size: "Size",
     small: "Small (S)",
     medium: "Medium (M)",
@@ -502,6 +503,7 @@ const i18n = {
     feishuCardTestDetail: "This is a settings test card. It is not attached to any agent permission request.",
   },
   zh: {
+    rateApp: "给 AgentHalo 评分…",
     size: "大小",
     small: "小 (S)",
     medium: "中 (M)",
@@ -988,6 +990,7 @@ const i18n = {
     feishuCardTestDetail: "这是设置页的测试卡片，不对应任何 agent 权限请求。",
   },
   "zh-TW": {
+    rateApp: "為 AgentHalo 評分…",
     size: "大小",
     small: "小 (S)",
     medium: "中 (M)",
@@ -1477,6 +1480,7 @@ const i18n = {
     feishuCardTestDetail: "這是設定頁的測試卡片，不對應任何 agent 權限請求。",
   },
   ko: {
+    rateApp: "AgentHalo 평가하기…",
     size: "크기",
     small: "작은 (S)",
     medium: "보통 (M)",
@@ -1963,6 +1967,7 @@ const i18n = {
     feishuCardTestDetail: "설정 페이지의 테스트 카드입니다. 어떤 에이전트 권한 요청과도 연결되어 있지 않습니다.",
   },
   ja: {
+    rateApp: "AgentHalo を評価…",
     size: "サイズ",
     small: "小 (S)",
     medium: "中 (M)",
@@ -2449,6 +2454,7 @@ const i18n = {
     feishuCardTestDetail: "これは設定画面のテストカードです。エージェントの権限リクエストには関連付けられていません。",
   },
   "pt-BR": {
+    rateApp: "Avaliar o AgentHalo…",
     size: "Tamanho",
     small: "Pequeno (S)",
     medium: "Médio (M)",
@@ -2935,6 +2941,7 @@ const i18n = {
     feishuCardTestDetail: "Este é um card de teste das configurações. Ele não está vinculado a nenhum pedido de permissão de agente.",
   },
   es: {
+    rateApp: "Valorar AgentHalo…",
     size: "Tamaño",
     small: "Chico (S)",
     medium: "Mediano (M)",

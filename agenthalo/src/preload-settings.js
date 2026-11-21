@@ -191,6 +191,7 @@ contextBridge.exposeInMainWorld("settingsAPI", {
   clearUpdateError: () => ipcRenderer.invoke("settings:clear-update-error"),
   copyUpdateError: (copyText) => ipcRenderer.invoke("settings:copy-update-error", copyText),
   openExternal: (url) => ipcRenderer.invoke("settings:open-external", url),
+  rateApp: () => ipcRenderer.invoke("settings:rate-app"),
   listThemes: () => ipcRenderer.invoke("settings:list-themes"),
   importCompanionZip: () => ipcRenderer.invoke("settings:import-companion-zip"),
   openUserThemesDir: () => ipcRenderer.invoke("settings:open-user-themes-dir"),

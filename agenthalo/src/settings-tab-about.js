@@ -158,6 +158,19 @@
     hero.appendChild(icon);
     hero.appendChild(title);
     hero.appendChild(tagline);
+    const rateButton = document.createElement("button");
+    rateButton.className = "soft-btn about-rate-button";
+    rateButton.type = "button";
+    rateButton.textContent = t("rateApp");
+    rateButton.addEventListener("click", async () => {
+      try {
+        const result = await window.settingsAPI.rateApp();
+        if (!result || result.status !== "ok") throw new Error("Review link failed");
+      } catch {
+        ops.showToast(t("aboutOpenExternalFailed"));
+      }
+    });
+    hero.appendChild(rateButton);
     parent.appendChild(hero);
 
     const infoSection = document.createElement("section");

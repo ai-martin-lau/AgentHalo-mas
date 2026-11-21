@@ -43,6 +43,13 @@ function loadPreload({ argv = [] } = {}) {
   return { exposed, ipcHandlers, invokes };
 }
 
+test("settings preload opens reviews only through the dedicated rating IPC", async () => {
+  const { exposed, invokes } = loadPreload();
+  assert.deepEqual(invokes, []);
+  assert.deepEqual(await exposed.get("settingsAPI").rateApp(), { status: "ok" });
+  assert.deepEqual(invokes, [["settings:rate-app"]]);
+});
+
 test("settings preload keeps every Feishu approver operation on the generic command IPC", async () => {
   const { exposed, invokes } = loadPreload();
   const settingsAPI = exposed.get("settingsAPI");

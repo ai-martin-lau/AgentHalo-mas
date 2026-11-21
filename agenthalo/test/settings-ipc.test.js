@@ -1028,10 +1028,10 @@ test("settings IPC serves agent/about/update/external and remove-theme dialog he
     assert.deepStrictEqual(await ipcMain.invoke("settings:get-about-info"), {
       version: "1.2.3",
       // The store binary's AGPL source is AgentHalo-mas, not the full repo.
-      repoUrl: "https://github.com/addsumtech/AgentHalo-mas",
-      repoLabel: "addsumtech / AgentHalo-mas",
-      issuesUrl: "https://github.com/addsumtech/AgentHalo-mas/issues",
-      licenseUrl: "https://github.com/addsumtech/AgentHalo-mas/blob/main/agenthalo/LICENSE",
+      repoUrl: "https://github.com/ai-martin-lau/AgentHalo-mas",
+      repoLabel: "ai-martin-lau / AgentHalo-mas",
+      issuesUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/issues",
+      licenseUrl: "https://github.com/ai-martin-lau/AgentHalo-mas/blob/main/agenthalo/LICENSE",
       upstreamUrl: "https://github.com/rullerzhou-afk/clawd-on-desk",
       license: "AGPL-3.0-only",
       copyright: "\u00a9 2026 Addsum",
@@ -1206,4 +1206,22 @@ test("unified companion import rejects corrupt, ambiguous and unsupported packag
       assert.strictEqual(imports, 0);
     }
   } finally { fs.rmSync(root, { recursive: true, force: true }); }
+});
+
+
+test("rating IPC opens the fixed App Store review URL with HTTPS fallback", async () => {
+  const { REVIEW_URL, REVIEW_WEB_URL } = require("../src/app-store-review");
+  const opened = [];
+  const { ipcMain } = createHarness({ shell: { openExternal: async url => {
+    opened.push(url);
+    if (url === REVIEW_URL) throw new Error("protocol unavailable");
+  } } });
+  assert.deepStrictEqual(opened, []);
+  assert.deepStrictEqual(await ipcMain.invoke("settings:rate-app", "https://example.test"), { status: "ok" });
+  assert.deepStrictEqual(opened, [REVIEW_URL, REVIEW_WEB_URL]);
+  ipcMain.invokeEvent = { sender: null };
+  assert.deepStrictEqual(await ipcMain.invoke("settings:rate-app"), {
+    status: "error", message: "untrusted settings sender",
+  });
+  assert.strictEqual(opened.length, 2);
 });
