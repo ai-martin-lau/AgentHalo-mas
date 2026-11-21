@@ -30,6 +30,7 @@ function makeCtx(overrides = {}) {
   const sounds = [];
   const ctx = {
     theme: _defaultTheme,
+    completionSoundMode: "always",
     doNotDisturb: false,
     miniTransitioning: false,
     miniMode: false,

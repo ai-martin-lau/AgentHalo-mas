@@ -64,7 +64,8 @@ const {
   PET_MOUTH_ACCESSORY_IDS,
 } = require("./pet-customization-catalog");
 
-const CURRENT_VERSION = 19;
+const CURRENT_VERSION = 20;
+const { LEGACY_THEME_IDS } = require("./builtin-pets");
 
 // Fields deliberately removed from the schema. Unknown keys are otherwise
 // preserved so a newer build's additions survive a rollback, which would
@@ -290,9 +291,10 @@ const SCHEMA = {
     validate: (v) => Number.isInteger(v) && v >= 0 && v <= MAX_AUTO_CLOSE_SECONDS,
   },
   soundMuted: { type: "boolean", default: false },
+  completionSoundMode: { type: "string", default: "long", enum: ["long", "always", "off"] },
   soundVolume: {
     type: "number",
-    default: 1,
+    default: 0.5,
     validate: (v) => Number.isFinite(v) && v >= 0 && v <= 1,
   },
   flashTaskbarOnComplete: { type: "boolean", default: true },
@@ -937,6 +939,30 @@ function migrate(raw) {
   if (out.version < 19) {
     out.recapEnabled = typeof out.recapEnabled === "boolean" ? out.recapEnabled : true;
     out.version = 19;
+  }
+  // Store 1.0.7 replaces the SVG collection, including the old halo artwork.
+  // Do not carry incompatible animation/variant/sound overrides onto new pets.
+  if (out.version < 20) {
+    const retired = new Set(LEGACY_THEME_IDS);
+    if (retired.has(out.theme)) out.theme = "halo";
+    if (retired.has(out.positionThemeId)) {
+      out.positionThemeId = "halo";
+      out.positionVariantId = "default";
+    }
+    function dropRetiredSources(value) {
+      if (Array.isArray(value)) return value.map(dropRetiredSources).filter((entry) => entry !== undefined);
+      if (!isPlainObject(value)) return value;
+      if (retired.has(value.sourceThemeId)) return undefined;
+      return Object.fromEntries(Object.entries(value)
+        .map(([key, entry]) => [key, dropRetiredSources(entry)])
+        .filter(([, entry]) => entry !== undefined));
+    }
+    for (const key of ["themeVariant", "themeOverrides"]) {
+      if (isPlainObject(out[key])) {
+        out[key] = dropRetiredSources(Object.fromEntries(Object.entries(out[key]).filter(([id]) => !retired.has(id))));
+      }
+    }
+    out.version = 20;
   }
   // Field-level migration also covers development snapshots that already have
   // the current schema. Preserve the old effective Codex timeout only when no

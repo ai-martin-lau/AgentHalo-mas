@@ -6,7 +6,7 @@
 
 Un compañero de escritorio tranquilo para tus tareas de IA.
 
-AgentHalo muestra las tareas principales en curso y en espera, y permite volver a la tarea seleccionada. Incluye 18 personajes con animaciones y sonidos: 17 compañeros originales y Sun Wukong. Las subtareas en segundo plano no aparecen en la lista.
+AgentHalo muestra las tareas principales en curso y en espera, y permite volver a la tarea seleccionada. Incluye compañeros como Halo con animaciones y sonidos, y permite importar paquetes de personajes. Las subtareas en segundo plano no aparecen en la lista.
 
 Esta es la edición de la Mac App Store. Consulta las [notas de la edición de la tienda](../README.md) para ver qué incluye.
 

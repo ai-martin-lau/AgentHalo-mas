@@ -216,7 +216,7 @@ describe("built-in store themes", () => {
     themeLoader.init(path.join(ROOT, "src"), userData);
     const builtins = themeLoader.discoverThemes().filter((theme) => theme.builtin);
     assert.ok(builtins.some((theme) => theme.id === themeLoader.DEFAULT_THEME_ID), "halo must ship");
-    assert.ok(builtins.length > 1);
+    assert.strictEqual(builtins.length, fs.readdirSync(path.join(ROOT, "pets")).length);
 
     for (const { id } of builtins) {
       const theme = themeLoader.loadTheme(id, { strict: true });
@@ -243,8 +243,8 @@ describe("built-in store themes", () => {
     assert.strictEqual(themeLoader.getRendererAssetsPath(), "../themes/halo/assets");
     assert.strictEqual(themeLoader.loadTheme("clawd")._id, "halo");
     const context = themeLoader.createThemeContext(null);
-    const idle = context.resolveAssetPath("idle-follow.svg");
-    assert.strictEqual(idle, path.join(ROOT, "themes", "halo", "assets", "idle-follow.svg"));
+    const idle = context.resolveAssetPath("codex-pet-idle-loop.svg");
+    assert.strictEqual(idle, path.join(ROOT, "themes", "halo", "assets", "codex-pet-idle-loop.svg"));
     assert.ok(fs.existsSync(idle));
   });
 });

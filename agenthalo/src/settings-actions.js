@@ -311,6 +311,7 @@ const updateRegistry = {
   recapEnabled: requireBoolean("recapEnabled"),
   tutorialSeen: requireBoolean("tutorialSeen"),
   soundMuted: requireBoolean("soundMuted"),
+  completionSoundMode: requireEnum("completionSoundMode", ["long", "always", "off"]),
   soundVolume: requireNumberInRange("soundVolume", 0, 1),
   textScale: requireNumberInRange("textScale", TEXT_SCALE_MIN, TEXT_SCALE_MAX),
   // Committed by the setTextScaleForDisplay command (the controller requires

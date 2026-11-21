@@ -59,6 +59,8 @@ module.exports = function initState(ctx) {
 const recapSink = ctx.recapSink && typeof ctx.recapSink.record === "function"
   ? ctx.recapSink
   : NOOP_RECAP_SINK;
+const { shouldPlayCompletionSound, createCompletionSoundTracker } = require("./completion-sound");
+const completionSoundTracker = createCompletionSoundTracker();
 const pendingClaudeRecapStarts = new Map();
 const MAX_PENDING_CLAUDE_RECAP_STARTS = 256;
 
@@ -577,6 +579,13 @@ function setState(newState, svgOverride, options = {}) {
   const sameState = newState === currentState;
   const sameSvg = !svgOverride || svgOverride === currentSvg;
   if (sameState && sameSvg) {
+    // Another session may finish while a short task's silent celebration is
+    // still visible. Evaluate its own duration even when no visual changes.
+    if ((newState === "attention" || newState === "mini-happy")
+      && !isOneshotDisabled("attention")
+      && shouldPlayCompletionSound(ctx.completionSoundMode, options.completionDurationMs)) {
+      ctx.playSound("complete");
+    }
     // Kimi CLI permission hold: re-arm the auto-return timer so the
     // notification animation keeps cycling while the user is reviewing
     // the permission prompt.
@@ -743,7 +752,7 @@ function applyState(state, svgOverride, options = {}) {
 
   // Sound triggers
   if (state === "attention" || state === "mini-happy") {
-    ctx.playSound("complete");
+    if (shouldPlayCompletionSound(ctx.completionSoundMode, applyOptions.completionDurationMs)) ctx.playSound("complete");
     if (ctx.flashTaskbar) ctx.flashTaskbar();
   } else if (state === "notification" || state === "mini-alert") {
     if (!applyOptions.muteNotificationSound) ctx.playSound("confirm");
@@ -1697,6 +1706,7 @@ function deleteSessionWithCompletionCleanup(sessionId, reason, options = {}) {
   ) {
     ctx.onSessionAutomationLifecycleEnd({ agentId, sessionId, reason });
   }
+  completionSoundTracker.delete(sessionId);
   return sessions.delete(sessionId);
 }
 
@@ -1823,6 +1833,7 @@ function promoteCompletion(sessionId, completionPayload = undefined) {
     recapDedupeId: completionPayload && completionPayload.recapDedupeId,
     completionCandidate: true,
   }, recapSnapshot);
+  const completionDurationMs = completionSoundTracker.finish(sessionId);
   if (hasConfirmedPermissionAnimationLock()) {
     const display = resolveDisplayState();
     setState(display, getSvgOverride(display));
@@ -1834,7 +1845,7 @@ function promoteCompletion(sessionId, completionPayload = undefined) {
   // from ANOTHER session (e.g. an error) — it must win. We must NOT clear the
   // global pending queue here; pendingTimer/pendingState are process-wide, not
   // per-session, so clearing them would swallow another session's visual.
-  setState("attention");
+  setState("attention", undefined, { completionDurationMs });
   return true;
 }
 
@@ -2305,6 +2316,10 @@ function updateSession(sessionId, state, event, opts = {}) {
     claudeBackgroundSubagentHoldAt = Math.max(1, Date.now());
   } else if (isClaudeMainStop && typedSubagentSnapshotIsZero) {
     claudeBackgroundSubagentHoldAt = null;
+  }
+
+  if (!normalizedSubagentId && preserveState !== true) {
+    completionSoundTracker.observe(sessionId, state, event);
   }
 
   // #406 Stop completion gate — Claude Code only; other agents keep their own
@@ -2830,6 +2845,8 @@ function updateSession(sessionId, state, event, opts = {}) {
   const suppressDuplicateCompletionVisual =
     duplicateCompletionVisualAtEntry || shouldSuppressDuplicateCompletionVisual(existing, state, event);
 
+  const completionDurationMs = state === "attention" || (state === "idle" && isDoneEvent(event))
+    ? completionSoundTracker.finish(sessionId) : null;
   if (ONESHOT_STATES.has(state)) {
     // Permission animation lock: while any permission request is pending,
     // keep the pet on notification and block all other one-shot visuals.
@@ -2870,7 +2887,8 @@ function updateSession(sessionId, state, event, opts = {}) {
       setState(displayState, getSvgOverride(displayState));
       return;
     }
-    setState(state);
+    setState(state, undefined, state === "attention"
+      ? { completionDurationMs } : {});
     return;
   }
 
@@ -3523,6 +3541,7 @@ function getCurrentHitBox() { return currentHitBox; }
 function getStartupRecoveryActive() { return startupRecoveryActive; }
 
 function cleanup() {
+  completionSoundTracker.clear();
   // The persist debounce timer is unref'd, so a quota update inside the
   // final debounce window before quit would otherwise never reach disk
   // (main.js before-quit calls this cleanup).

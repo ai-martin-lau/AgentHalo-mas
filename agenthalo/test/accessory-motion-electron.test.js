@@ -17,6 +17,7 @@ function electronExecutable() {
 }
 
 test("real SVG getCTM motion stays inside the declared accessory envelope", { timeout: 90_000 }, (t) => {
+  if (process.env.AGENTHALO_TEST_NO_GUI === "1") return t.skip("GUI launch disabled by AGENTHALO_TEST_NO_GUI");
   const executable = electronExecutable();
   if (!executable) return t.skip("Electron executable is not installed");
   if (process.platform === "linux" && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY) {

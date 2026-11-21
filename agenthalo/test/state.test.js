@@ -20,6 +20,7 @@ const { countLiveSubagents } = require("../src/state-visual-resolver");
 function makeCtx(overrides = {}) {
   const ctx = {
     lang: "en",
+    completionSoundMode: "always",
     theme: _defaultTheme,
     doNotDisturb: false,
     miniTransitioning: false,

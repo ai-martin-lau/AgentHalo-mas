@@ -295,7 +295,7 @@ describe("prefs.validate", () => {
     const v = prefs.validate({
       lang: "klingon",       // not in enum
       soundMuted: "yes",     // wrong type
-      soundVolume: 2,        // out of range → default 1
+      soundVolume: 2,        // out of range → default 0.5
       petTint: "custom-css",
       petAccessory: "wizard-hat",
       petMouthAccessory: "cigarette",
@@ -323,7 +323,7 @@ describe("prefs.validate", () => {
     const d = prefs.getDefaults();
     assert.strictEqual(v.lang, d.lang);
     assert.strictEqual(v.soundMuted, false);
-    assert.strictEqual(v.soundVolume, 1);
+    assert.strictEqual(v.soundVolume, 0.5);
     assert.deepStrictEqual(v.petTint, {});
     assert.deepStrictEqual(v.petAccessory, {});
     assert.deepStrictEqual(v.petMouthAccessory, {});
@@ -1898,22 +1898,22 @@ describe("prefs.load", () => {
     }
   });
 
-  it("accepts the current v19 schema and locks an explicit v20 file", () => {
-    const currentPath = makeTempPath("v19.json");
-    fs.writeFileSync(currentPath, JSON.stringify({ version: 19, lang: "zh" }), "utf8");
+  it("accepts the current v20 schema and locks an explicit v21 file", () => {
+    const currentPath = makeTempPath("v20.json");
+    fs.writeFileSync(currentPath, JSON.stringify({ version: prefs.CURRENT_VERSION, lang: "zh" }), "utf8");
     const current = prefs.load(currentPath);
     assert.strictEqual(current.locked, false);
-    assert.strictEqual(current.snapshot.version, 19);
+    assert.strictEqual(current.snapshot.version, prefs.CURRENT_VERSION);
     assert.strictEqual(current.snapshot.lang, "zh");
 
-    const futurePath = makeTempPath("v20.json");
-    fs.writeFileSync(futurePath, JSON.stringify({ version: 20, lang: "ja" }), "utf8");
+    const futurePath = makeTempPath("v21.json");
+    fs.writeFileSync(futurePath, JSON.stringify({ version: prefs.CURRENT_VERSION + 1, lang: "ja" }), "utf8");
     const originalWarn = console.warn;
     console.warn = () => {};
     try {
       const future = prefs.load(futurePath);
       assert.strictEqual(future.locked, true);
-      assert.strictEqual(future.snapshot.version, 20);
+      assert.strictEqual(future.snapshot.version, prefs.CURRENT_VERSION + 1);
       assert.strictEqual(future.snapshot.lang, "ja");
     } finally {
       console.warn = originalWarn;

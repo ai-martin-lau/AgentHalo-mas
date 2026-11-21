@@ -8,7 +8,7 @@ const path = require("node:path");
 const { spawnSync } = require("node:child_process");
 
 test("Electron main can load Koffi and harden a Windows recap root", {
-  skip: process.platform !== "win32",
+  skip: process.env.AGENTHALO_TEST_NO_GUI === "1" || process.platform !== "win32",
 }, (t) => {
   const parent = fs.mkdtempSync(path.join(os.tmpdir(), "clawd-recap-electron-acl-"));
   const root = path.join(parent, "recap-v1");

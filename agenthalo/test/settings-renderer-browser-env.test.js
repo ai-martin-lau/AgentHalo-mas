@@ -10447,6 +10447,23 @@ describe("settings renderer browser environment", () => {
     assert.equal(group.querySelector(".collapsible-group-header"), null);
   });
 
+  it("shows the completion sound mode in General and saves the selected option", async () => {
+    const calls = [];
+    const harness = loadGeneralTabForTest({
+      snapshot: makeGeneralSnapshot({ completionSoundMode: "long" }),
+      settingsAPI: { update: async (key, value) => { calls.push({ key, value }); return { status: "ok" }; } },
+    });
+    harness.renderContent();
+    const picker = harness.content.querySelector(".settings-completion-sound-select");
+    assert.ok(picker);
+    assert.equal(getSelectedPickerValue(picker), "long");
+    assert.deepEqual(picker.querySelectorAll(".language-picker-option").map((option) => option.dataset.lang), ["long", "always", "off"]);
+    choosePickerOption(picker, "off");
+    await Promise.resolve();
+    await Promise.resolve();
+    assert.deepEqual(calls, [{ key: "completionSoundMode", value: "off" }]);
+  });
+
   it("keeps the single sound switch and volume slider synchronized in place", () => {
     const initialSnapshot = makeGeneralSnapshot({
       soundMuted: false,
@@ -10465,7 +10482,7 @@ describe("settings renderer browser environment", () => {
     assert.ok(volumeControl);
     assert.ok(volumeSlider);
     assert.ok(optionList);
-    assert.strictEqual(optionList.children.length, 2);
+    assert.strictEqual(optionList.children.length, 3);
     assert.ok(harness.getSwitchMeta("soundMuted").row.querySelector(".row-desc"));
     assert.strictEqual(summary.children.length, 1);
     assert.ok(summary.children[0].classList.contains("sound-header-switch"));

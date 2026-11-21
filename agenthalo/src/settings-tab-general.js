@@ -1191,7 +1191,7 @@
       element: summaryControl.headerSwitch, invert: true, row, text, extraElement: null,
     });
     row.append(text, summaryControl.element);
-    group.append(row, buildVolumeSliderRow());
+    group.append(row, buildCompletionSoundRow(), buildVolumeSliderRow());
     return group;
   }
 
@@ -1669,6 +1669,42 @@
     return next;
   }
 
+  function buildCompletionSoundRow() {
+    const row = document.createElement("div");
+    row.className = "row";
+    const label = document.createElement("span");
+    label.className = "row-label";
+    label.textContent = t("rowCompletionSound");
+    const picker = helpers.buildSettingsSelect({
+      value: (state.snapshot && state.snapshot.completionSoundMode) || "long",
+      options: [
+        { value: "long", label: t("completionSoundLong") },
+        { value: "always", label: t("completionSoundAlways") },
+        { value: "off", label: t("completionSoundOff") },
+      ],
+      ariaLabel: t("rowCompletionSound"),
+      className: "settings-completion-sound-select",
+      onChange: async (next) => {
+        try {
+          const result = await window.settingsAPI.update("completionSoundMode", next);
+          if (result && result.status === "ok") return true;
+          ops.showToast(t("toastSaveFailed") + ((result && result.message) || "unknown error"), { error: true });
+        } catch (err) {
+          ops.showToast(t("toastSaveFailed") + err.message, { error: true });
+        }
+        return false;
+      },
+    });
+    const text = document.createElement("div");
+    text.className = "row-text";
+    text.appendChild(label);
+    const control = document.createElement("div");
+    control.className = "row-control";
+    control.appendChild(picker.element);
+    row.append(text, control);
+    return row;
+  }
+
   function buildVolumeSliderRow() {
     const row = document.createElement("div");
     row.className = "row volume-slider-row";
@@ -1702,7 +1738,7 @@
 
     function getSnapshotVolumePct() {
       const v = state.snapshot && typeof state.snapshot.soundVolume === "number"
-        ? state.snapshot.soundVolume : 1;
+        ? state.snapshot.soundVolume : 0.5;
       return Math.round(v * 100);
     }
 

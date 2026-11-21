@@ -2163,6 +2163,7 @@ const _stateCtx = {
   sendToHitWin,
   syncHitWin,
   playSound,
+  get completionSoundMode() { return _settingsController.get("completionSoundMode"); },
   flashTaskbar,
   t: (key) => t(key),
   focusTerminalWindow: (...args) => focusTerminalWindow(...args),

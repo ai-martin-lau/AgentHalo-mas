@@ -56,6 +56,7 @@ function makeRealStateHarness() {
   const noop = () => {};
   const state = require("../src/state")({
     lang: "en",
+    completionSoundMode: "always",
     theme,
     doNotDisturb: false,
     miniTransitioning: false,

@@ -36,6 +36,13 @@
       "retentionReason": "Built-in themes are runtime product capabilities."
     },
     {
+      "pattern": "pets/**",
+      "class": "runtime-required",
+      "owner": "theme-runtime",
+      "packaged": true,
+      "retentionReason": "Built-in Codex v2 packages are shipped alongside generated themes."
+    },
+    {
       "pattern": "assets/gif/**",
       "class": "docs-marketing",
       "owner": "docs-readme",

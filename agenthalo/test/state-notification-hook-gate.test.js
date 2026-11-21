@@ -14,6 +14,7 @@ function makeCtx({ notificationHookEnabled = true } = {}) {
   const soundsPlayed = [];
   const ctx = {
     lang: "en",
+    completionSoundMode: "always",
     theme: defaultTheme,
     doNotDisturb: false,
     miniTransitioning: false,

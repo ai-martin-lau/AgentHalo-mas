@@ -13,7 +13,7 @@ This project includes third-party materials.
 
 ## Freesound Notification Sounds
 
-The default completion sound at `assets/sounds/complete.mp3` uses
+The fallback completion sound at `assets/sounds/complete.mp3` uses
 "DELETRAZ_Ludivine_2019_2020_notification.wav" by iut_Paris8:
 
 - Source: https://freesound.org/people/iut_Paris8/sounds/510287/

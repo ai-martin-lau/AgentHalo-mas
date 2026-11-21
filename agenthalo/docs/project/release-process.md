@@ -41,6 +41,16 @@ The repository-root `.github/workflows/ci.yml` runs `npm ci`, `npm test` and
 6. Upload the `.pkg` with Transporter (or `xcrun altool`), then fill in the
    listing, review notes and screenshots from `store/`.
 
+### v1.0.7 Draft Smoke Checklist
+
+- Confirm the packaged app shows `1.0.7` metadata and build `10701` on both architectures.
+- Settings -> About shows `v1.0.7`, sourced from `app.getVersion()`.
+- Inspect `pets/halo` and the generated `themes/halo` wrappers and local sounds in the development package.
+- Migrate old built-in theme selections to Halo without retaining old SVG overrides.
+- Check completion sounds for short and long tasks in all three modes; confirmation sounds keep the existing mute and DND guards.
+- Run `AGENTHALO_TEST_NO_GUI=1 npm test` when GUI launches are prohibited. This skips Electron window tests explicitly.
+- Build only `npm run build:mas-dev` for local review; do not launch or upload it during automated review.
+
 ### v1.0.4 Draft Smoke Checklist
 
 - Confirm the packaged app shows `1.0.4` metadata on both architectures.

@@ -53,7 +53,7 @@ describe("Mac App Store configuration", () => {
     for (const script of ["build", "build:mac", "build:mas"]) {
       assert.strictEqual(
         pkg.scripts[script],
-        "node scripts/build-proc-info.js && electron-builder --mac mas --universal",
+        "node scripts/generate-builtin-pets.js && node scripts/build-proc-info.js && electron-builder --mac mas --universal",
         script,
       );
     }
@@ -80,7 +80,7 @@ describe("Mac App Store configuration", () => {
   it("builds a universal development copy with a development certificate and a local profile", () => {
     assert.strictEqual(
       pkg.scripts["build:mas-dev"],
-      "node scripts/build-proc-info.js && electron-builder --mac mas-dev --universal",
+      "node scripts/generate-builtin-pets.js && node scripts/build-proc-info.js && electron-builder --mac mas-dev --universal",
     );
     const masDev = pkg.build.masDev;
     // mas-dev inherits every mas option, so the distribution identity and
@@ -369,7 +369,7 @@ describe("repository asset audit", () => {
 
 describe("retired Telegram sidecar", () => {
   it("starts directly without fetching a retired executable", () => {
-    assert.strictEqual(pkg.scripts.start, "node launch.js");
+    assert.strictEqual(pkg.scripts.start, "node scripts/generate-builtin-pets.js && node launch.js");
   });
 
   it("contains no retired scripts, prebuild hooks, or extraResources", () => {

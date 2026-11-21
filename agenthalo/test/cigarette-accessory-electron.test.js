@@ -20,6 +20,7 @@ test("cigarette SMIL advances and restarts in the production mouth object channe
   const source = fs.readFileSync(path.join(__dirname, "..", "src", "index.html"), "utf8");
   assert.match(source, /<object id="clawd-mouth-accessory"[^>]*type="image\/svg\+xml"/);
 
+  if (process.env.AGENTHALO_TEST_NO_GUI === "1") return t.skip("GUI launch disabled by AGENTHALO_TEST_NO_GUI");
   const executable = electronExecutable();
   if (!executable) return t.skip("Electron executable is not installed");
   if (process.platform === "linux" && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY) {

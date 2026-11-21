@@ -1,8 +1,8 @@
 {
   "appId": "6814860893",
   "platform": "MAC_OS",
-  "version": "1.0.6",
-  "build": "10602",
+  "version": "1.0.7",
+  "build": "10701",
   "localizations": {
     "en-US": {
       "name": "AgentHalo",
