@@ -22,7 +22,7 @@
     },
     {
       "file": "src/bubble-renderer.js",
-      "sha256": "2a60ffc16dfb64111d7575210c75e04a01fe31f803a55ccefbec4dc312a8fd03",
+      "sha256": "be68d4583279ebeceb7f92a2f29e28d656443c8058439ce6148a7114785d41b0",
       "packaged": true,
       "matches": true
     },
@@ -106,7 +106,7 @@
     },
     {
       "file": "src/settings-actions.js",
-      "sha256": "19c1f6bc6bc0c895542e43e06c4e760fd281419abc18ca0044fa4544f95aca84",
+      "sha256": "f6613f3e627c3dd6c1f1c618f360cb56a2009ebfa5e5dc8812893d2ba2324cca",
       "packaged": true,
       "matches": true
     },
@@ -154,7 +154,7 @@
     },
     {
       "file": "src/settings-i18n.js",
-      "sha256": "237dc08d003f7c6e9036311012d5e00563faaac194f579adc7ff2e92592264aa",
+      "sha256": "6b6b1f56a3e7d34e2a623de170b108a975a7d35b9bb9f01317a9090e15577519",
       "packaged": true,
       "matches": true
     },
@@ -236,13 +236,13 @@
     },
     {
       "file": "src/settings-tab-recap.js",
-      "sha256": "8769611832b7744d8dddd6ec0a4a1ff392b717b8e063a5f32cbc4e03e0f081a9",
+      "sha256": "a8204e4b41658c8bedb2cc2a41ebfa37818e5a5ef0c4f0a70bdf73d3b5ed5f26",
       "packaged": true,
       "matches": true
     },
     {
       "file": "src/settings-tab-remote-ssh.js",
-      "sha256": "9fe010b84845feaf455c4936e8b0cfcb4682dbee7fefc1cd45746977c0f90149",
+      "sha256": "609ef15217fd7297b53fb3fb19cc57ef12608d7c91d5b65f80d0f0455955a229",
       "packaged": false
     },
     {
@@ -258,7 +258,7 @@
     },
     {
       "file": "src/settings-tab-theme.js",
-      "sha256": "ad1241c52d9606b94cd60b9831079b2a122a5dd1240aaa23c3470a91145cd225",
+      "sha256": "1687129a6776c8a4e21d83ddc6e08cf178c2f3580464e8593f9f633fb5e3ea01",
       "packaged": true,
       "matches": true
     },
@@ -270,7 +270,7 @@
     },
     {
       "file": "src/settings-ui-core.js",
-      "sha256": "da26d0916ca2bfd987c45578f7ec678090a969c2ca7ca8544f1e82e5bcdb7a8c",
+      "sha256": "0f209266b3194b660f82000d744a91a0dd63d6ab4090c5b71211e7ac1c42aa7c",
       "packaged": true,
       "matches": true
     },
@@ -306,7 +306,7 @@
     },
     {
       "file": "src/shortcut-actions.js",
-      "sha256": "2a2b28dd1e43ef9e87afb4c5fe29d7aeceaa58d96082c427151de02123528d5f",
+      "sha256": "ed1e6a3a270026c7f04a5e67748eac6a692181168f10038b37c87bf70188c5df",
       "packaged": true,
       "matches": true
     },
@@ -337,7 +337,7 @@
     },
     {
       "file": "themes/halo/theme.json",
-      "sha256": "6c2e840632d798f9598be87394a58320350911df555e917d05b1e224ece4f7e1",
+      "sha256": "3fba28921c447ef15d3a37e89348a7be9fb690596da8f59a6b898507255dcc10",
       "matches": true
     },
     {
@@ -436,18 +436,18 @@
       "locale": "en-US",
       "tab": "theme",
       "lang": "en",
-      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nDesktop companion\n\nChoose and customize your desktop pet.\n\nAnimation and sound\nBuilt-in\nHalo\nBUILT-IN\n✓ Active\nFox\nBUILT-IN\nPanda\nBUILT-IN\nOctopus\nBUILT-IN\nCat\nBUILT-IN\nBunny\nBUILT-IN\nDragon\nBUILT-IN\nPenguin\nBUILT-IN\nAxolotl\nBUILT-IN\nMonkey King\nBUILT-IN\nImport companions\n\nSupports AgentHalo and Codex Pet packages. Format is detected automatically.\n\nImport character package (.zip)\nOpen themes folder\nRefresh themes",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nDesktop companion\n\nChoose and customize your desktop pet.\n\nAnimation and sound\nBuilt-in\nHalo the Owl\n✓ Active\nFox\nPanda\nOctopus\nCat\nBunny\nDragon\nPenguin\nAxolotl\nMonkey King\nImport companions\n\nSupports AgentHalo and Codex Pet packages. Format is detected automatically.\n\nImport character package (.zip)\nOpen themes folder\nRefresh themes",
       "themeCount": 10,
-      "activeTheme": "HaloBuilt-in✓ Active",
+      "activeTheme": "Halo the Owl✓ Active",
       "errors": []
     },
     {
       "locale": "en-US",
       "tab": "general",
       "lang": "en",
-      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nPreferences\n\nConfigure how AgentHalo behaves on your desktop.\n\nAppearance\nLanguage\nInterface language for menus and bubbles.\nEnglish\nInterface colors\nShared across the app; follows system light and dark mode.\nClassic Orange\nMoss Green\nOcean Blue\nSoft Lavender\nRose Pink\nSize\n30%\nText size\nSaved separately for each display.\n100%\nAlerts & feedback\nSound effects\nPlay a chime when AgentHalo finishes a task or asks for input.\nCompletion sound\nLong tasks (30 seconds or more)\nVolume\nAvailable when sound effects are on.\n50%\nBehavior & position\nFree roam\nStarts wandering after 8 seconds idle. Working, thinking or moving the mouse stops it.\nMovement style\nNatural\nHorizontal / vertical\nActivity area\nThe area file is invalid or still loading; roaming stays paused.\nChoose area…\nStartup and display\nOpen at login\nShow in menu bar\nShow in Dock\nShortcuts\nFootprints",
+      "text": "AgentHalo\nDesktop companion\nConnected apps\nPreferences\nAbout\nPreferences\n\nConfigure how AgentHalo behaves on your desktop.\n\nAppearance\nLanguage\nInterface language for menus and bubbles.\nEnglish\nInterface colors\nShared across the app; follows system light and dark mode.\nClassic Orange\nMoss Green\nOcean Blue\nSoft Lavender\nRose Pink\nSize\n30%\nText size\nSaved separately for each display.\n100%\nAlerts & feedback\nSound effects\nPlay a chime when AgentHalo finishes a task or asks for input.\nCompletion sound\nLong tasks (30s+)\nVolume\nAvailable when sound effects are on.\n50%\nBehavior & position\nFree roam\nStarts wandering after 8 seconds idle. Working, thinking or moving the mouse stops it.\nMovement style\nNatural\nHorizontal / vertical\nActivity area\nThe area file is invalid or still loading; roaming stays paused.\nChoose area…\nStartup and display\nOpen at login\nShow in menu bar\nShow in Dock\nShortcuts\nFootprints",
       "themeCount": 0,
-      "completion": "Long tasks (30 seconds or more)Long tasks (30 seconds or more)Every timeOff",
+      "completion": "Long tasks (30s+)Long tasks (30s+)Every timeOff",
       "soundBox": {
         "x": 216,
         "y": 544.515625,
@@ -483,9 +483,9 @@
       "locale": "zh-Hans",
       "tab": "theme",
       "lang": "zh",
-      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n桌面伙伴\n\n选择并装扮你的桌宠。\n\n动画和声音\n内建\nHalo\n内建\n✓ 当前\n小狐狸\n内建\n熊猫\n内建\n小章鱼\n内建\n橘猫\n内建\n小兔\n内建\n小龙\n内建\n企鹅\n内建\n六角恐龙\n内建\n孙悟空\n内建\n导入伙伴\n\n支持 AgentHalo 和 Codex Pet 角色包，自动识别格式。\n\n导入角色包（.zip）\n打开主题文件夹\n刷新主题",
+      "text": "AgentHalo\n桌面伙伴\n连接应用\n偏好设置\n关于\n桌面伙伴\n\n选择并装扮你的桌宠。\n\n动画和声音\n内建\n猫头鹰 Halo\n✓ 当前\n小狐狸\n熊猫\n小章鱼\n橘猫\n小兔\n小龙\n企鹅\n六角恐龙\n孙悟空\n导入伙伴\n\n支持 AgentHalo 和 Codex Pet 角色包，自动识别格式。\n\n导入角色包（.zip）\n打开主题文件夹\n刷新主题",
       "themeCount": 10,
-      "activeTheme": "Halo内建✓ 当前",
+      "activeTheme": "猫头鹰 Halo✓ 当前",
       "errors": []
     },
     {
@@ -530,9 +530,9 @@
       "locale": "zh-Hant",
       "tab": "theme",
       "lang": "zh-TW",
-      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n桌面夥伴\n\n選擇並裝扮你的桌寵。\n\n動畫與聲音\n內建\nHalo\n內建\n✓ 目前\n小狐狸\n內建\n熊貓\n內建\n小章魚\n內建\n橘貓\n內建\n小兔\n內建\n小龍\n內建\n企鵝\n內建\n六角恐龍\n內建\n孫悟空\n內建\n匯入夥伴\n\n支援 AgentHalo 和 Codex Pet 角色包，自動辨識格式。\n\n匯入角色包（.zip）\n開啟主題資料夾\n重新整理主題",
+      "text": "AgentHalo\n桌面夥伴\n連接應用\n偏好設定\n關於\n桌面夥伴\n\n選擇並裝扮你的桌寵。\n\n動畫與聲音\n內建\n貓頭鷹 Halo\n✓ 目前\n小狐狸\n熊貓\n小章魚\n橘貓\n小兔\n小龍\n企鵝\n六角恐龍\n孫悟空\n匯入夥伴\n\n支援 AgentHalo 和 Codex Pet 角色包，自動辨識格式。\n\n匯入角色包（.zip）\n開啟主題資料夾\n重新整理主題",
       "themeCount": 10,
-      "activeTheme": "Halo內建✓ 目前",
+      "activeTheme": "貓頭鷹 Halo✓ 目前",
       "errors": []
     },
     {
@@ -577,18 +577,18 @@
       "locale": "ja",
       "tab": "theme",
       "lang": "ja",
-      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\nデスクトップの仲間\n\nデスクトップペットを選んでカスタマイズします。\n\nアニメーションとサウンド\n組み込み\nHalo\n組み込み\n✓ 使用中\nキツネ\n組み込み\nパンダ\n組み込み\nタコ\n組み込み\nネコ\n組み込み\nウサギ\n組み込み\nドラゴン\n組み込み\nペンギン\n組み込み\nウーパールーパー\n組み込み\n孫悟空\n組み込み\n仲間を読み込む\n\nAgentHalo と Codex Pet に対応。形式は自動で判別します。\n\nキャラクターパッケージをインポート（.zip）\nテーマフォルダを開く\nテーマを更新",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\nデスクトップの仲間\n\nデスクトップペットを選んでカスタマイズします。\n\nアニメーションとサウンド\n組み込み\nフクロウのHalo\n✓ 使用中\nキツネ\nパンダ\nタコ\nネコ\nウサギ\nドラゴン\nペンギン\nウーパールーパー\n孫悟空\n仲間を読み込む\n\nAgentHalo と Codex Pet に対応。形式は自動で判別します。\n\nキャラクターパッケージをインポート（.zip）\nテーマフォルダを開く\nテーマを更新",
       "themeCount": 10,
-      "activeTheme": "Halo組み込み✓ 使用中",
+      "activeTheme": "フクロウのHalo✓ 使用中",
       "errors": []
     },
     {
       "locale": "ja",
       "tab": "general",
       "lang": "ja",
-      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\n環境設定\n\nAgentHalo のデスクトップでの動作を設定します。\n\n外観\n言語\nメニューと吹き出しの表示言語です。\n日本語\n画面の配色\nアプリ全体に適用され、システムのライト・ダークモードに従います。\nクラシックオレンジ\nモスグリーン\nオーシャンブルー\nラベンダー\nローズピンク\nサイズ\n30%\n文字サイズ\nディスプレイごとに保存されます。\n100%\n通知とフィードバック\n効果音\nAgentHalo がタスクを完了したとき、または入力を求めたときに音を再生します。\n完了通知音\n長いタスク（30秒以上）\n音量\n効果音がオンのときに調整できます。\n50%\n動作と位置\n自由散策\n8秒間待機すると歩き始めます。作業中・思考中やマウス操作時は停止します。\n移動スタイル\n自然\n水平 / 垂直\n活動範囲\n範囲ファイルが無効または読み込み中です。自由散策は一時停止します。\n範囲を選択…\n起動と表示\nログイン時に開く\nメニューバーに表示\nDock に表示\nショートカット\n足跡",
+      "text": "AgentHalo\nデスクトップの仲間\nアプリ連携\n環境設定\n情報\n環境設定\n\nAgentHalo のデスクトップでの動作を設定します。\n\n外観\n言語\nメニューと吹き出しの表示言語です。\n日本語\n画面の配色\nアプリ全体に適用され、システムのライト・ダークモードに従います。\nクラシックオレンジ\nモスグリーン\nオーシャンブルー\nラベンダー\nローズピンク\nサイズ\n30%\n文字サイズ\nディスプレイごとに保存されます。\n100%\n通知とフィードバック\n効果音\nAgentHalo がタスクを完了したとき、または入力を求めたときに音を再生します。\n完了通知音\n30秒以上のタスク\n音量\n効果音がオンのときに調整できます。\n50%\n動作と位置\n自由散策\n8秒間待機すると歩き始めます。作業中・思考中やマウス操作時は停止します。\n移動スタイル\n自然\n水平 / 垂直\n活動範囲\n範囲ファイルが無効または読み込み中です。自由散策は一時停止します。\n範囲を選択…\n起動と表示\nログイン時に開く\nメニューバーに表示\nDock に表示\nショートカット\n足跡",
       "themeCount": 0,
-      "completion": "長いタスク（30秒以上）長いタスク（30秒以上）毎回オフ",
+      "completion": "30秒以上のタスク30秒以上のタスク毎回オフ",
       "soundBox": {
         "x": 216,
         "y": 551.515625,
@@ -624,9 +624,9 @@
       "locale": "ko",
       "tab": "theme",
       "lang": "ko",
-      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n데스크톱 친구\n\n데스크톱 펫을 선택하고 꾸밀 수 있습니다.\n\n애니메이션 및 소리\n기본 제공\nHalo\n기본 제공\n✓ 활성\n여우\n기본 제공\n판다\n기본 제공\n문어\n기본 제공\n고양이\n기본 제공\n토끼\n기본 제공\n용\n기본 제공\n펭귄\n기본 제공\n우파루파\n기본 제공\n손오공\n기본 제공\n친구 가져오기\n\nAgentHalo와 Codex Pet 패키지를 지원하며 형식을 자동으로 인식합니다.\n\n캐릭터 패키지 가져오기 (.zip)\n테마 폴더 열기\n테마 새로고침",
+      "text": "AgentHalo\n데스크톱 친구\n앱 연결\n환경설정\n정보\n데스크톱 친구\n\n데스크톱 펫을 선택하고 꾸밀 수 있습니다.\n\n애니메이션 및 소리\n기본 제공\n부엉이 Halo\n✓ 활성\n여우\n판다\n문어\n고양이\n토끼\n용\n펭귄\n우파루파\n손오공\n친구 가져오기\n\nAgentHalo와 Codex Pet 패키지를 지원하며 형식을 자동으로 인식합니다.\n\n캐릭터 패키지 가져오기 (.zip)\n테마 폴더 열기\n테마 새로고침",
       "themeCount": 10,
-      "activeTheme": "Halo기본 제공✓ 활성",
+      "activeTheme": "부엉이 Halo✓ 활성",
       "errors": []
     },
     {
@@ -671,18 +671,18 @@
       "locale": "es-ES",
       "tab": "theme",
       "lang": "es",
-      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nCompañero de escritorio\n\nElige y personaliza tu mascota de escritorio.\n\nAnimación y sonido\nIntegrados\nHalo\nINTEGRADO\n✓ Activo\nZorro\nINTEGRADO\nPanda\nINTEGRADO\nPulpo\nINTEGRADO\nGato\nINTEGRADO\nConejo\nINTEGRADO\nDragón\nINTEGRADO\nPingüino\nINTEGRADO\nAjolote\nINTEGRADO\nRey Mono\nINTEGRADO\nImportar compañeros\n\nAdmite paquetes AgentHalo y Codex Pet. El formato se detecta automáticamente.\n\nImportar personaje (.zip)\nAbrir carpeta de temas\nActualizar temas",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nCompañero de escritorio\n\nElige y personaliza tu mascota de escritorio.\n\nAnimación y sonido\nIntegrados\nHalo el búho\n✓ Activo\nZorro\nPanda\nPulpo\nGato\nConejo\nDragón\nPingüino\nAjolote\nRey Mono\nImportar compañeros\n\nAdmite paquetes AgentHalo y Codex Pet. El formato se detecta automáticamente.\n\nImportar personaje (.zip)\nAbrir carpeta de temas\nActualizar temas",
       "themeCount": 10,
-      "activeTheme": "HaloIntegrado✓ Activo",
+      "activeTheme": "Halo el búho✓ Activo",
       "errors": []
     },
     {
       "locale": "es-ES",
       "tab": "general",
       "lang": "es",
-      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nPreferencias\n\nConfigura cómo se comporta AgentHalo en tu escritorio.\n\nApariencia\nIdioma\nIdioma de la interfaz para menús y globos.\nEspañol\nColores de la interfaz\nSe aplica a toda la app y sigue el modo claro u oscuro del sistema.\nNaranja clásico\nVerde musgo\nAzul océano\nLavanda suave\nRosa\nTamaño\n30%\nTamaño del texto\nSe guarda por separado para cada pantalla.\n100%\nAlertas y comentarios\nEfectos de sonido\nReproduce un tono cuando AgentHalo termina una tarea o pide entrada.\nSonido de finalización\nTareas largas (30 segundos o más)\nVolumen\nDisponible con los efectos de sonido activados.\n50%\nComportamiento y posición\nDeambular libre\nEmpieza a pasear tras 8 segundos de inactividad. Se detiene al trabajar, pensar o mover el ratón.\nEstilo de movimiento\nNatural\nHorizontal / vertical\nÁrea de actividad\nEl archivo del área no es válido o todavía se está cargando; el paseo permanece en pausa.\nElegir área…\nInicio y visualización\nAbrir al iniciar sesión\nMostrar en la barra de menús\nMostrar en el Dock\nAtajos\nHuellas",
+      "text": "AgentHalo\nCompañero de escritorio\nAplicaciones conectadas\nPreferencias\nAcerca de\nPreferencias\n\nConfigura cómo se comporta AgentHalo en tu escritorio.\n\nApariencia\nIdioma\nIdioma de la interfaz para menús y globos.\nEspañol\nColores de la interfaz\nSe aplica a toda la app y sigue el modo claro u oscuro del sistema.\nNaranja clásico\nVerde musgo\nAzul océano\nLavanda suave\nRosa\nTamaño\n30%\nTamaño del texto\nSe guarda por separado para cada pantalla.\n100%\nAlertas y comentarios\nEfectos de sonido\nReproduce un tono cuando AgentHalo termina una tarea o pide entrada.\nSonido de finalización\nTareas de 30 s+\nVolumen\nDisponible con los efectos de sonido activados.\n50%\nComportamiento y posición\nDeambular libre\nEmpieza a pasear tras 8 segundos de inactividad. Se detiene al trabajar, pensar o mover el ratón.\nEstilo de movimiento\nNatural\nHorizontal / vertical\nÁrea de actividad\nEl archivo del área no es válido o todavía se está cargando; el paseo permanece en pausa.\nElegir área…\nInicio y visualización\nAbrir al iniciar sesión\nMostrar en la barra de menús\nMostrar en el Dock\nAtajos\nHuellas",
       "themeCount": 0,
-      "completion": "Tareas largas (30 segundos o más)Tareas largas (30 segundos o más)SiempreDesactivado",
+      "completion": "Tareas de 30 s+Tareas de 30 s+SiempreDesactivado",
       "soundBox": {
         "x": 216,
         "y": 544.515625,
@@ -772,9 +772,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "dc1b4ce368f8dfdaed6475f3b2b4364c2f5f4d9e3f43268e32b15e57e69dc182",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "en-US",
@@ -905,7 +903,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "Halo the Owl",
           "active": true,
           "x": 838.4,
           "y": 546.18203125,
@@ -1044,9 +1042,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "bb0e5da8b2c11612da38355881213f1717921730b9ebad71ccae2509e129fd0e",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hans",
@@ -1177,7 +1173,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "猫头鹰 Halo",
           "active": true,
           "x": 838.4,
           "y": 554.23203125,
@@ -1316,9 +1312,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "4d1a553fafbdd2ae22cbaded097cc9a0c55d2252eb6051632fef2f39c4351988",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hant",
@@ -1449,7 +1443,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "貓頭鷹 Halo",
           "active": true,
           "x": 838.4,
           "y": 554.23203125,
@@ -1588,9 +1582,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "6bfc9a28bc2539973d0e96a3cc0577fe02aab048726a40a143dcbaec602eb57e",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "ja",
@@ -1721,7 +1713,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "フクロウのHalo",
           "active": true,
           "x": 838.4,
           "y": 554.23203125,
@@ -1860,9 +1852,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "5bd9b0416079847e0ff3cff7b9b50db6c9912109854deac33810218c5d336fa9",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "ko",
@@ -1993,7 +1983,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "부엉이 Halo",
           "active": true,
           "x": 838.4,
           "y": 546.18203125,
@@ -2132,9 +2122,7 @@
           "height": 416
         }
       ],
-      "noPetUiOverlap": true,
-      "sha256": "e0a0d6168d8c19b8409b20445f54f9f8763333cb5212afe8eba06f856749d7c9",
-      "unchanged": true
+      "noPetUiOverlap": true
     },
     {
       "locale": "es-ES",
@@ -2265,7 +2253,7 @@
       "noPetUiOverlap": true,
       "visibleThemeCards": [
         {
-          "name": "Halo",
+          "name": "Halo el búho",
           "active": true,
           "x": 838.4,
           "y": 546.18203125,
