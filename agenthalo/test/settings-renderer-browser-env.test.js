@@ -11369,6 +11369,18 @@ describe("settings renderer browser environment", () => {
     assert.deepStrictEqual([img.style.width, img.style.height], ["800%", "1100%"]);
   });
 
+  it("gives built-in pet names the whole row, with the full name as a tooltip", () => {
+    const { content } = loadThemeTabForTest({
+      themes: [
+        { id: "halo", name: "Halo the Owl", builtin: true, active: true },
+        { id: "fox", name: "Fox", builtin: true, active: false },
+      ],
+    });
+    assert.strictEqual(content.querySelectorAll(".theme-card-badge").length, 0, "the Built-in heading already says it");
+    const names = content.querySelectorAll(".theme-card-name-text");
+    assert.deepStrictEqual(names.map((el) => el.title), ["Halo the Owl", "Fox"]);
+  });
+
   it("keeps customization visible on every capable pet while omitting Calico", () => {
     const supported = loadThemeTabForTest({
       themes: [

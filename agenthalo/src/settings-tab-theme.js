@@ -761,13 +761,10 @@
     const nameText = document.createElement("span");
     nameText.className = "theme-card-name-text";
     nameText.textContent = localizeField(theme.name) || theme.id;
+    // Long names still ellipsize in narrow windows; the tooltip keeps them readable.
+    nameText.title = nameText.textContent;
     name.appendChild(nameText);
-    if (theme.builtin) {
-      const badge = document.createElement("span");
-      badge.className = "theme-card-badge";
-      badge.textContent = t("themeBadgeBuiltin");
-      name.appendChild(badge);
-    }
+    // Built-in pets sit under their own "Built-in" heading, so no per-card badge.
     if (theme.managedCodexPet) {
       const badge = document.createElement("span");
       badge.className = "theme-card-badge accent";
