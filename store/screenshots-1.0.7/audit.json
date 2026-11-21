@@ -724,15 +724,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "en-US",
@@ -742,15 +753,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "dc1b4ce368f8dfdaed6475f3b2b4364c2f5f4d9e3f43268e32b15e57e69dc182",
+      "unchanged": true
     },
     {
       "locale": "en-US",
@@ -760,76 +784,149 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 546.18203125,
+          "width": 187.05468749999997,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "Fox",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "Panda",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
         }
       ]
     },
@@ -841,15 +938,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 481.453125
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "en-US",
@@ -859,15 +967,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hans",
@@ -877,15 +996,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hans",
@@ -895,15 +1025,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "bb0e5da8b2c11612da38355881213f1717921730b9ebad71ccae2509e129fd0e",
+      "unchanged": true
     },
     {
       "locale": "zh-Hans",
@@ -913,76 +1056,149 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 554.23203125,
+          "width": 187.05468749999997,
+          "height": 262.97265625
+        },
+        {
+          "name": "小狐狸",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
+        },
+        {
+          "name": "熊猫",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
         }
       ]
     },
@@ -994,15 +1210,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 485.34375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hans",
@@ -1012,15 +1239,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hant",
@@ -1030,15 +1268,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hant",
@@ -1048,15 +1297,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "4d1a553fafbdd2ae22cbaded097cc9a0c55d2252eb6051632fef2f39c4351988",
+      "unchanged": true
     },
     {
       "locale": "zh-Hant",
@@ -1066,76 +1328,149 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 554.23203125,
+          "width": 187.05468749999997,
+          "height": 262.97265625
+        },
+        {
+          "name": "小狐狸",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
+        },
+        {
+          "name": "熊貓",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
         }
       ]
     },
@@ -1147,15 +1482,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 485.34375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "zh-Hant",
@@ -1165,15 +1511,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ja",
@@ -1183,15 +1540,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ja",
@@ -1201,15 +1569,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "6bfc9a28bc2539973d0e96a3cc0577fe02aab048726a40a143dcbaec602eb57e",
+      "unchanged": true
     },
     {
       "locale": "ja",
@@ -1219,76 +1600,149 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 554.23203125,
+          "width": 187.05468749999997,
+          "height": 262.97265625
+        },
+        {
+          "name": "キツネ",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
+        },
+        {
+          "name": "パンダ",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 554.23203125,
+          "width": 187.07265625,
+          "height": 262.97265625
         }
       ]
     },
@@ -1300,15 +1754,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 526.109375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ja",
@@ -1318,15 +1783,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ko",
@@ -1336,15 +1812,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ko",
@@ -1354,15 +1841,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "5bd9b0416079847e0ff3cff7b9b50db6c9912109854deac33810218c5d336fa9",
+      "unchanged": true
     },
     {
       "locale": "ko",
@@ -1372,76 +1872,149 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 546.18203125,
+          "width": 187.05468749999997,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "여우",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "판다",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
         }
       ]
     },
@@ -1453,15 +2026,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 481.453125
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "ko",
@@ -1471,15 +2055,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 193.609375,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "es-ES",
@@ -1489,15 +2084,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 64,
+        "y": 499.1875,
+        "width": 936,
+        "height": 201.59375
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
-          "scale": "2",
-          "imageRendering": "pixelated"
+          "scale": "2.5",
+          "imageRendering": "pixelated",
+          "x": 1040,
+          "y": 400,
+          "width": 360,
+          "height": 400
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "es-ES",
@@ -1507,15 +2113,28 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 88,
+        "y": 354,
+        "width": 900,
+        "height": 403.890625
+      },
       "pets": [
         {
           "id": "halo",
           "row": "6",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1000,
+          "y": 465,
+          "width": 384,
+          "height": 416
         }
-      ]
+      ],
+      "noPetUiOverlap": true,
+      "sha256": "e0a0d6168d8c19b8409b20445f54f9f8763333cb5212afe8eba06f856749d7c9",
+      "unchanged": true
     },
     {
       "locale": "es-ES",
@@ -1525,76 +2144,149 @@
       "titleLines": 2,
       "titleRight": 1352,
       "subtitleBottom": 269.890625,
+      "ui": {
+        "x": 820,
+        "y": 330,
+        "width": 620,
+        "height": 540
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 28,
+          "y": 400,
+          "width": 144,
+          "height": 160
         },
         {
           "id": "fox",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 186,
+          "y": 400,
+          "width": 124,
+          "height": 160
         },
         {
           "id": "panda",
           "row": "4",
           "column": "3",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 334,
+          "y": 400,
+          "width": 124,
+          "height": 167
         },
         {
           "id": "octopus",
-          "row": "7",
-          "column": "2",
+          "row": "3",
+          "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 480,
+          "y": 400,
+          "width": 128,
+          "height": 160
         },
         {
           "id": "cat",
-          "row": "8",
+          "row": "4",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 400,
+          "width": 126,
+          "height": 162
         },
         {
           "id": "bunny",
           "row": "3",
-          "column": "2",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 55,
+          "y": 650,
+          "width": 91,
+          "height": 160
         },
         {
           "id": "dragon",
           "row": "0",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 188,
+          "y": 650,
+          "width": 121,
+          "height": 160
         },
         {
           "id": "penguin",
           "row": "4",
-          "column": "3",
+          "column": "1",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 340,
+          "y": 650,
+          "width": 113,
+          "height": 163
         },
         {
           "id": "axolotl",
           "row": "6",
           "column": "0",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 474,
+          "y": 650,
+          "width": 141,
+          "height": 160
         },
         {
           "id": "wukong",
           "row": "3",
           "column": "2",
           "scale": "1",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 629,
+          "y": 650,
+          "width": 127,
+          "height": 160
+        }
+      ],
+      "noPetUiOverlap": true,
+      "visibleThemeCards": [
+        {
+          "name": "Halo",
+          "active": true,
+          "x": 838.4,
+          "y": 546.18203125,
+          "width": 187.05468749999997,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "Zorro",
+          "active": false,
+          "x": 1041.5546875,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
+        },
+        {
+          "name": "Panda",
+          "active": false,
+          "x": 1244.7273437499998,
+          "y": 546.18203125,
+          "width": 187.07265625,
+          "height": 259.52265624999995
         }
       ]
     },
@@ -1606,15 +2298,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 48,
+        "y": 350,
+        "width": 1060,
+        "height": 419.921875
+      },
       "pets": [
         {
           "id": "halo",
           "row": "8",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 1136,
+          "y": 520,
+          "width": 278,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     },
     {
       "locale": "es-ES",
@@ -1624,15 +2327,26 @@
       "titleLines": 1,
       "titleRight": 1352,
       "subtitleBottom": 200.140625,
+      "ui": {
+        "x": 350,
+        "y": 285,
+        "width": 1030.390625,
+        "height": 588
+      },
       "pets": [
         {
           "id": "halo",
           "row": "0",
           "column": "0",
           "scale": "2",
-          "imageRendering": "pixelated"
+          "imageRendering": "pixelated",
+          "x": 40,
+          "y": 540,
+          "width": 288,
+          "height": 320
         }
-      ]
+      ],
+      "noPetUiOverlap": true
     }
   ]
 }

@@ -15,7 +15,7 @@ if(themes.length!==10)throw Error(`Expected 10 themes, got ${themes.length}`);
 // Keep the generated SVG geometry, animation and settings DOM; nearest-neighbor only.
 for(const t of themes){const svg=fs.readFileSync(new URL(t.previewFileUrl),'utf8');const atlas=fs.readFileSync(path.join(app,'themes',t.id,'assets/spritesheet.webp'));t.previewFileUrl='data:image/svg+xml;base64,'+Buffer.from(svg.replace('href="spritesheet.webp"','href="data:image/webp;base64,'+atlas.toString('base64')+'"').replaceAll('image-rendering: auto','image-rendering: pixelated')).toString('base64')}
 const agents=['claude-code','codex'].map(id=>{const a=require(path.join(app,'agents',id+'.js'));return {id:a.id,name:a.name,eventSource:a.eventSource,capabilities:a.capabilities,cleanupSuggestionExempt:true}});
-const {i18n}=require(path.join(app,'src/i18n'));
+const previousApprove=Object.fromEntries(Object.keys(copy).map(locale=>{const f=path.join(root,locale,'02-approve.png');return [locale,fs.existsSync(f)?crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'):null]}));
 const archive=path.join(app,'dist/mas-dev-universal/AgentHalo.app/Contents/Resources/app.asar');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const sourceFiles=fs.readdirSync(path.join(app,'src')).filter(f=>/^(settings|language-picker|shortcut-actions|ui-color-theme|sound-playback|localized-field|session-hud|bubble)/.test(f)&&/\.(js|css|html)$/.test(f));
@@ -47,7 +47,7 @@ async function main(){
  await context.route(/^https?:/,route=>route.abort());
  const canvasContext=await context.browser().newContext({viewport:{width:1440,height:900},deviceScaleFactor:2,colorScheme:'light',bypassCSP:true});canvasContext.setDefaultTimeout(15000);await canvasContext.route(/^https?:/,r=>r.abort());
  try{for(const [locale,c]of Object.entries(copy)){
-  const dir=path.join(root,locale),uiDir=path.join(dir,'ui');fs.mkdirSync(uiDir,{recursive:true});
+  const sourceLayout={};const dir=path.join(root,locale),uiDir=path.join(dir,'ui');fs.mkdirSync(uiDir,{recursive:true});
   for(const tab of ['theme','general','agents','about']){
    const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.setViewportSize(tab==='theme'?{width:1300,height:900}:tab==='general'?{width:c.lang==='es'?880:800,height:900}:{width:920,height:700});
@@ -60,12 +60,13 @@ async function main(){
    const info=await page.evaluate(()=>({lang:ClawdSettingsCore.state.snapshot.lang,tab:ClawdSettingsCore.state.activeTab,text:document.body.innerText,themeCount:document.querySelectorAll('.theme-card').length,activeTheme:document.querySelector('.theme-card.active')?.textContent,completion:document.querySelector('.settings-completion-sound-select')?.textContent}));
    if(errors.length)throw Error(locale+'/'+tab+': '+errors.join('; '));
    if(info.lang!==c.lang||info.tab!==tab)throw Error('Locale/tab mismatch');
-   if(tab==='theme')await page.screenshot({path:path.join(uiDir,'theme.png')});
+   if(tab==='theme'){sourceLayout.themeCards=await page.locator('.theme-card').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {name:e.querySelector('.theme-card-name-text').textContent,active:e.classList.contains('active'),x:r.x,y:r.y,width:r.width,height:r.height}}));await page.screenshot({path:path.join(uiDir,'theme.png')})}
    if(tab==='agents')await page.screenshot({path:path.join(uiDir,'agents.png'),clip:{x:0,y:0,width:920,height:420}});
    if(tab==='about')await page.screenshot({path:path.join(uiDir,'about.png')});
    if(tab==='general'){
     const sound=page.locator('.sound-settings-group');await sound.scrollIntoViewIfNeeded();await settled(page);
-    // Crop the actual section, including its heading, completion selector and volume.
+    // Align this screenshot-only group heading with the actual row text, as requested.
+    await sound.evaluate(e=>e.closest('.section').querySelector('.section-title').style.paddingLeft='19px');
     const section=sound.locator('..');
     await page.evaluate(()=>document.querySelector('#content').scrollTop=0);await page.waitForTimeout(100);
     const initialBox=await section.boundingBox();await page.setViewportSize({width:c.lang==='es'?880:800,height:Math.ceil(initialBox.y+initialBox.height+8)});
@@ -82,13 +83,26 @@ async function main(){
   const bubble=await context.newPage();const errors=[];bubble.on('pageerror',e=>errors.push(e.message));await bubble.setViewportSize({width:500,height:420});
   await bubble.addInitScript(({lang})=>{window.bubbleAPI=new Proxy({onPermissionShow:cb=>document.addEventListener('DOMContentLoaded',()=>cb({lang,toolName:'Bash',toolInput:{command:'npm test'},sessionFolder:'AgentHalo',sessionShortId:'107',suggestions:[],presentation:{expanded:false},interaction:{intent:'tool-approval',capabilities:{}}}))},{get:(o,k)=>o[k]||(()=>{})})},{lang:c.lang});
   await bubble.goto(file(path.join(app,'src/bubble.html'))+`?lang=${c.lang}`);await bubble.waitForFunction(()=>document.querySelector('#commandBlock')?.textContent.includes('npm test'));await settled(bubble);await bubble.locator('#card').screenshot({path:path.join(uiDir,'bubble.png')});audit.pages.push({locale,tab:'bubble',text:await bubble.locator('body').innerText(),errors});if(errors.length)throw Error(errors.join(';'));await bubble.close();
-  fs.writeFileSync(path.join(dir,'hud.html'),hudHtml(c));const hud=await context.newPage();await hud.setViewportSize({width:470,height:112});await hud.goto(file(path.join(dir,'hud.html')));await settled(hud);
+  fs.writeFileSync(path.join(uiDir,'layout.json'),JSON.stringify(sourceLayout,null,2)+'\n');
+  fs.writeFileSync(path.join(dir,'hud.html'),hudHtml(c));const hud=await context.newPage();await hud.setViewportSize({width:520,height:112});await hud.goto(file(path.join(dir,'hud.html')));await settled(hud);
   const clipped=await hud.locator('.title').evaluateAll(es=>es.some(e=>e.scrollWidth>e.clientWidth));if(clipped)throw Error(locale+' HUD title overflow');await hud.screenshot({path:path.join(uiDir,'hud.png'),omitBackground:true});await hud.close();
   for(let slide=1;slide<=5;slide++){
    const page=await canvasContext.newPage();await page.setViewportSize({width:1440,height:900});await page.goto(file(path.join(root,'canvas.html'))+`?locale=${locale}&slide=${slide}`);await page.waitForFunction(()=>window.canvasReady||window.canvasError);const err=await page.evaluate(()=>window.canvasError);if(err)throw Error(err);await settled(page);
-   const metrics=await page.evaluate(()=>{const h=document.querySelector('h1'),p=document.querySelector('header p');const r=h.getBoundingClientRect(),pr=p.getBoundingClientRect();return{title:h.textContent,subtitle:p.textContent,titleLines:Math.round(r.height/parseFloat(getComputedStyle(h).lineHeight)),titleRight:r.right,subtitleBottom:pr.bottom,pets:[...document.querySelectorAll('.pet')].map(e=>({id:e.dataset.pet,row:e.dataset.row,column:e.dataset.column,scale:e.dataset.scale,imageRendering:getComputedStyle(e).imageRendering}))}});
+   const metrics=await page.evaluate(()=>{
+    const rect=e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}};
+    const h=document.querySelector('h1'),p=document.querySelector('header p'),r=h.getBoundingClientRect(),pr=p.getBoundingClientRect();
+    return{title:h.textContent,subtitle:p.textContent,titleLines:Math.round(r.height/parseFloat(getComputedStyle(h).lineHeight)),titleRight:r.right,subtitleBottom:pr.bottom,ui:rect(document.querySelector('.ui')),pets:[...document.querySelectorAll('.pet')].map(e=>({id:e.dataset.pet,row:e.dataset.row,column:e.dataset.column,scale:e.dataset.scale,imageRendering:getComputedStyle(e).imageRendering,...rect(e)}))};
+   });
+   const intersects=(a,b)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
+   for(const p of metrics.pets){if(intersects(p,metrics.ui))throw Error(locale+'/'+slide+' pet overlaps UI');if(p.x<0||p.y<0||p.x+p.width>1440||p.y+p.height>900)throw Error(locale+'/'+slide+' pet clipped')}
+   for(let i=0;i<metrics.pets.length;i++)for(let j=i+1;j<metrics.pets.length;j++)if(intersects(metrics.pets[i],metrics.pets[j]))throw Error(locale+'/'+slide+' pets overlap');
+   metrics.noPetUiOverlap=true;
+   if(slide===3){
+    metrics.visibleThemeCards=sourceLayout.themeCards.slice(0,3).map(c=>({...c,x:820-230+c.x*1.15,y:330+c.y*1.15,width:c.width*1.15,height:c.height*1.15}));
+    for(const c of metrics.visibleThemeCards)if(c.x<820||c.y<330||c.x+c.width>1440||c.y+c.height>870)throw Error(locale+' first three gallery cards clipped');
+   }
    if(metrics.titleLines>2||metrics.titleRight>1353||metrics.subtitleBottom>300)throw Error(locale+'/'+slide+' copy overflow '+JSON.stringify(metrics));
-   const name=['01-walk-away','02-approve','03-characters','04-quiet','05-privacy'][slide-1];await page.screenshot({path:path.join(dir,name+'.png')});audit.slides.push({locale,name,...metrics});await page.close();console.log(locale+'/'+name);
+   const name=['01-walk-away','02-approve','03-characters','04-quiet','05-privacy'][slide-1];const rendered=await page.screenshot();if(slide!==2||previousApprove[locale]===null)fs.writeFileSync(path.join(dir,name+'.png'),rendered);if(slide===2){metrics.sha256=hash(fs.readFileSync(path.join(dir,name+'.png')));metrics.unchanged=previousApprove[locale]===null||previousApprove[locale]===metrics.sha256;if(!metrics.unchanged)throw Error(locale+' 02-approve changed')}audit.slides.push({locale,name,...metrics});await page.close();console.log(locale+'/'+name);
   }
  }
  fs.writeFileSync(path.join(root,'audit.json'),JSON.stringify(audit,null,2)+'\n');

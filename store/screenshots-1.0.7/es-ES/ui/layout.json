@@ -1,0 +1,84 @@
+{
+  "themeCards": [
+    {
+      "name": "Halo",
+      "active": true,
+      "x": 216,
+      "y": 187.984375,
+      "width": 162.65625,
+      "height": 225.671875
+    },
+    {
+      "name": "Zorro",
+      "active": false,
+      "x": 392.65625,
+      "y": 187.984375,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Panda",
+      "active": false,
+      "x": 569.328125,
+      "y": 187.984375,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Pulpo",
+      "active": false,
+      "x": 746,
+      "y": 187.984375,
+      "width": 162.65625,
+      "height": 225.671875
+    },
+    {
+      "name": "Gato",
+      "active": false,
+      "x": 922.65625,
+      "y": 187.984375,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Conejo",
+      "active": false,
+      "x": 1099.328125,
+      "y": 187.984375,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Dragón",
+      "active": false,
+      "x": 216,
+      "y": 427.65625,
+      "width": 162.65625,
+      "height": 225.671875
+    },
+    {
+      "name": "Pingüino",
+      "active": false,
+      "x": 392.65625,
+      "y": 427.65625,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Ajolote",
+      "active": false,
+      "x": 569.328125,
+      "y": 427.65625,
+      "width": 162.671875,
+      "height": 225.671875
+    },
+    {
+      "name": "Rey Mono",
+      "active": false,
+      "x": 746,
+      "y": 427.65625,
+      "width": 162.65625,
+      "height": 225.671875
+    }
+  ]
+}
