@@ -1,50 +1,50 @@
 {
- "en-US": {
-  "name": "AgentHalo: AI Desktop Pet",
-  "subtitle": "Pings you when the AI is done",
-  "keywords": "companion,mascot,notifier,coding,developer,programmer,terminal,cli,task,alert,menubar,animated,buddy",
-  "promotionalText": "Start a long AI coding task and walk away. Your desktop pet shows when the agent is thinking, working or waiting for you, and calls you back when it is done.",
-  "whatsNew": "Clearer App Store page and character previews. No change to how AgentHalo connects to your tools.",
-  "description": "AgentHalo puts a small animated pet on your Mac desktop that follows your AI coding agents. Start a long task, switch to something else, and the pet shows you when the agent is thinking, working, waiting for your approval, or done.\n\n· Know when to come back: the pet changes its animation for each task state and plays a short sound when a task finishes or needs you.\n· Approve from the desktop: when a tool asks to run a command, a bubble next to the pet shows the command, and you allow or deny it right there.\n· Task list: see every running task and which ones are waiting for you.\n· 18 built-in characters: 17 original companions (Halo, Sprout, Persimmon, Ink, Crescent and more) plus Sun Wukong, each with its own animations and sounds. You can also import your own character packs.\n\nWorks with command-line AI coding tools such as Claude Code and Codex CLI. Connect each tool once in Settings by choosing its config folder (for example ~/.claude). AgentHalo writes its hook entries and a small agenthalo folder only in folders you authorize, and disconnecting the tool removes both.\n\nPrivacy: task status is processed only on your Mac. To show tasks and bubbles, AgentHalo receives task titles, tool names, working folders, and a short excerpt of the final reply when a task finishes. None of it is stored off your Mac or uploaded to Apple or to us. There is no account and no analytics. The local status server listens on 127.0.0.1 only."
- },
- "zh-Hans": {
-  "name": "AgentHalo - AI 编程桌宠",
-  "subtitle": "AI 干完活，它会喊你回来",
-  "keywords": "桌面宠物,电子宠物,桌面伴侣,智能体,程序员,开发者,终端,命令行,提醒,通知,任务,效率,菜单栏,可爱,动画,角色,写代码",
-  "promotionalText": "把耗时的 AI 编程任务交出去，你去忙别的。桌宠会显示智能体在思考、在干活还是在等你确认，干完了喊你回来。",
-  "whatsNew": "更新了商店介绍和角色预览图，连接工具的方式没有变化。",
-  "description": "AgentHalo 是一只待在 Mac 桌面上的小桌宠，跟着你的 AI 编程智能体动。交出一个耗时的任务后你可以去忙别的，它会显示智能体在思考、在干活、在等你确认，还是已经做完。\n\n· 知道什么时候该回来：每种任务状态有对应的动画，任务做完或需要你处理时会提示一声。\n· 在桌面上直接批准：工具请求执行命令时，桌宠旁边弹出气泡，显示要执行的命令，由你允许或拒绝。\n· 任务列表：看到所有正在跑的任务，以及哪些在等你。\n· 18 个内置角色：17 个原创桌宠（光环、豆芽、柿子、墨点、月牙等），以及孙悟空。每个角色都有自己的动画和音效，也可以导入你自己的角色包。\n\n支持 Claude Code、Codex CLI 等命令行 AI 编程工具。每个工具只需在设置里连接一次：选择它的配置文件夹（例如 ~/.claude）。AgentHalo 只在你授权的文件夹里写入 hook 配置和一个 agenthalo 小文件夹，断开连接时两者都会移除。\n\n隐私：任务状态只在你的 Mac 上处理。为了显示任务和气泡，AgentHalo 会收到任务标题、工具名、工作目录，以及任务完成时回复的简短摘录；这些内容不会存到 Mac 以外，也不会上传给苹果或我们。没有账号，没有统计。本机状态服务只监听 127.0.0.1。"
- },
- "zh-Hant": {
-  "name": "AgentHalo - AI 程式桌寵",
-  "subtitle": "AI 做完了，它會叫你回來",
-  "keywords": "桌面寵物,電子寵物,桌面夥伴,智慧代理,工程師,開發者,終端機,命令列,提醒,通知,任務,效率,選單列,可愛,動畫,角色,寫程式",
-  "promotionalText": "把耗時的 AI 程式任務交出去，你去忙別的。桌寵會顯示代理在思考、在工作還是在等你確認，做完了叫你回來。",
-  "whatsNew": "更新了商店介紹與角色預覽圖，連接工具的方式沒有變化。",
-  "description": "AgentHalo 是一隻待在 Mac 桌面上的小桌寵，跟著你的 AI 程式代理一起動。交出一個耗時的任務後你可以去忙別的，它會顯示代理在思考、在工作、在等你確認，還是已經完成。\n\n· 知道什麼時候該回來：每種任務狀態都有對應的動畫，任務完成或需要你處理時會提示一聲。\n· 在桌面上直接批准：工具請求執行指令時，桌寵旁邊會跳出氣泡，顯示要執行的指令，由你允許或拒絕。\n· 任務列表：看到所有正在執行的任務，以及哪些在等你。\n· 18 個內建角色：17 個原創桌寵（光環、豆芽、柿子、墨點、月牙等），以及孫悟空。每個角色都有自己的動畫和音效，也可以匯入你自己的角色包。\n\n支援 Claude Code、Codex CLI 等命令列 AI 程式工具。每個工具只需在設定中連接一次：選擇它的設定檔資料夾（例如 ~/.claude）。AgentHalo 只在你授權的資料夾中寫入 hook 設定和一個 agenthalo 小資料夾，中斷連接時兩者都會移除。\n\n隱私：任務狀態只在你的 Mac 上處理。為了顯示任務和氣泡，AgentHalo 會收到任務標題、工具名稱、工作目錄，以及任務完成時回覆的簡短摘錄；這些內容不會存到 Mac 以外，也不會上傳給 Apple 或我們。沒有帳號，沒有統計。本機狀態服務只監聽 127.0.0.1。"
- },
- "ja": {
-  "name": "AgentHalo: AIデスクトップペット",
-  "subtitle": "AIの作業が終わったら知らせてくれる",
-  "keywords": "マスコット,キャラクター,相棒,エージェント,コーディング,プログラミング,開発者,ターミナル,通知,タスク,効率化,メニューバー,かわいい,アニメ",
-  "promotionalText": "時間のかかるAIコーディング作業を任せて、ほかのことを。ペットがエージェントの考え中・作業中・確認待ちを見せて、終わったら呼び戻してくれます。",
-  "whatsNew": "App Storeの紹介文とキャラクターのプレビューを更新しました。ツールとの接続方法に変更はありません。",
-  "description": "AgentHalo は、AIコーディングエージェントの動きに合わせて反応する、Macデスクトップの小さなペットです。時間のかかる作業を任せてほかのことをしていても、エージェントが考え中か、作業中か、あなたの確認待ちか、もう終わったかがひと目でわかります。\n\n· 戻るタイミングがわかる：タスクの状態ごとにアニメーションが変わり、完成したときや対応が必要なときは短い音で知らせます。\n· デスクトップで承認：ツールがコマンドの実行を求めると、ペットの横に吹き出しが出てコマンドを表示し、その場で許可または拒否できます。\n· タスク一覧：実行中のタスクと、あなたを待っているタスクを確認できます。\n· 18体の内蔵キャラクター：オリジナルの17体（Halo、Sprout、Persimmon、Ink、Crescent など）と孫悟空。それぞれ専用のアニメーションと音があり、自作のキャラクターパックも読み込めます。\n\nClaude Code や Codex CLI などのコマンドライン型AIコーディングツールに対応。各ツールは設定で一度だけ、設定フォルダ（例：~/.claude）を選んで接続します。AgentHalo は許可されたフォルダにのみ hook の設定と小さな agenthalo フォルダを書き込み、接続を解除すると両方を削除します。\n\nプライバシー：タスクの状態はMac内でのみ処理されます。タスクと吹き出しを表示するため、タスク名、ツール名、作業フォルダ、完了時の返信の短い抜粋を受け取りますが、Mac外に保存したり、Appleや私たちに送信したりすることはありません。アカウントも解析もありません。ローカルのステータスサーバーは 127.0.0.1 でのみ待ち受けます。"
- },
- "ko": {
-  "name": "AgentHalo: AI 데스크톱 펫",
-  "subtitle": "AI 작업이 끝나면 불러 주는 친구",
-  "keywords": "마스코트,캐릭터,동반자,에이전트,코딩,프로그래밍,개발자,터미널,명령줄,알림,생산성,메뉴막대,귀여운,애니메이션",
-  "promotionalText": "시간이 걸리는 AI 코딩 작업을 맡기고 다른 일을 하세요. 펫이 에이전트가 생각 중인지, 작업 중인지, 확인을 기다리는지 보여 주고 끝나면 불러 줍니다.",
-  "whatsNew": "App Store 소개와 캐릭터 미리보기를 업데이트했습니다. 도구 연결 방식은 바뀌지 않았습니다.",
-  "description": "AgentHalo는 AI 코딩 에이전트의 상태에 따라 움직이는 Mac 데스크톱의 작은 펫입니다. 오래 걸리는 작업을 맡기고 다른 일을 하는 동안에도 에이전트가 생각 중인지, 작업 중인지, 승인을 기다리는지, 이미 끝났는지 바로 알 수 있습니다.\n\n· 돌아올 때를 알려 줌: 작업 상태마다 애니메이션이 바뀌고, 작업이 끝나거나 확인이 필요하면 짧은 소리로 알려 줍니다.\n· 데스크톱에서 바로 승인: 도구가 명령 실행을 요청하면 펫 옆에 말풍선이 나타나 명령을 보여 주고, 그 자리에서 허용하거나 거부할 수 있습니다.\n· 작업 목록: 실행 중인 모든 작업과 나를 기다리는 작업을 확인할 수 있습니다.\n· 18가지 기본 캐릭터: 오리지널 컴패니언 17종(Halo, Sprout, Persimmon, Ink, Crescent 등)과 손오공. 캐릭터마다 고유한 애니메이션과 소리가 있으며, 직접 만든 캐릭터 팩도 가져올 수 있습니다.\n\nClaude Code, Codex CLI 같은 명령줄 AI 코딩 도구와 함께 사용할 수 있습니다. 설정에서 각 도구의 설정 폴더(예: ~/.claude)를 한 번만 선택하면 연결됩니다. AgentHalo는 허용한 폴더에만 hook 설정과 작은 agenthalo 폴더를 기록하며, 연결을 해제하면 둘 다 삭제합니다.\n\n개인정보: 작업 상태는 Mac 안에서만 처리됩니다. 작업과 말풍선을 표시하기 위해 작업 제목, 도구 이름, 작업 폴더, 작업 완료 시 응답의 짧은 발췌를 받지만, Mac 밖에 저장하거나 Apple 또는 저희에게 보내지 않습니다. 계정도 분석도 없습니다. 로컬 상태 서버는 127.0.0.1에서만 수신합니다."
- },
- "es-ES": {
-  "name": "AgentHalo: mascota IA",
-  "subtitle": "Te avisa cuando la IA termina",
-  "keywords": "escritorio,compañero,agente,programación,desarrollador,terminal,consola,aviso,tarea,productividad",
-  "promotionalText": "Deja una tarea larga de programación con IA y haz otra cosa. Tu mascota muestra si el agente piensa, trabaja o espera tu respuesta, y te avisa cuando acaba.",
-  "whatsNew": "Página de la App Store y vistas previas de personajes más claras. La conexión con tus herramientas no cambia.",
-  "description": "AgentHalo pone en el escritorio de tu Mac una pequeña mascota animada que sigue a tus agentes de programación con IA. Deja una tarea larga, ponte con otra cosa y la mascota te muestra si el agente está pensando, trabajando, esperando tu aprobación o si ya ha terminado.\n\n· Sabes cuándo volver: la mascota cambia de animación según el estado de cada tarea y suena un aviso corto cuando una tarea termina o te necesita.\n· Aprueba desde el escritorio: cuando una herramienta pide ejecutar un comando, aparece un bocadillo junto a la mascota con el comando, y lo permites o lo rechazas allí mismo.\n· Lista de tareas: ve todas las tareas en marcha y cuáles te están esperando.\n· 18 personajes incluidos: 17 compañeros originales (Halo, Sprout, Persimmon, Ink, Crescent y más) y Sun Wukong, cada uno con sus animaciones y sonidos. También puedes importar tus propios paquetes de personajes.\n\nFunciona con herramientas de programación con IA de línea de comandos como Claude Code y Codex CLI. Conecta cada herramienta una sola vez en Ajustes eligiendo su carpeta de configuración (por ejemplo ~/.claude). AgentHalo solo escribe sus entradas de hook y una pequeña carpeta agenthalo en las carpetas que autorizas, y al desconectar la herramienta se eliminan ambas.\n\nPrivacidad: el estado de las tareas se procesa solo en tu Mac. Para mostrar tareas y bocadillos, AgentHalo recibe títulos de tareas, nombres de herramientas, carpetas de trabajo y un breve extracto de la respuesta final cuando termina una tarea. Nada de esto se guarda fuera de tu Mac ni se envía a Apple ni a nosotros. No hay cuenta ni analítica. El servidor de estado local solo escucha en 127.0.0.1."
- }
+  "en-US": {
+    "name": "AgentHalo: AI Desktop Pet",
+    "subtitle": "Pings you when the AI is done",
+    "keywords": "companion,mascot,notifier,coding,developer,programmer,terminal,cli,task,alert,menubar,animated,buddy",
+    "promotionalText": "Start a long AI coding task and walk away. Your desktop pet shows when the agent is thinking, working or waiting for you, and calls you back when it is done.",
+    "whatsNew": "Added Rate AgentHalo… to the menu and the About page. Clearer App Store page and character previews. No change to how AgentHalo connects to your tools.",
+    "description": "AgentHalo puts a small animated pet on your Mac desktop that follows your AI coding agents. Start a long task, switch to something else, and the pet shows you when the agent is thinking, working, waiting for your approval, or done.\n\n· Know when to come back: the pet changes its animation for each task state and plays a short sound when a task finishes or needs you.\n· Approve from the desktop: when a tool asks to run a command, a bubble next to the pet shows the command, and you allow or deny it right there.\n· Task list: see every running task and which ones are waiting for you.\n· 18 built-in characters: 17 original companions (Halo, Sprout, Persimmon, Ink, Crescent and more) plus Sun Wukong, each with its own animations and sounds. You can also import your own character packs.\n\nWorks with command-line AI coding tools such as Claude Code and Codex CLI. Connect each tool once in Settings by choosing its config folder (for example ~/.claude). AgentHalo writes its hook entries and a small agenthalo folder only in folders you authorize, and disconnecting the tool removes both.\n\nPrivacy: task status is processed only on your Mac. To show tasks and bubbles, AgentHalo receives task titles, tool names, working folders, and a short excerpt of the final reply when a task finishes. None of it is stored off your Mac or uploaded to Apple or to us. There is no account and no analytics. The local status server listens on 127.0.0.1 only."
+  },
+  "zh-Hans": {
+    "name": "AgentHalo - AI 编程桌宠",
+    "subtitle": "AI 干完活，它会喊你回来",
+    "keywords": "桌面宠物,电子宠物,桌面伴侣,智能体,程序员,开发者,终端,命令行,提醒,通知,任务,效率,菜单栏,可爱,动画,角色,写代码",
+    "promotionalText": "把耗时的 AI 编程任务交出去，你去忙别的。桌宠会显示智能体在思考、在干活还是在等你确认，干完了喊你回来。",
+    "whatsNew": "菜单和「关于」页新增「给 AgentHalo 评分…」入口；更新了商店介绍和角色预览图。连接工具的方式没有变化。",
+    "description": "AgentHalo 是一只待在 Mac 桌面上的小桌宠，跟着你的 AI 编程智能体动。交出一个耗时的任务后你可以去忙别的，它会显示智能体在思考、在干活、在等你确认，还是已经做完。\n\n· 知道什么时候该回来：每种任务状态有对应的动画，任务做完或需要你处理时会提示一声。\n· 在桌面上直接批准：工具请求执行命令时，桌宠旁边弹出气泡，显示要执行的命令，由你允许或拒绝。\n· 任务列表：看到所有正在跑的任务，以及哪些在等你。\n· 18 个内置角色：17 个原创桌宠（光环、豆芽、柿子、墨点、月牙等），以及孙悟空。每个角色都有自己的动画和音效，也可以导入你自己的角色包。\n\n支持 Claude Code、Codex CLI 等命令行 AI 编程工具。每个工具只需在设置里连接一次：选择它的配置文件夹（例如 ~/.claude）。AgentHalo 只在你授权的文件夹里写入 hook 配置和一个 agenthalo 小文件夹，断开连接时两者都会移除。\n\n隐私：任务状态只在你的 Mac 上处理。为了显示任务和气泡，AgentHalo 会收到任务标题、工具名、工作目录，以及任务完成时回复的简短摘录；这些内容不会存到 Mac 以外，也不会上传给苹果或我们。没有账号，没有统计。本机状态服务只监听 127.0.0.1。"
+  },
+  "zh-Hant": {
+    "name": "AgentHalo - AI 程式桌寵",
+    "subtitle": "AI 做完了，它會叫你回來",
+    "keywords": "桌面寵物,電子寵物,桌面夥伴,智慧代理,工程師,開發者,終端機,命令列,提醒,通知,任務,效率,選單列,可愛,動畫,角色,寫程式",
+    "promotionalText": "把耗時的 AI 程式任務交出去，你去忙別的。桌寵會顯示代理在思考、在工作還是在等你確認，做完了叫你回來。",
+    "whatsNew": "選單和「關於」頁新增「為 AgentHalo 評分…」入口；更新了商店介紹和角色預覽圖。連接工具的方式沒有變化。",
+    "description": "AgentHalo 是一隻待在 Mac 桌面上的小桌寵，跟著你的 AI 程式代理一起動。交出一個耗時的任務後你可以去忙別的，它會顯示代理在思考、在工作、在等你確認，還是已經完成。\n\n· 知道什麼時候該回來：每種任務狀態都有對應的動畫，任務完成或需要你處理時會提示一聲。\n· 在桌面上直接批准：工具請求執行指令時，桌寵旁邊會跳出氣泡，顯示要執行的指令，由你允許或拒絕。\n· 任務列表：看到所有正在執行的任務，以及哪些在等你。\n· 18 個內建角色：17 個原創桌寵（光環、豆芽、柿子、墨點、月牙等），以及孫悟空。每個角色都有自己的動畫和音效，也可以匯入你自己的角色包。\n\n支援 Claude Code、Codex CLI 等命令列 AI 程式工具。每個工具只需在設定中連接一次：選擇它的設定檔資料夾（例如 ~/.claude）。AgentHalo 只在你授權的資料夾中寫入 hook 設定和一個 agenthalo 小資料夾，中斷連接時兩者都會移除。\n\n隱私：任務狀態只在你的 Mac 上處理。為了顯示任務和氣泡，AgentHalo 會收到任務標題、工具名稱、工作目錄，以及任務完成時回覆的簡短摘錄；這些內容不會存到 Mac 以外，也不會上傳給 Apple 或我們。沒有帳號，沒有統計。本機狀態服務只監聽 127.0.0.1。"
+  },
+  "ja": {
+    "name": "AgentHalo: AIデスクトップペット",
+    "subtitle": "AIの作業が終わったら知らせてくれる",
+    "keywords": "マスコット,キャラクター,相棒,エージェント,コーディング,プログラミング,開発者,ターミナル,通知,タスク,効率化,メニューバー,かわいい,アニメ",
+    "promotionalText": "時間のかかるAIコーディング作業を任せて、ほかのことを。ペットがエージェントの考え中・作業中・確認待ちを見せて、終わったら呼び戻してくれます。",
+    "whatsNew": "メニューと「情報」ページに「AgentHalo を評価…」を追加しました。ストアの説明とキャラクターのプレビューも更新しました。ツールの接続方法に変更はありません。",
+    "description": "AgentHalo は、AIコーディングエージェントの動きに合わせて反応する、Macデスクトップの小さなペットです。時間のかかる作業を任せてほかのことをしていても、エージェントが考え中か、作業中か、あなたの確認待ちか、もう終わったかがひと目でわかります。\n\n· 戻るタイミングがわかる：タスクの状態ごとにアニメーションが変わり、完成したときや対応が必要なときは短い音で知らせます。\n· デスクトップで承認：ツールがコマンドの実行を求めると、ペットの横に吹き出しが出てコマンドを表示し、その場で許可または拒否できます。\n· タスク一覧：実行中のタスクと、あなたを待っているタスクを確認できます。\n· 18体の内蔵キャラクター：オリジナルの17体（Halo、Sprout、Persimmon、Ink、Crescent など）と孫悟空。それぞれ専用のアニメーションと音があり、自作のキャラクターパックも読み込めます。\n\nClaude Code や Codex CLI などのコマンドライン型AIコーディングツールに対応。各ツールは設定で一度だけ、設定フォルダ（例：~/.claude）を選んで接続します。AgentHalo は許可されたフォルダにのみ hook の設定と小さな agenthalo フォルダを書き込み、接続を解除すると両方を削除します。\n\nプライバシー：タスクの状態はMac内でのみ処理されます。タスクと吹き出しを表示するため、タスク名、ツール名、作業フォルダ、完了時の返信の短い抜粋を受け取りますが、Mac外に保存したり、Appleや私たちに送信したりすることはありません。アカウントも解析もありません。ローカルのステータスサーバーは 127.0.0.1 でのみ待ち受けます。"
+  },
+  "ko": {
+    "name": "AgentHalo: AI 데스크톱 펫",
+    "subtitle": "AI 작업이 끝나면 불러 주는 친구",
+    "keywords": "마스코트,캐릭터,동반자,에이전트,코딩,프로그래밍,개발자,터미널,명령줄,알림,생산성,메뉴막대,귀여운,애니메이션",
+    "promotionalText": "시간이 걸리는 AI 코딩 작업을 맡기고 다른 일을 하세요. 펫이 에이전트가 생각 중인지, 작업 중인지, 확인을 기다리는지 보여 주고 끝나면 불러 줍니다.",
+    "whatsNew": "메뉴와 정보 페이지에 'AgentHalo 평가하기…'를 추가했습니다. 스토어 설명과 캐릭터 미리보기도 새로 바꿨습니다. 도구 연결 방식은 그대로입니다.",
+    "description": "AgentHalo는 AI 코딩 에이전트의 상태에 따라 움직이는 Mac 데스크톱의 작은 펫입니다. 오래 걸리는 작업을 맡기고 다른 일을 하는 동안에도 에이전트가 생각 중인지, 작업 중인지, 승인을 기다리는지, 이미 끝났는지 바로 알 수 있습니다.\n\n· 돌아올 때를 알려 줌: 작업 상태마다 애니메이션이 바뀌고, 작업이 끝나거나 확인이 필요하면 짧은 소리로 알려 줍니다.\n· 데스크톱에서 바로 승인: 도구가 명령 실행을 요청하면 펫 옆에 말풍선이 나타나 명령을 보여 주고, 그 자리에서 허용하거나 거부할 수 있습니다.\n· 작업 목록: 실행 중인 모든 작업과 나를 기다리는 작업을 확인할 수 있습니다.\n· 18가지 기본 캐릭터: 오리지널 컴패니언 17종(Halo, Sprout, Persimmon, Ink, Crescent 등)과 손오공. 캐릭터마다 고유한 애니메이션과 소리가 있으며, 직접 만든 캐릭터 팩도 가져올 수 있습니다.\n\nClaude Code, Codex CLI 같은 명령줄 AI 코딩 도구와 함께 사용할 수 있습니다. 설정에서 각 도구의 설정 폴더(예: ~/.claude)를 한 번만 선택하면 연결됩니다. AgentHalo는 허용한 폴더에만 hook 설정과 작은 agenthalo 폴더를 기록하며, 연결을 해제하면 둘 다 삭제합니다.\n\n개인정보: 작업 상태는 Mac 안에서만 처리됩니다. 작업과 말풍선을 표시하기 위해 작업 제목, 도구 이름, 작업 폴더, 작업 완료 시 응답의 짧은 발췌를 받지만, Mac 밖에 저장하거나 Apple 또는 저희에게 보내지 않습니다. 계정도 분석도 없습니다. 로컬 상태 서버는 127.0.0.1에서만 수신합니다."
+  },
+  "es-ES": {
+    "name": "AgentHalo: mascota IA",
+    "subtitle": "Te avisa cuando la IA termina",
+    "keywords": "escritorio,compañero,agente,programación,desarrollador,terminal,consola,aviso,tarea,productividad",
+    "promotionalText": "Deja una tarea larga de programación con IA y haz otra cosa. Tu mascota muestra si el agente piensa, trabaja o espera tu respuesta, y te avisa cuando acaba.",
+    "whatsNew": "Añadido Valorar AgentHalo… al menú y a la página Acerca de. Página de la App Store y vistas previas de personajes más claras. No cambia la forma de conectar tus herramientas.",
+    "description": "AgentHalo pone en el escritorio de tu Mac una pequeña mascota animada que sigue a tus agentes de programación con IA. Deja una tarea larga, ponte con otra cosa y la mascota te muestra si el agente está pensando, trabajando, esperando tu aprobación o si ya ha terminado.\n\n· Sabes cuándo volver: la mascota cambia de animación según el estado de cada tarea y suena un aviso corto cuando una tarea termina o te necesita.\n· Aprueba desde el escritorio: cuando una herramienta pide ejecutar un comando, aparece un bocadillo junto a la mascota con el comando, y lo permites o lo rechazas allí mismo.\n· Lista de tareas: ve todas las tareas en marcha y cuáles te están esperando.\n· 18 personajes incluidos: 17 compañeros originales (Halo, Sprout, Persimmon, Ink, Crescent y más) y Sun Wukong, cada uno con sus animaciones y sonidos. También puedes importar tus propios paquetes de personajes.\n\nFunciona con herramientas de programación con IA de línea de comandos como Claude Code y Codex CLI. Conecta cada herramienta una sola vez en Ajustes eligiendo su carpeta de configuración (por ejemplo ~/.claude). AgentHalo solo escribe sus entradas de hook y una pequeña carpeta agenthalo en las carpetas que autorizas, y al desconectar la herramienta se eliminan ambas.\n\nPrivacidad: el estado de las tareas se procesa solo en tu Mac. Para mostrar tareas y bocadillos, AgentHalo recibe títulos de tareas, nombres de herramientas, carpetas de trabajo y un breve extracto de la respuesta final cuando termina una tarea. Nada de esto se guarda fuera de tu Mac ni se envía a Apple ni a nosotros. No hay cuenta ni analítica. El servidor de estado local solo escucha en 127.0.0.1."
+  }
 }
